@@ -1,35 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>���Ͱ��Ͱ��Ͱ���</title>
     <link>https://baiban114.github.io/tablerow.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on ���Ͱ��Ͱ��Ͱ���</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 12 Jul 2021 12:23:20 +0800</lastBuildDate>
+    <language>zh-cn</language>
     
         <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-        <item>
-        <title>Test01</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/test01/</link>
-        <pubDate>Mon, 12 Jul 2021 12:23:20 +0800</pubDate>
-        
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/test01/</guid>
-        <description>My New Hugo Site https://baiban114.github.io/tablerow.github.io/posts/test01/ -- https://baiban114.github.io/tablerow.github.io/posts/test01/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>My First Post</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/my-first-post/</link>
-        <pubDate>Mon, 12 Jul 2021 02:42:09 +0800</pubDate>
-        
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/my-first-post/</guid>
-        <description>My New Hugo Site https://baiban114.github.io/tablerow.github.io/posts/my-first-post/ -- https://baiban114.github.io/tablerow.github.io/posts/my-first-post/ - </description>
-        </item>
     
     
   </channel>
