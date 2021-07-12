@@ -5,8 +5,31 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 12 Jul 2021 12:23:20 +0800</lastBuildDate>
     
         <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Test01</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/test01/</link>
+        <pubDate>Mon, 12 Jul 2021 12:23:20 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/test01/</guid>
+        <description>My New Hugo Site https://baiban114.github.io/tablerow.github.io/posts/test01/ -- https://baiban114.github.io/tablerow.github.io/posts/test01/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>My First Post</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/my-first-post/</link>
+        <pubDate>Mon, 12 Jul 2021 02:42:09 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/my-first-post/</guid>
+        <description>My New Hugo Site https://baiban114.github.io/tablerow.github.io/posts/my-first-post/ -- https://baiban114.github.io/tablerow.github.io/posts/my-first-post/ - </description>
+        </item>
     
     
   </channel>
