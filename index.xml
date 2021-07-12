@@ -17,7 +17,14 @@
         <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
         
         <guid>https://baiban114.github.io/tablerow.github.io/posts/%E8%BE%A3%E9%B8%A1hugo/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E8%BE%A3%E9%B8%A1hugo/ -&lt;h1 id=&#34;辣鸡hugo&#34;&gt;辣鸡hugo&lt;/h1&gt;
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E8%BE%A3%E9%B8%A1hugo/ -&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
+&lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。。。&lt;/p&gt;
+&lt;p&gt;​	一开始尝试在centos7上使用hugo（好像是linux64位0.84.x版本），用nginx做服务器，结果用到一半，突然生不出来了。。。改了配置文件，执行hugo命令后静态页面一直没变过。。卸载了安装extended版本 ，然后提示说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）&lt;/p&gt;
+&lt;p&gt;​	最后用了windows版+git hub pages。&lt;/p&gt;
+&lt;p&gt;​	另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？&lt;/p&gt;
+&lt;h1 id=&#34;跟风写博客&#34;&gt;跟风写博客&lt;/h1&gt;
+&lt;p&gt;​	雀食跟风，我明明没啥要写的，也没时间写；只是因为大家都搞博客，所以我也搞了。要说我也不喜欢静态博客，这种搭建成本低，但定制需要额外学习成本的生成器适合那些专门写博客文章的人。嘛，不过有人喜欢写就是了，我是不喜欢写。身边搞博客的人越来越多，三人成虎，最后我也跟风搞了。&lt;/p&gt;
+&lt;p&gt;​	我倒是不反对多体验多经历，可是哪儿有这个时间呢？&lt;/p&gt;
 - https://baiban114.github.io/tablerow.github.io/posts/%E8%BE%A3%E9%B8%A1hugo/ - </description>
         </item>
     
