@@ -13,30 +13,32 @@
       <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
       
       <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/</guid>
-      <description>知识随笔 线性： 线性关系： ​	两个变量之间存在一次方函数关系，就称它们之间存在线性关系。正比例关系是线性关系中的特例，反比例关系不是线性关系。
-反比例关系：两个变量乘积一样
+      <description>线性：  感觉真的像一条线上的关系，
+是连续的么？
+ 线性关系： ​	两个变量之间存在一次方函数关系，就称它们之间存在线性关系。正比例关系是线性关系中的特例，反比例关系不是线性关系。
+​	反比例关系：两个变量乘积一样
 ​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。
  数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。
 这个映射要同时满足两个条件：
 1，可加性 f(x + y) = f(x) + f(y)
 2，齐次性（同质性） f(αx) = αf(x)
 也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的
- 线性的例子  数组：下标和元素一一对应   </description>
+ 线性的例子  数组：下标和元素一一对应，线性存储  线性代数中学到的 行列式中两个向量可以互相表示，说明他们是线性相关的(行列式得0，因为向量平行)</description>
     </item>
     
     <item>
       <title>第一篇</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/%E8%BE%A3%E9%B8%A1hugo/</link>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
       <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
       
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E8%BE%A3%E9%B8%A1hugo/</guid>
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
       <description>博客搭建 ​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。。。
 ​	一开始尝试在centos7上使用hugo（好像是linux64位0.84.x版本），用nginx做服务器，结果用到一半，突然生不出来了。。。改了配置文件，执行hugo命令后静态页面一直没变过。。卸载了安装extended版本 ，然后提示说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）
 ​	最后用了windows版+git hub pages。
 ​	另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？
 跟风写博客 ​	雀食跟风，我明明没啥要写的，也没时间写；只是因为大家都搞博客，所以我也搞了。要说我也不喜欢静态博客，这种搭建成本低，但定制需要额外学习成本的生成器适合那些专门写博客文章的人。嘛，不过有人喜欢写就是了，我是不喜欢写。身边搞博客的人越来越多，三人成虎，最后我也跟风搞了。
 ​	我倒是不反对多体验多经历，可是哪儿有这个时间呢？将来有时间了，还是想自己做个动态博客，多设计点儿有趣的功能。看文字最没意思了。
-hugo常用命令 ../hugo new posts/新文章.md hugo -D </description>
+hugo常用命令 ../hugo new posts/新文章.md hugo -D git push -u origin master </description>
     </item>
     
   </channel>
