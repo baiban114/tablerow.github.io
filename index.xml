@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>彦祖，你又来看博客了</title>
@@ -6,47 +5,77 @@
     <description>Recent content on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 21 Jul 2021 05:37:27 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>知识随笔</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
-      
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/</guid>
-      <description>线性：  感觉真的像一条线上的关系，
-是连续的么？
- 线性关系： ​	两个变量之间存在一次方函数关系，就称它们之间存在线性关系。正比例关系是线性关系中的特例，反比例关系不是线性关系。
-​	反比例关系：两个变量乘积一样
-​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。
- 数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。
-这个映射要同时满足两个条件：
-1，可加性 f(x + y) = f(x) + f(y)
-2，齐次性（同质性） f(αx) = αf(x)
-也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的
- 线性的例子  数组：下标和元素一一对应，线性存储  线性代数中学到的 行列式中两个向量可以互相表示，说明他们是线性相关的(行列式得0，因为向量平行)</description>
-    </item>
+    <lastBuildDate>Wed, 21 Jul 2021 05:37:27 +0800</lastBuildDate>
     
-    <item>
-      <title>放飞自我的第一篇</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
-      <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
-      
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
-      <description>嘶。。diary这个主题有点儿窄，黑文字多的话感jio还是开头中间都有图片观感好点儿。不知道在Typora里设置居中和大小能不能在网站中显示出来，我看我下面六花的图就没居中。。。
-博客搭建 ​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。
-​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的静态页面突然就生不出来了。。。QAQ
-​	改了配置文件、添加了新文章、执行hugo命令后也没有生成新的、正确的静态页面。根据提示，安装extended版本 ，结果又报错说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）。
-​	最后用了windows版+github pages。省时又省心，效果还一样。之前尝试部署到服务器上的我简直是个可爱的小傻瓜。
-​	另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？
-​	近日正好收到一篇公众号的推送，关于hugo搭建博客的，就用上了。最早了解的是wordPress，但没有使用；身边人用的最多的是hexo。年轻时总想着搞个人博客，早就接触到了建站容易的静态博客，但感觉搭建起来对技术提高帮助不大，就没搞。实际上现在搞了也没多大的帮助，只是偶尔刺激自己在博客上整理整理思想、经验。
-​	尝试了下集成utteranc评论功能，但是没有成功，因为所用的diary主题没有支持这个评论插件。
-为什么搞静态博客？答：跟风 ​	雀食跟风，我明明没啥要写的，也没时间写；只是因为好多人都在搞博客。要说我也不喜欢静态博客，它搭建成本低，但定制需要额外学习成本（学习到的技术不是很通用）。它适合那些专门写文章的人，专注于写作，不用花过多心思管理代码和服务器。嘛，不过有人喜欢用就是了，没必要当成普世的目标。身边搞博客的人越来越多，还大肆吹嘘博客的好处，仿佛每个成功男人的背后都有一个静态博客网站。三人成虎，最后我也跟风搞了。前前后后花了珍贵的两天复习时间，做了一件平平无奇的事情。
-​	我倒是不反对多体验多经历，可是哪儿有这个时间呢？每一次挑战都是有成本的，每一次看似成功的选择都有可能孕育出失败的种子。开元盛世之后就是安史之变，战无不胜的拿破仑遭遇了滑铁卢，摩托罗拉在销量最高的一年见证了智能手机的诞生，而苏联在如日中天时进军了阿富汗。我慢慢变得不是很喜欢夸人，因为我看到了不少小小的辉煌和小小的失败。我不否认别人的出彩之处，只是暂时厌倦了举轻若重，有些人看见别人有前途就赶紧夸一下，生怕落后。按说出于礼貌应该夸一下，但不宜妄自菲薄。大家都是人类，没什么做得到做不到的。
-​	将来有时间了，还是想自己做个动态博客，多设计点儿有趣的功能。我身边有CSDN多次热榜第一的室友，有ACM拿过学校第一枚区域赛奖牌的同学，有大一就和中科院一起发表论文的学弟。但对现阶段的我来说，再大的成就都比不上通过考研初试和复试。
-常用命令 ​	每次输入这么多命令太麻烦了，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。
-​	还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。
-hugo -D cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master </description>
-    </item>
+        <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>知识随笔</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/</link>
+        <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/ -&lt;h5 id=&#34;线性&#34;&gt;线性：&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感觉真的像一条线上的关系，&lt;/p&gt;
+&lt;p&gt;是连续的么？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;线性关系&#34;&gt;线性关系：&lt;/h6&gt;
+&lt;p&gt;​	两个变量之间存在一次方&lt;a href=&#34;https://baike.baidu.com/item/%E5%87%BD%E6%95%B0%E5%85%B3%E7%B3%BB/9846826&#34;&gt;函数关系&lt;/a&gt;，就称它们之间存在线性关系。&lt;a href=&#34;https://baike.baidu.com/item/%E6%AD%A3%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8192987&#34;&gt;正比例关系&lt;/a&gt;是线性关系中的特例，&lt;a href=&#34;https://baike.baidu.com/item/%E5%8F%8D%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8193245&#34;&gt;反比例关系&lt;/a&gt;不是线性关系。&lt;/p&gt;
+&lt;p&gt;​	&lt;em&gt;反比例关系：两个变量乘积一样&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。&lt;/p&gt;
+&lt;p&gt;这个映射要同时满足两个条件：&lt;/p&gt;
+&lt;p&gt;1，可加性 f(x + y) = f(x) + f(y)&lt;/p&gt;
+&lt;p&gt;2，齐次性（同质性） f(αx) = αf(x)&lt;/p&gt;
+&lt;p&gt;也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;线性的例子&#34;&gt;线性的例子&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;数组：下标和元素一一对应，线性存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;线性代数中学到的&#34;&gt;线性代数中学到的&lt;/h6&gt;
+&lt;p&gt;行列式中两个向量可以互相表示，说明他们是&lt;strong&gt;线性相关&lt;/strong&gt;的(行列式得0，因为向量平行)&lt;/p&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>放飞自我的第一篇</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
+        <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ -&lt;p&gt;嘶。。diary这个主题有点儿窄，黑文字多的话感jio还是开头中间都有图片观感好点儿。不知道在Typora里设置居中和大小能不能在网站中显示出来，我看我下面六花的图就没居中。。。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/baiban114/tianrun/raw/master/imgs/20210722115148.webp&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
+&lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。&lt;/p&gt;
+&lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的静态页面突然就生不出来了。。。QAQ&lt;/p&gt;
+&lt;p&gt;​	改了配置文件、添加了新文章、执行hugo命令后也没有生成新的、正确的静态页面。根据提示，安装extended版本 ，结果又报错说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）。&lt;/p&gt;
+&lt;p&gt;​		最后用了windows版+github pages。省时又省心，效果还一样。之前尝试部署到服务器上的我简直是个可爱的小傻瓜。&lt;/p&gt;
+&lt;p&gt;​		另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？&lt;/p&gt;
+&lt;p&gt;​		近日正好收到一篇公众号的推送，关于hugo搭建博客的，就用上了。最早了解的是wordPress，但没有使用；身边人用的最多的是hexo。年轻时总想着搞个人博客，早就接触到了建站容易的静态博客，但感觉搭建起来对技术提高帮助不大，就没搞。实际上现在搞了也没多大的帮助，只是偶尔刺激自己在博客上整理整理思想、经验。&lt;/p&gt;
+&lt;p&gt;​		尝试了下集成utteranc评论功能，但是没有成功，因为所用的diary主题没有支持这个评论插件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0617%2F6da1c4d9j00qut6ji005oc001aa00q0m.jpg&amp;amp;thumbnail=650x2147483647&amp;amp;quality=80&amp;amp;type=jpg#pic_center&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;为什么搞静态博客答跟风&#34;&gt;为什么搞静态博客？答：跟风&lt;/h1&gt;
+&lt;p&gt;​		雀食跟风，我明明没啥要写的，也没时间写；只是因为好多人都在搞博客。要说我也不喜欢静态博客，它搭建成本低，但定制需要额外学习成本（学习到的技术不是很通用）。它适合那些专门写文章的人，专注于写作，不用花过多心思管理代码和服务器。嘛，不过有人喜欢用就是了，没必要当成普世的目标。身边搞博客的人越来越多，还大肆吹嘘博客的好处，仿佛每个成功男人的背后都有一个静态博客网站。三人成虎，最后我也跟风搞了。前前后后花了珍贵的两天复习时间，做了一件平平无奇的事情。&lt;/p&gt;
+&lt;p&gt;​		我倒是不反对多体验多经历，可是哪儿有这个时间呢？每一次挑战都是有成本的，每一次看似成功的选择都有可能孕育出失败的种子。开元盛世之后就是安史之变，战无不胜的拿破仑遭遇了滑铁卢，摩托罗拉在销量最高的一年见证了智能手机的诞生，而苏联在如日中天时进军了阿富汗。我慢慢变得不是很喜欢夸人，因为我看到了不少小小的辉煌和小小的失败。我不否认别人的出彩之处，只是暂时厌倦了举轻若重，有些人看见别人有前途就赶紧夸一下，生怕落后。按说出于礼貌应该夸一下，但不宜妄自菲薄。大家都是人类，没什么做得到做不到的。&lt;/p&gt;
+&lt;p&gt;​		将来有时间了，还是想自己做个动态博客，多设计点儿有趣的功能。我身边有CSDN多次热榜第一的室友，有ACM拿过学校第一枚区域赛奖牌的同学，有大一就和中科院一起发表论文的学弟。但对现阶段的我来说，再大的成就都比不上通过考研初试和复试。&lt;/p&gt;
+&lt;h1 id=&#34;常用命令&#34;&gt;常用命令&lt;/h1&gt;
+&lt;p&gt;​		每次输入这么多命令太麻烦了，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。&lt;/p&gt;
+&lt;p&gt;​		还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo -D 
+cd ./public
+git add -A
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;脚本提交&amp;#34;&lt;/span&gt;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ - </description>
+        </item>
+    
     
   </channel>
-</rss>
+</rss> 
