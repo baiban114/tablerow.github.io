@@ -50,7 +50,8 @@
         <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
         
         <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ -&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ -&lt;p&gt;&lt;img src=&#34;https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0617%2F6da1c4d9j00qut6ji005oc001aa00q0m.jpg&amp;amp;thumbnail=650x2147483647&amp;amp;quality=80&amp;amp;type=jpg#pic_center&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
 &lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。&lt;/p&gt;
 &lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的静态页面突然就生不出来了。。。QAQ&lt;/p&gt;
 &lt;p&gt;​	改了配置文件、添加了新文章、执行hugo命令后也没有生成新的、正确的静态页面。根据提示，安装extended版本 ，结果又报错说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）。&lt;/p&gt;
