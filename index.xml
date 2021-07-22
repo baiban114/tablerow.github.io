@@ -50,19 +50,26 @@
         <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
         
         <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ -&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
-&lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。。。&lt;/p&gt;
-&lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；结果改到一半，静态页面突然生不出来了。。。&lt;/p&gt;
-&lt;p&gt;​	改了配置文件，执行hugo命令后没有生成新的静态页面。。根据提示，卸载了安装extended版本 ，结果提示说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）QAQ&lt;/p&gt;
-&lt;p&gt;​	最后用了windows版+git hub pages。省时又省心，效果还一样，我觉得之前尝试部署到自己服务器上的我简直是个可爱的小傻瓜。&lt;/p&gt;
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ -&lt;p&gt;&lt;img src=&#34;https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0617%2F6da1c4d9j00qut6ji005oc001aa00q0m.jpg&amp;amp;thumbnail=650x2147483647&amp;amp;quality=80&amp;amp;type=jpg&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
+&lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。&lt;/p&gt;
+&lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的静态页面突然就生不出来了。。。QAQ&lt;/p&gt;
+&lt;p&gt;​	改了配置文件、添加了新文章、执行hugo命令后也没有生成新的、正确的静态页面。根据提示，安装extended版本 ，结果又报错说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）。&lt;/p&gt;
+&lt;p&gt;​	最后用了windows版+github pages。省时又省心，效果还一样。之前尝试部署到服务器上的我简直是个可爱的小傻瓜。&lt;/p&gt;
 &lt;p&gt;​	另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？&lt;/p&gt;
+&lt;p&gt;​		近日正好收到一篇公众号的推送，关于hugo搭建博客的，就用上了。最早了解的是wordpress，但没有使用；身边人用的最多的是hexo。年轻时总想着搞个人博客，早就接触到了建站容易的静态博客，但感觉搭建起来对技术提高帮助不大，就没搞。实际上现在搞了也没多大的帮助，只是偶尔刺激自己在博客上整理整理思想、经验。&lt;/p&gt;
 &lt;h1 id=&#34;为什么搞静态博客答跟风&#34;&gt;为什么搞静态博客？答：跟风&lt;/h1&gt;
-&lt;p&gt;​	雀食跟风，我明明没啥要写的，也没时间写；只是因为好多人都在搞博客。要说我也不喜欢静态博客，它搭建成本低，但定制需要额外学习成本（学习到的技术不是很通用）。它适合那些专门写博客文章的人，专注于文章，不用花过多心思管理代码和服务器。嘛，不过有人喜欢写就是了。身边搞博客的人越来越多，还大肆吹嘘博客的好处，仿佛每个成功男人的背后都用一个静态博客网站。三人成虎，最后我也跟风搞了。前前后后花了珍贵的两天复习时间，做了一件平平无奇的事情。&lt;/p&gt;
-&lt;p&gt;​	我倒是不反对多体验多经历，可是哪儿有这个时间呢？每一次挑战都是有成本的，每一次看似成功的选择都有可能孕育出失败的种子。开元盛世之后就是安史之变，战无不胜的拿破仑遭遇了滑铁卢，摩托罗拉在销量最高的一年见证了智能手机的诞生，而苏联在如日中天时进军了阿富汗。我慢慢变得不是很喜欢夸人，因为我看到了不少小小的辉煌和小小的失败。我不否认别人的出彩之处，只是暂时厌倦了举轻若重，别人有好处就赶紧夸一下，生怕落后。&lt;/p&gt;
-&lt;p&gt;​	将来有时间了，还是想自己做个动态博客，多设计点儿有趣的功能。&lt;/p&gt;
-&lt;h1 id=&#34;hugo常用命令&#34;&gt;hugo常用命令&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;../hugo new posts/新文章.md
-hugo -D
+&lt;p&gt;​		雀食跟风，我明明没啥要写的，也没时间写；只是因为好多人都在搞博客。要说我也不喜欢静态博客，它搭建成本低，但定制需要额外学习成本（学习到的技术不是很通用）。它适合那些专门写文章的人，专注于写作，不用花过多心思管理代码和服务器。嘛，不过有人喜欢用就是了，没必要当成普世的目标。身边搞博客的人越来越多，还大肆吹嘘博客的好处，仿佛每个成功男人的背后都有一个静态博客网站。三人成虎，最后我也跟风搞了。前前后后花了珍贵的两天复习时间，做了一件平平无奇的事情。&lt;/p&gt;
+&lt;p&gt;​		我倒是不反对多体验多经历，可是哪儿有这个时间呢？每一次挑战都是有成本的，每一次看似成功的选择都有可能孕育出失败的种子。开元盛世之后就是安史之变，战无不胜的拿破仑遭遇了滑铁卢，摩托罗拉在销量最高的一年见证了智能手机的诞生，而苏联在如日中天时进军了阿富汗。我慢慢变得不是很喜欢夸人，因为我看到了不少小小的辉煌和小小的失败。我不否认别人的出彩之处，只是暂时厌倦了举轻若重，有些人看见别人有前途就赶紧夸一下，生怕落后。按说出于礼貌应该夸一下，但不宜妄自菲薄。大家都是人类，没什么做得到做不到的。&lt;/p&gt;
+&lt;p&gt;​		将来有时间了，还是想自己做个动态博客，多设计点儿有趣的功能。我身边有CSDN多次热榜第一的室友，有ACM拿过学校第一枚区域赛奖牌的同学，有大一就和中科院一起发表论文的学弟。但对现阶段的我来说，再大的成就都比不上通过考研初试和复试。&lt;/p&gt;
+&lt;h1 id=&#34;常用命令&#34;&gt;常用命令&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new posts/新文章.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;​		每次输入这么多命令太麻烦了，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。&lt;/p&gt;
+&lt;p&gt;​		还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo -D 
+cd ./public
+git add -A
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;脚本提交&amp;#34;&lt;/span&gt;
 git push -u origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ - </description>
         </item>
