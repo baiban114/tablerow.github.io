@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 彦祖，你又来看博客了</title>
-    <link>https://baiban114.github.io/tablerow.github.io/posts/</link>
-    <description>Recent content in Posts on 彦祖，你又来看博客了</description>
+    <title>测试 on 彦祖，你又来看博客了</title>
+    <link>https://baiban114.github.io/tablerow.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 21 Jul 2021 05:37:27 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>随笔</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</link>
-      <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
-      
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</guid>
-      <description>使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。
- 线性：  感觉真的像一条线上的关系，
-是连续的么？
- 线性关系： ​	两个变量之间存在一次方函数关系，就称它们之间存在线性关系。正比例关系是线性关系中的特例，反比例关系不是线性关系。
-​	反比例关系：两个变量乘积一样
-​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。
- 数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。
-这个映射要同时满足两个条件：
-1，可加性 f(x + y) = f(x) + f(y)
-2，齐次性（同质性） f(αx) = αf(x)
-也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的
- 线性的例子  数组：下标和元素一一对应，线性存储  线性代数中学到的 行列式中两个向量可以互相表示，说明他们是线性相关的(行列式得0，因为向量平行)
-云计算 （cloud computing）是分布式计算的一种，通过网络“云”将计算处理程序分解成小程序计算。（有点儿像分治？mapreduce?）
-云计算三种服务模式   IaaS
-  SaaS：(Software as a Service)通过网络进行程序提供的服务
-  PaaS:Platform as a Service）
- 是指平台即服务。 把服务器平台作为一种服务提供的商业模式，以SaaS的模式提交给用户。因此，PaaS也是SaaS模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度(位于中间件层，提供企业进行定制化研发的中间件平台、数据库、应用服务器等)。 在2007年国内外SaaS厂商先后推出自己的PAAS平台  在云计算范围内（分布式、网络）考虑这仨的概念！
-  Cloud Foundry是业界第一个开源PaaS云平台。诞生了“容器”？由Vmware小组开发</description>
-    </item>
-    
+    <lastBuildDate>Mon, 12 Jul 2021 13:05:36 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>放飞自我的第一篇</title>
       <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>

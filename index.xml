@@ -12,12 +12,15 @@
     
     
         <item>
-        <title>知识随笔</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/</link>
+        <title>随笔</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</link>
         <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
         
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/ -&lt;h5 id=&#34;线性&#34;&gt;线性：&lt;/h5&gt;
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/ -&lt;blockquote&gt;
+&lt;p&gt;使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;线性&#34;&gt;线性：&lt;/h5&gt;
 &lt;blockquote&gt;
 &lt;p&gt;感觉真的像一条线上的关系，&lt;/p&gt;
 &lt;p&gt;是连续的么？&lt;/p&gt;
@@ -39,7 +42,55 @@
 &lt;/ul&gt;
 &lt;h6 id=&#34;线性代数中学到的&#34;&gt;线性代数中学到的&lt;/h6&gt;
 &lt;p&gt;行列式中两个向量可以互相表示，说明他们是&lt;strong&gt;线性相关&lt;/strong&gt;的(行列式得0，因为向量平行)&lt;/p&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/%E7%9F%A5%E8%AF%86%E9%9A%8F%E7%AC%94/ - </description>
+&lt;h1 id=&#34;云计算&#34;&gt;云计算&lt;/h1&gt;
+&lt;p&gt;（cloud computing）是分布式计算的一种，通过网络“云”将计算处理程序分解成小程序计算。（有点儿像分治？mapreduce?）&lt;/p&gt;
+&lt;h2 id=&#34;云计算三种服务模式&#34;&gt;云计算三种服务模式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IaaS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SaaS：(Software as a Service)通过网络进行程序提供的服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PaaS:Platform as a Service）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是指&lt;a href=&#34;https://baike.baidu.com/item/%E5%B9%B3%E5%8F%B0%E5%8D%B3%E6%9C%8D%E5%8A%A1/4329761&#34;&gt;平台即服务&lt;/a&gt;。  把服务器平台作为一种服务提供的商业模式，以SaaS的模式提交给用户。因此，PaaS也是&lt;a href=&#34;https://baike.baidu.com/item/SaaS&#34;&gt;SaaS&lt;/a&gt;模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度(位于中间件层，提供企业进行定制化研发的中间件平台、数据库、应用服务器等)。&lt;/li&gt;
+&lt;li&gt;在2007年国内外SaaS厂商先后推出自己的PAAS平台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在云计算范围内（分布式、网络）考虑这仨的概念！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cloud Foundry是业界第一个开源PaaS云平台。诞生了“容器”？由Vmware小组开发&lt;/p&gt;
+&lt;p&gt;而Docker打包时带上了环境（操作系统）？（这里还不明白。其他教程谈到Docker和虚拟机技术的区别是没有抽象出操作系统内核和硬件。但以py为例，创建的py容器雀食带linux操作系统），不用再在另一台机器的配置上麻烦。但单独的docker只是部署小项目的小工具，用容器编排(Docker Compose)和容器集群才算提供Paas。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;单个容器的应用肯定不足以支撑项目，不用集群用不了分布式、云计算？&lt;/p&gt;
+&lt;p&gt;容器编排和脚本差不多&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;老生常谈的概念&#34;&gt;老生常谈的概念&lt;/h1&gt;
+&lt;h2 id=&#34;动态和静态&#34;&gt;动态和静态&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;动态&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;静态&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;出处&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;随数据而变的&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;写死的文件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;动态页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;被调度、分配资源、随运行时环境而改变；有状态转换、上下文/命名空间等限制&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;程序、作业、镜像&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;操作系统、Docker&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/ - </description>
         </item>
     
     
