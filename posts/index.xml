@@ -8,11 +8,11 @@
     <language>zh-cn</language>
     <lastBuildDate>Wed, 21 Jul 2021 05:37:27 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>随笔</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</link>
+      <title>灵鸡一动</title>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</link>
       <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
       
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</guid>
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</guid>
       <description>使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。
  线性：  感觉真的像一条线上的关系，
 是连续的么？
@@ -52,7 +52,7 @@
 ​	将来有时间了，还是想自己做个动态博客，多设计点儿有趣的功能。我身边有CSDN多次热榜第一的室友，有ACM拿过学校第一枚区域赛奖牌的同学，有大一就和中科院一起发表论文的学弟。但对现阶段的我来说，再大的成就都比不上通过考研初试和复试。
 常用命令 ​	每次输入这么多命令太麻烦了，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。
 ​	还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。
-hugo -D cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master </description>
+hugo -D cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master 写博客的技巧总结  放点儿好康的图，开头和中间黑文字多的地方 彩蛋永不过时 对diary这个主题来说，描述不要写太长，不好看；  </description>
     </item>
     
   </channel>

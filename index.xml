@@ -12,12 +12,12 @@
     
     
         <item>
-        <title>随笔</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</link>
+        <title>灵鸡一动</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</link>
         <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
         
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/ -&lt;blockquote&gt;
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/ -&lt;blockquote&gt;
 &lt;p&gt;使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h5 id=&#34;线性&#34;&gt;线性：&lt;/h5&gt;
@@ -90,7 +90,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/tr%E7%9A%84%E8%BE%9E%E5%85%B8/ - </description>
+- https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/ - </description>
         </item>
     
     
@@ -124,7 +124,13 @@ cd ./public
 git add -A
 git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;脚本提交&amp;#34;&lt;/span&gt;
 git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ - </description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;写博客的技巧总结&#34;&gt;写博客的技巧总结&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;放点儿好康的图，开头和中间黑文字多的地方&lt;/li&gt;
+&lt;li&gt;彩蛋永不过时&lt;/li&gt;
+&lt;li&gt;对diary这个主题来说，描述不要写太长，不好看；&lt;/li&gt;
+&lt;/ul&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ - </description>
         </item>
     
     
