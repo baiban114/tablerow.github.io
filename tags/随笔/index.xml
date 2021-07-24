@@ -1,44 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 彦祖，你又来看博客了</title>
-    <link>https://baiban114.github.io/tablerow.github.io/posts/</link>
-    <description>Recent content in Posts on 彦祖，你又来看博客了</description>
+    <title>随笔 on 彦祖，你又来看博客了</title>
+    <link>https://baiban114.github.io/tablerow.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 24 Jul 2021 18:06:08 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>tips</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/tips/</link>
-      <pubDate>Sat, 24 Jul 2021 18:06:08 +0800</pubDate>
-      
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/tips/</guid>
-      <description>考研数学 张宇高数第一讲 等式 =&amp;gt; 两边取极限、倒数、积分； 出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)
-sinx &amp;lt;= x；sinx其实比x小，看泰勒公式就知道；同济书里的证明：数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~</description>
-    </item>
-    
-    <item>
-      <title>灵鸡一动</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</link>
-      <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
-      
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</guid>
-      <description>使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。
-分成三档：死记硬背的、理解的、容易忘也不好整理进体系的小tips。本页内容侧重于理解
- 老生常谈的概念 动态和静态    动态 静态 出处     随数据而变的 写死的文件 动态页面   被调度、分配资源、随运行时环境而改变；有状态转换、上下文/命名空间等限制 程序、作业、镜像 操作系统、Docker    线性：  感觉真的像一条线上的关系，
-是连续的么？
- 线性关系： ​	两个变量之间存在一次方函数关系，就称它们之间存在线性关系。正比例关系是线性关系中的特例，反比例关系不是线性关系。
-​	反比例关系：两个变量乘积一样
-​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。
- 数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。
-这个映射要同时满足两个条件：
-1，可加性 f(x + y) = f(x) + f(y)
-2，齐次性（同质性） f(αx) = αf(x)
-也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的
- 线性的例子  数组：下标和元素一一对应，线性存储  线性代数中学到的 行列式中两个向量可以互相表示，说明他们是线性相关的(行列式得0，因为向量平行)
-云计算 （cloud computing）是分布式计算的一种，通过网络“云”将计算处理程序分解成小程序计算。（有点儿像分治？mapreduce?）</description>
-    </item>
-    
+    <lastBuildDate>Mon, 12 Jul 2021 13:05:36 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>放飞自我的第一篇</title>
       <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
