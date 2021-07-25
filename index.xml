@@ -5,9 +5,20 @@
     <description>Recent content on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 24 Jul 2021 18:06:08 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jul 2021 04:51:02 +0800</lastBuildDate>
     
         <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>开源协议要点整理</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%A6%81%E7%82%B9%E6%95%B4%E7%90%86/</link>
+        <pubDate>Mon, 26 Jul 2021 04:51:02 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%A6%81%E7%82%B9%E6%95%B4%E7%90%86/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%A6%81%E7%82%B9%E6%95%B4%E7%90%86/ -- https://baiban114.github.io/tablerow.github.io/posts/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%A6%81%E7%82%B9%E6%95%B4%E7%90%86/ - </description>
+        </item>
     
     
     
@@ -115,11 +126,11 @@
     
         <item>
         <title>放飞自我的第一篇</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
+        <link>https://baiban114.github.io/tablerow.github.io/about/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
         <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
         
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ -&lt;p&gt;嘶。。diary这个主题有点儿窄，黑文字多的话感jio还是开头中间都有图片观感好点儿。不知道在Typora里设置居中和大小能不能在网站中显示出来，我看我下面六花的图就没居中。。。&lt;/p&gt;
+        <guid>https://baiban114.github.io/tablerow.github.io/about/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/about/%E7%AC%AC%E4%B8%80%E7%AF%87/ -&lt;p&gt;嘶。。diary这个主题有点儿窄，黑文字多的话感jio还是开头中间都有图片观感好点儿。不知道在Typora里设置居中和大小能不能在网站中显示出来，我看我下面六花的图就没居中。。。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://gitee.com/baiban114/tianrun/raw/master/imgs/20210722115148.webp&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
 &lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。&lt;/p&gt;
@@ -151,7 +162,7 @@ git push -u origin master
 &lt;li&gt;对diary这个主题来说，描述不要写太长，不好看；&lt;/li&gt;
 &lt;li&gt;做主题的图片还是放相关的图片比较好，你看那些杂七杂八的博客，一点儿都不好看&lt;/li&gt;
 &lt;/ul&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/ - </description>
+- https://baiban114.github.io/tablerow.github.io/about/%E7%AC%AC%E4%B8%80%E7%AF%87/ - </description>
         </item>
     
     
