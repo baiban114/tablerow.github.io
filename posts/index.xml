@@ -6,7 +6,34 @@
     <description>Recent content in Posts on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 24 Jul 2021 18:06:08 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Jul 2021 16:47:18 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo使用经验</title>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
+      
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
+      <description>写在前面 ​	首先，我还不是很喜欢hugo；除了以前提到的缺点外，其他静态网站生成器有些优点是我挺羡慕的：
+  VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架了
+  Hexo：由中国台湾人创建，中文文档健全(hugo中文文档相当于没有)
+  WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持onenote上传笔记（鸡肋）
+然后。。。hugo的优点可能是快？我不知道。。。
+  快速开始 中文文档少有的中文233：
+快速入门 | Hugo 中文网 (gohugo.cn)
+下载主题可以自己选，主题商城也在这个网站；我看排第一的Vno主题有些类似大火的那个hexo的主题，但我不喜欢。
+自己钻研的定制经验 ​	因为没时间系统学习怎么制作hugo主题，我只能再Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办
+主题文件夹下
+  exampleSite为主题的例子
+  layout放置了页面的主体框架，其中
+  shortcodes目录定义shortcode，可以在其他html中当组件用
+  _default下存放了主体部分的html框架（即body中的主div内的内容，正中间的主体）
+  baseof.html是全html页面的框架，其中head部分被放到了partials文件夹下
+  single.html是文章内容的html
+  可以自定义友链、关于我这种功能的页面在这里，记得将single中的主体框架部分拷贝过来，修改{{.Content}}附近；
+ 踩坑：自定义页面的时候，要全用{{define main}}包裹起来，我把css放在外边，结果只编译了css        partials有评论、head、自定义head、版权、主体js等部分的html
+  站点配置文件config.toml 博文开头的配置 </description>
+    </item>
+    
     <item>
       <title>tips</title>
       <link>https://baiban114.github.io/tablerow.github.io/posts/tips/</link>

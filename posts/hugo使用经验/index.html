@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html><head>
-	<meta name="generator" content="Hugo 0.84.1" />
-<title>彦祖，你又来看博客了</title>
+<title>Hugo使用经验</title>
 
 
-
-  
 
 
 <meta charset="utf-8">
@@ -54,6 +51,10 @@
 
 
 
+
+  
+    <script src="/tablerow.github.io/js/toc.js"></script>
+  
 
 
 
@@ -148,7 +149,7 @@
 <body>
     	<div id="app"><div ref="sideContainer" class="side-container">
     
-    <a class="a-block nav-head active" href="https://baiban114.github.io/tablerow.github.io/">
+    <a class="a-block nav-head false" href="https://baiban114.github.io/tablerow.github.io/">
     
         <div class="nav-title">
             彦祖，你又来看博客了
@@ -222,6 +223,114 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2" onclick="onNavClick(`#写在前面-nav`)" id="写在前面-nav">
+									写在前面
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" onclick="onNavClick(`#快速开始-nav`)" id="快速开始-nav">
+									快速开始
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%87%aa%e5%b7%b1%e9%92%bb%e7%a0%94%e7%9a%84%e5%ae%9a%e5%88%b6%e7%bb%8f%e9%aa%8c" onclick="onNavClick(`#自己钻研的定制经验-nav`)" id="自己钻研的定制经验-nav">
+									自己钻研的定制经验
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%ab%99%e7%82%b9%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6configtoml" onclick="onNavClick(`#站点配置文件configtoml-nav`)" id="站点配置文件configtoml-nav">
+									站点配置文件config.toml
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8d%9a%e6%96%87%e5%bc%80%e5%a4%b4%e7%9a%84%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#博文开头的配置-nav`)" id="博文开头的配置-nav">
+									博文开头的配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -237,8 +346,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 brightness_7
             </i>
         </a>
-        
-        
         
         
     </div>
@@ -293,6 +400,114 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
             
             
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2" onclick="onNavClick(`#写在前面-nav`)" id="写在前面-nav">
+									写在前面
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" onclick="onNavClick(`#快速开始-nav`)" id="快速开始-nav">
+									快速开始
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%87%aa%e5%b7%b1%e9%92%bb%e7%a0%94%e7%9a%84%e5%ae%9a%e5%88%b6%e7%bb%8f%e9%aa%8c" onclick="onNavClick(`#自己钻研的定制经验-nav`)" id="自己钻研的定制经验-nav">
+									自己钻研的定制经验
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%ab%99%e7%82%b9%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6configtoml" onclick="onNavClick(`#站点配置文件configtoml-nav`)" id="站点配置文件configtoml-nav">
+									站点配置文件config.toml
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8d%9a%e6%96%87%e5%bc%80%e5%a4%b4%e7%9a%84%e9%85%8d%e7%bd%ae" onclick="onNavClick(`#博文开头的配置-nav`)" id="博文开头的配置-nav">
+									博文开头的配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
         </div>
     </div>
 </div>
@@ -332,148 +547,141 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div>
 
             <div id="content">
-
 <div ref="streamContainer" class="stream-container">
-    <div class="post-list-container post-list-container-no-background">
-        
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
             
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Hugo使用经验
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2021-07-26
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            
+            
 
-                        </div>
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Hugo使用经验
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-07-26 16:47
+                        </time>
+                        
+
+                        
+
                         
                         
                     </div>
                 </div>
+            </div>
             
-        
-            
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/tips/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                tips
-                            </div>
-                            <div class="post-item-summary">
-                                总结小技巧，该用时要能想起来
-                            </div>
-                            <div class="post-item-meta">
-    2021-07-24
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="写在前面">写在前面</h1>
+<p>​		首先，我还不是很喜欢hugo；除了以前提到的缺点外，其他静态网站生成器有些优点是我挺羡慕的：</p>
+<ul>
+<li>
+<p>VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架了</p>
+</li>
+<li>
+<p>Hexo：由中国台湾人创建，中文文档健全(hugo中文文档相当于没有)</p>
+</li>
+<li>
+<p>WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&quot;shortcode&quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持onenote上传笔记（鸡肋）</p>
+<p>然后。。。hugo的优点可能是快？我不知道。。。</p>
+</li>
+</ul>
+<h1 id="快速开始">快速开始</h1>
+<p>中文文档少有的中文233：</p>
+<p><a href="https://www.gohugo.cn/getting-started/quick-start/">快速入门 | Hugo 中文网 (gohugo.cn)</a></p>
+<p>下载主题可以自己选，主题商城也在这个网站；我看排第一的Vno主题有些类似大火的那个hexo的主题，但我不喜欢。</p>
+<h1 id="自己钻研的定制经验">自己钻研的定制经验</h1>
+<p>​		因为没时间系统学习怎么制作hugo主题，我只能再Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办</p>
+<p>主题文件夹下</p>
+<ul>
+<li>
+<p>exampleSite为主题的例子</p>
+</li>
+<li>
+<p>layout放置了页面的主体框架，其中</p>
+<ul>
+<li>
+<p>shortcodes目录定义shortcode，可以在其他html中当组件用</p>
+</li>
+<li>
+<p>_default下存放了主体部分的html框架（即body中的主div内的内容，正中间的主体）</p>
+<ul>
+<li>
+<p>baseof.html是全html页面的框架，其中head部分被放到了partials文件夹下</p>
+</li>
+<li>
+<p>single.html是文章内容的html</p>
+</li>
+<li>
+<p>可以自定义友链、关于我这种功能的页面在这里，记得将single中的主体框架部分拷贝过来，修改{{.Content}}附近；</p>
+<ul>
+<li>踩坑：自定义页面的时候，要全用{{define main}}包裹起来，我把css放在外边，结果只编译了css</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>partials有评论、head、自定义head、版权、主体js等部分的html</p>
+</li>
+</ul>
+<h1 id="站点配置文件configtoml">站点配置文件config.toml</h1>
+<h1 id="博文开头的配置">博文开头的配置</h1>
 
-                        </div>
-                        
-                        
-                            
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            
-                                 style="background-image: url('https://gitee.com/baiban114/tianrun/raw/master/imgs/20210725162744.webp')"
-                            
-                            ></div>
-                            </div>
-                        
-                    </div>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-07-26</p>
+                    
                 </div>
+            </div>
             
-        
             
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                灵鸡一动
-                            </div>
-                            <div class="post-item-summary">
-                                本篇记录突然出现的灵感、没来及整理的知识点、寻找知识间思想的联系。具体知识点要写到对应的笔记上
-                            </div>
-                            <div class="post-item-meta">
-    2021-07-21
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <nav class="post-pagination">
 
-                        </div>
-                        
-                        
-                            
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            
-                                 style="background-image: url('https://gitee.com/baiban114/tianrun/raw/master/imgs/20210725162900.png')"
-                            
-                            ></div>
-                            </div>
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://baiban114.github.io/tablerow.github.io/about/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                放飞自我的第一篇
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2021-07-12
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://baiban114.github.io/tablerow.github.io/posts/tips/">
+			Previous<br>tips
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
 
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-        </a>
+
+
+
+
+
+
+
+
+
+
+
+<div id="utter" alt="baiban114/tablerow.github.io"></div>
+
+
+
+            </div>
+        </div>
     </div>
 </div>
 
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -738,6 +946,18 @@ app = new Vue({
 
 		
 		
+		const utterances = document.createElement('script');
+        utterances.type = 'text/javascript';
+        utterances.async = true;
+        utterances.setAttribute('theme','github-light')
+        utterances.setAttribute('repo','baiban114\/tablerow.github.io')
+		utterances.setAttribute('issue-term', 'pathname')
+        utterances.crossorigin = 'anonymous';
+        utterances.src = 'https://utteranc.es/client.js';
+ 
+        window.document.getElementById('utter').appendChild(utterances);
+	
+		
 
 
         document.querySelectorAll("table").forEach(function(elem){
@@ -747,6 +967,9 @@ app = new Vue({
             elem.classList.add("table-hover");
         })
 
+        
+        spy();
+        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         
         
     },

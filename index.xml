@@ -5,9 +5,76 @@
     <description>Recent content on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 24 Jul 2021 18:06:08 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jul 2021 16:47:18 +0800</lastBuildDate>
     
         <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Hugo使用经验</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
+        <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/ -&lt;h1 id=&#34;写在前面&#34;&gt;写在前面&lt;/h1&gt;
+&lt;p&gt;​		首先，我还不是很喜欢hugo；除了以前提到的缺点外，其他静态网站生成器有些优点是我挺羡慕的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hexo：由中国台湾人创建，中文文档健全(hugo中文文档相当于没有)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持onenote上传笔记（鸡肋）&lt;/p&gt;
+&lt;p&gt;然后。。。hugo的优点可能是快？我不知道。。。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;快速开始&#34;&gt;快速开始&lt;/h1&gt;
+&lt;p&gt;中文文档少有的中文233：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.gohugo.cn/getting-started/quick-start/&#34;&gt;快速入门 | Hugo 中文网 (gohugo.cn)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载主题可以自己选，主题商城也在这个网站；我看排第一的Vno主题有些类似大火的那个hexo的主题，但我不喜欢。&lt;/p&gt;
+&lt;h1 id=&#34;自己钻研的定制经验&#34;&gt;自己钻研的定制经验&lt;/h1&gt;
+&lt;p&gt;​		因为没时间系统学习怎么制作hugo主题，我只能再Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办&lt;/p&gt;
+&lt;p&gt;主题文件夹下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;exampleSite为主题的例子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;layout放置了页面的主体框架，其中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;shortcodes目录定义shortcode，可以在其他html中当组件用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_default下存放了主体部分的html框架（即body中的主div内的内容，正中间的主体）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;baseof.html是全html页面的框架，其中head部分被放到了partials文件夹下&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;single.html是文章内容的html&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以自定义友链、关于我这种功能的页面在这里，记得将single中的主体框架部分拷贝过来，修改{{.Content}}附近；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;踩坑：自定义页面的时候，要全用{{define main}}包裹起来，我把css放在外边，结果只编译了css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;partials有评论、head、自定义head、版权、主体js等部分的html&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;站点配置文件configtoml&#34;&gt;站点配置文件config.toml&lt;/h1&gt;
+&lt;h1 id=&#34;博文开头的配置&#34;&gt;博文开头的配置&lt;/h1&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/ - </description>
+        </item>
     
     
     
