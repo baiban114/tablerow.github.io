@@ -72,7 +72,7 @@
 &lt;li&gt;
 &lt;p&gt;partials有评论、head、自定义head、版权、主体js等部分的html&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;sidebar:电脑端侧边栏的大纲（说大纲是以为引用了版权页，而版权页单独写在一个html里），移动端这部分有单独页面，不在这里；&lt;/li&gt;
+&lt;li&gt;sidebar:电脑端侧边栏的大纲（说大纲是以为引用了版权页，而版权页单独写在一个html里），移动端这部分有单独页面，不在这里（见baseof.html）；&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

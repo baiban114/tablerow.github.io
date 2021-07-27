@@ -32,7 +32,7 @@
   single.html是文章内容的html
   可以自定义友链、关于我这种功能的页面在这里，记得将single中的主体框架部分拷贝过来，修改{{.Content}}附近；
  踩坑：自定义页面的时候，要全用{{define main}}包裹起来，我把css放在外边，结果只编译了css        partials有评论、head、自定义head、版权、主体js等部分的html
- sidebar:电脑端侧边栏的大纲（说大纲是以为引用了版权页，而版权页单独写在一个html里），移动端这部分有单独页面，不在这里；    站点配置文件config.toml 博文开头的配置 Live2d看板娘 基础款 ​	基础款</description>
+ sidebar:电脑端侧边栏的大纲（说大纲是以为引用了版权页，而版权页单独写在一个html里），移动端这部分有单独页面，不在这里（见baseof.html）；    站点配置文件config.toml 博文开头的配置 Live2d看板娘 基础款 ​	基础款</description>
     </item>
     
     <item>
