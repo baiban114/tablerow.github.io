@@ -78,35 +78,35 @@
 &lt;h1 id=&#34;live2d看板娘&#34;&gt;Live2d看板娘&lt;/h1&gt;
 &lt;h2 id=&#34;基础款&#34;&gt;基础款&lt;/h2&gt;
 &lt;p&gt;​		基础款&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;charset&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
 
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;&amp;gt;
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;L2Dwidget&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;init&lt;/span&gt;({
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;model&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
-            &lt;span style=&#34;color:#a6e22e&#34;&gt;scale&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,
-            &lt;span style=&#34;color:#a6e22e&#34;&gt;hHeadPos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,
-            &lt;span style=&#34;color:#a6e22e&#34;&gt;vHeadPos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.618&lt;/span&gt;,
-            &lt;span style=&#34;color:#a6e22e&#34;&gt;jsonPath&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/shizuku.model.json&amp;#39;&lt;/span&gt;,       &lt;span style=&#34;color:#75715e&#34;&gt;// xxx.model.json 的路径,换人物修改这个
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
-            &lt;span style=&#34;color:#a6e22e&#34;&gt;superSample&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,     &lt;span style=&#34;color:#75715e&#34;&gt;// 超采样等级
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;120&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// canvas的宽度
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt;,        &lt;span style=&#34;color:#75715e&#34;&gt;// canvas的高度
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;position&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#75715e&#34;&gt;// 显示位置：左或右。建议右，移动端不会挡标题，左边还可以放播放器
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;hOffset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// canvas水平偏移
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;vOffset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// canvas垂直偏移
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;mobile&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
-            &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// 是否在移动设备上显示
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;scale&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,           &lt;span style=&#34;color:#75715e&#34;&gt;// 移动设备上的缩放
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;motion&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,       &lt;span style=&#34;color:#75715e&#34;&gt;// 移动设备是否开启重力感应
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;react&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
-            &lt;span style=&#34;color:#a6e22e&#34;&gt;opacityDefault&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;// 默认透明度
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;opacityOnHover&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;// 鼠标移上透明度
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
+&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;&amp;gt;
+    L2Dwidget.init({
+        model: {
+            scale: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,
+            hHeadPos: &lt;span style=&#34;color:#b452cd&#34;&gt;0.5&lt;/span&gt;,
+            vHeadPos: &lt;span style=&#34;color:#b452cd&#34;&gt;0.618&lt;/span&gt;,
+            jsonPath: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/shizuku.model.json&amp;#39;&lt;/span&gt;,       &lt;span style=&#34;color:#228b22&#34;&gt;// xxx.model.json 的路径,换人物修改这个
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
+        display: {
+            superSample: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,     &lt;span style=&#34;color:#228b22&#34;&gt;// 超采样等级
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            width: &lt;span style=&#34;color:#b452cd&#34;&gt;120&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas的宽度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            height: &lt;span style=&#34;color:#b452cd&#34;&gt;300&lt;/span&gt;,        &lt;span style=&#34;color:#228b22&#34;&gt;// canvas的高度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            position: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#228b22&#34;&gt;// 显示位置：左或右。建议右，移动端不会挡标题，左边还可以放播放器
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            hOffset: &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas水平偏移
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            vOffset: &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas垂直偏移
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
+        mobile: {
+            show: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// 是否在移动设备上显示
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            scale: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,           &lt;span style=&#34;color:#228b22&#34;&gt;// 移动设备上的缩放
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            motion: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;,       &lt;span style=&#34;color:#228b22&#34;&gt;// 移动设备是否开启重力感应
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
+        react: {
+            opacityDefault: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#228b22&#34;&gt;// 默认透明度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            opacityOnHover: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#228b22&#34;&gt;// 鼠标移上透明度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
      });
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;加到哪儿应该都行，我是粘到了extended_head里，会加载到head。人物长什么样子可以直接百度“live2d 看板娘 ”+名字、长相什么的。我个人喜欢shizuku，双马尾好可爱ヽ(✿ﾟ▽ﾟ)ノ!!!  hibiki也不错&lt;/p&gt;
 - https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/ - </description>
         </item>
@@ -159,7 +159,7 @@
 &lt;td style=&#34;text-align:center&#34;&gt;动态页面&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;被调度、分配资源、随运行时环境而改变；有些==状态转换？==、上下文/命名空间等限制&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;被调度、分配资源、随运行时环境而改变；有些==状态转换？==上下文/命名空间等限制&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;程序、作业、镜像&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;操作系统、Docker&lt;/td&gt;
 &lt;/tr&gt;
@@ -173,7 +173,7 @@
 &lt;/blockquote&gt;
 &lt;h6 id=&#34;线性关系&#34;&gt;线性关系：&lt;/h6&gt;
 &lt;p&gt;​	两个变量之间存在一次方&lt;a href=&#34;https://baike.baidu.com/item/%E5%87%BD%E6%95%B0%E5%85%B3%E7%B3%BB/9846826&#34;&gt;函数关系&lt;/a&gt;，就称它们之间存在线性关系。&lt;a href=&#34;https://baike.baidu.com/item/%E6%AD%A3%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8192987&#34;&gt;正比例关系&lt;/a&gt;是线性关系中的特例，&lt;a href=&#34;https://baike.baidu.com/item/%E5%8F%8D%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8193245&#34;&gt;反比例关系&lt;/a&gt;不是线性关系。&lt;/p&gt;
-&lt;p&gt;​	*反比例关系：两个变量乘积不变&lt;/p&gt;
+&lt;p&gt;​	&lt;em&gt;反比例关系：两个变量乘积不变&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。&lt;/p&gt;

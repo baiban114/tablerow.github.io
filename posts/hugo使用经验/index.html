@@ -812,35 +812,35 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <h1 id="live2d看板娘">Live2d看板娘</h1>
 <h2 id="基础款">基础款</h2>
 <p>​		基础款</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>  <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;text/javascript&#34;</span> <span style="color:#658b00">charset</span>=<span style="color:#cd5555">&#34;utf-8&#34;</span>  <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
 
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
-    <span style="color:#a6e22e">L2Dwidget</span>.<span style="color:#a6e22e">init</span>({
-        <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">scale</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
-            <span style="color:#a6e22e">hHeadPos</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.5</span>,
-            <span style="color:#a6e22e">vHeadPos</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.618</span>,
-            <span style="color:#a6e22e">jsonPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/shizuku.model.json&#39;</span>,       <span style="color:#75715e">// xxx.model.json 的路径,换人物修改这个
-</span><span style="color:#75715e"></span>        },
-        <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">superSample</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,     <span style="color:#75715e">// 超采样等级
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">120</span>,         <span style="color:#75715e">// canvas的宽度
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">300</span>,        <span style="color:#75715e">// canvas的高度
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">position</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;right&#39;</span>,   <span style="color:#75715e">// 显示位置：左或右。建议右，移动端不会挡标题，左边还可以放播放器
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">hOffset</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,         <span style="color:#75715e">// canvas水平偏移
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">vOffset</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,         <span style="color:#75715e">// canvas垂直偏移
-</span><span style="color:#75715e"></span>        },
-        <span style="color:#a6e22e">mobile</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">show</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,         <span style="color:#75715e">// 是否在移动设备上显示
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">scale</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,           <span style="color:#75715e">// 移动设备上的缩放
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">motion</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,       <span style="color:#75715e">// 移动设备是否开启重力感应
-</span><span style="color:#75715e"></span>        },
-        <span style="color:#a6e22e">react</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">opacityDefault</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,  <span style="color:#75715e">// 默认透明度
-</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">opacityOnHover</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,  <span style="color:#75715e">// 鼠标移上透明度
-</span><span style="color:#75715e"></span>        },
+&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;text/javascript&#34;</span>&gt;
+    L2Dwidget.init({
+        model: {
+            scale: <span style="color:#b452cd">1</span>,
+            hHeadPos: <span style="color:#b452cd">0.5</span>,
+            vHeadPos: <span style="color:#b452cd">0.618</span>,
+            jsonPath: <span style="color:#cd5555">&#39;https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/shizuku.model.json&#39;</span>,       <span style="color:#228b22">// xxx.model.json 的路径,换人物修改这个
+</span><span style="color:#228b22"></span>        },
+        display: {
+            superSample: <span style="color:#b452cd">1</span>,     <span style="color:#228b22">// 超采样等级
+</span><span style="color:#228b22"></span>            width: <span style="color:#b452cd">120</span>,         <span style="color:#228b22">// canvas的宽度
+</span><span style="color:#228b22"></span>            height: <span style="color:#b452cd">300</span>,        <span style="color:#228b22">// canvas的高度
+</span><span style="color:#228b22"></span>            position: <span style="color:#cd5555">&#39;right&#39;</span>,   <span style="color:#228b22">// 显示位置：左或右。建议右，移动端不会挡标题，左边还可以放播放器
+</span><span style="color:#228b22"></span>            hOffset: <span style="color:#b452cd">0</span>,         <span style="color:#228b22">// canvas水平偏移
+</span><span style="color:#228b22"></span>            vOffset: <span style="color:#b452cd">0</span>,         <span style="color:#228b22">// canvas垂直偏移
+</span><span style="color:#228b22"></span>        },
+        mobile: {
+            show: <span style="color:#8b008b;font-weight:bold">true</span>,         <span style="color:#228b22">// 是否在移动设备上显示
+</span><span style="color:#228b22"></span>            scale: <span style="color:#b452cd">1</span>,           <span style="color:#228b22">// 移动设备上的缩放
+</span><span style="color:#228b22"></span>            motion: <span style="color:#8b008b;font-weight:bold">true</span>,       <span style="color:#228b22">// 移动设备是否开启重力感应
+</span><span style="color:#228b22"></span>        },
+        react: {
+            opacityDefault: <span style="color:#b452cd">1</span>,  <span style="color:#228b22">// 默认透明度
+</span><span style="color:#228b22"></span>            opacityOnHover: <span style="color:#b452cd">1</span>,  <span style="color:#228b22">// 鼠标移上透明度
+</span><span style="color:#228b22"></span>        },
      });
-&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
 </code></pre></div><p>加到哪儿应该都行，我是粘到了extended_head里，会加载到head。人物长什么样子可以直接百度“live2d 看板娘 ”+名字、长相什么的。我个人喜欢shizuku，双马尾好可爱ヽ(✿ﾟ▽ﾟ)ノ!!!  hibiki也不错</p>
 
                     
@@ -1189,6 +1189,6 @@ app = new Vue({
 
 
 </script>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1818615632&auto=0&height=66" style="position: fixed;"></iframe>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1818615632&auto=0&height=66" style="position: fixed;bottom: 30px;left: 5px;"></iframe>
     </body>
 </html>
