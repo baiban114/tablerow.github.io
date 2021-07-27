@@ -24,19 +24,21 @@
 &lt;p&gt;VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架了&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Hexo：由中国台湾人创建，中文文档健全(hugo中文文档相当于没有)&lt;/p&gt;
+&lt;p&gt;Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持onenote上传笔记（鸡肋）&lt;/p&gt;
-&lt;p&gt;然后。。。hugo的优点可能是快？我不知道。。。&lt;/p&gt;
+&lt;p&gt;然后。。。hugo的优点可能是快？我不知道。。。但如果开发速度慢、学习成本高不还相当于慢了。。&lt;/p&gt;
+&lt;p&gt;如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;快速开始&#34;&gt;快速开始&lt;/h1&gt;
 &lt;p&gt;中文文档少有的中文233：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.gohugo.cn/getting-started/quick-start/&#34;&gt;快速入门 | Hugo 中文网 (gohugo.cn)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下载主题可以自己选，主题商城也在这个网站；我看排第一的Vno主题有些类似大火的那个hexo的主题，但我不喜欢。&lt;/p&gt;
+&lt;p&gt;其中下载主题可以自己选，主题商城也在这个网站；我看排第一的Vno主题有些类似大火的那个hexo的主题，但我不喜欢。&lt;/p&gt;
 &lt;h1 id=&#34;自己钻研的定制经验&#34;&gt;自己钻研的定制经验&lt;/h1&gt;
-&lt;p&gt;​		因为没时间系统学习怎么制作hugo主题，我只能再Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办&lt;/p&gt;
+&lt;p&gt;​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。&lt;/p&gt;
+&lt;h2 id=&#34;目录结构&#34;&gt;目录结构&lt;/h2&gt;
 &lt;p&gt;主题文件夹下&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -73,6 +75,39 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;站点配置文件configtoml&#34;&gt;站点配置文件config.toml&lt;/h1&gt;
 &lt;h1 id=&#34;博文开头的配置&#34;&gt;博文开头的配置&lt;/h1&gt;
+&lt;h1 id=&#34;live2d看板娘&#34;&gt;Live2d看板娘&lt;/h1&gt;
+&lt;h2 id=&#34;基础款&#34;&gt;基础款&lt;/h2&gt;
+&lt;p&gt;​		基础款&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;&amp;gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;L2Dwidget&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;init&lt;/span&gt;({
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;model&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;scale&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;hHeadPos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;vHeadPos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.618&lt;/span&gt;,
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;jsonPath&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/shizuku.model.json&amp;#39;&lt;/span&gt;,       &lt;span style=&#34;color:#75715e&#34;&gt;// xxx.model.json 的路径,换人物修改这个
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;superSample&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,     &lt;span style=&#34;color:#75715e&#34;&gt;// 超采样等级
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;120&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// canvas的宽度
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt;,        &lt;span style=&#34;color:#75715e&#34;&gt;// canvas的高度
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;position&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#75715e&#34;&gt;// 显示位置：左或右。建议右，移动端不会挡标题，左边还可以放播放器
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;hOffset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// canvas水平偏移
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;vOffset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// canvas垂直偏移
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;mobile&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,         &lt;span style=&#34;color:#75715e&#34;&gt;// 是否在移动设备上显示
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;scale&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,           &lt;span style=&#34;color:#75715e&#34;&gt;// 移动设备上的缩放
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;motion&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,       &lt;span style=&#34;color:#75715e&#34;&gt;// 移动设备是否开启重力感应
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;react&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;opacityDefault&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;// 默认透明度
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;opacityOnHover&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;// 鼠标移上透明度
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        },
+     });
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;加到哪儿应该都行，我是粘到了extended_head里，会加载到head。人物长什么样子可以直接百度“live2d 看板娘 ”+名字、长相什么的。我个人喜欢shizuku，双马尾好可爱ヽ(✿ﾟ▽ﾟ)ノ!!!  hibiki也不错&lt;/p&gt;
 - https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/ - </description>
         </item>
     
@@ -207,52 +242,6 @@
 &lt;p&gt;Dockerfile和脚本差不多&lt;/p&gt;
 &lt;/blockquote&gt;
 - https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>放飞自我的第一篇</title>
-        <link>https://baiban114.github.io/tablerow.github.io/about/</link>
-        <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
-        
-        <guid>https://baiban114.github.io/tablerow.github.io/about/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/about/ -&lt;p&gt;嘶。。diary这个主题有点儿窄，黑文字多的话感jio还是开头中间都有图片观感好点儿。不知道在Typora里设置居中和大小能不能在网站中显示出来，我看我下面六花的图就没居中。。。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/baiban114/tianrun/raw/master/imgs/20210722115148.webp&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建&lt;/h1&gt;
-&lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的。&lt;/p&gt;
-&lt;p&gt;​	相比之下hexo是中国台湾人创建的，有中文文档，就很爽。&lt;/p&gt;
-&lt;p&gt;​	如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。&lt;/p&gt;
-&lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的静态页面突然就生不出来了。。。QAQ&lt;/p&gt;
-&lt;p&gt;​	改了配置文件、添加了新文章、执行hugo命令后也没有生成新的、正确的静态页面。根据提示，安装extended版本 ，结果又报错说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）。&lt;/p&gt;
-&lt;p&gt;​		最后用了windows版+github pages。省时又省心，效果还一样。之前尝试部署到服务器上的我简直是个可爱的小傻瓜。&lt;/p&gt;
-&lt;p&gt;​		另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？&lt;/p&gt;
-&lt;p&gt;​		近日正好收到一篇公众号的推送，关于hugo搭建博客的，就用上了。最早了解的是wordPress，但没有使用；身边人用的最多的是hexo。年轻时总想着搞个人博客，早就接触到了建站容易的静态博客，但感觉搭建起来对技术提高帮助不大，就没搞。实际上现在搞了也没多大的帮助，只是偶尔刺激自己在博客上整理思想、经验。&lt;/p&gt;
-&lt;p&gt;​		尝试了下集成utteranc评论功能，虽然所用的diary主题没有支持，但我自己把它添上去了。&lt;/p&gt;
-&lt;p&gt;​		现在博客内容主要是写给自己的，到不用担心信息孤岛的问题。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0617%2F6da1c4d9j00qut6ji005oc001aa00q0m.jpg&amp;amp;thumbnail=650x2147483647&amp;amp;quality=80&amp;amp;type=jpg#pic_center&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;为什么搞静态博客跟风&#34;&gt;为什么搞静态博客？跟风&lt;/h1&gt;
-&lt;p&gt;​		雀食跟风，我明明没啥要写的，也没时间写；只是因为好多人都在搞博客。要说我也不喜欢静态博客，它搭建成本低，但定制需要额外学习成本（学习到的技术不是很通用）。它适合那些专门写文章的人，专注于写作，不用花过多心思管理代码和服务器。嘛，不过有人喜欢用就是了，没必要当成普世的目标。身边搞博客的人越来越多，还大肆吹嘘博客的好处，仿佛每个成功男人的背后都有一个静态博客网站。三人成虎，最后我也跟风搞了。前前后后花了珍贵的两天复习时间，做了一件平平无奇的事情。&lt;/p&gt;
-&lt;p&gt;​		我倒是不反对多体验多经历，可是哪儿有这个时间呢？每一次挑战都是有成本的，每一次看似成功的选择都有可能孕育出失败的种子。开元盛世之后就是安史之变，战无不胜的拿破仑遭遇了滑铁卢，摩托罗拉在销量最高的一年见证了智能手机的诞生，而苏联在如日中天时进军了阿富汗。我慢慢变得不是很喜欢夸人，因为我看到了不少小小的辉煌和小小的失败。我不否认别人的出彩之处，只是暂时厌倦了举轻若重，有些人看见别人有前途就赶紧夸一下，生怕落后。按说出于礼貌应该夸一下，但不宜妄自菲薄。大家都是人类，没什么做得到做不到的。&lt;/p&gt;
-&lt;p&gt;​		将来有时间了，还是想自己做个动态博客，多设计点儿有趣的功能。我身边有CSDN多次热榜第一的室友，有ACM拿过学校第一枚区域赛奖牌的同学，有大一就和中科大还是院来着一起搞论文的学弟。但对现阶段的我来说，再大的成就都比不上通过考研初试和复试。&lt;/p&gt;
-&lt;h1 id=&#34;常用命令&#34;&gt;常用命令&lt;/h1&gt;
-&lt;p&gt;​		utteranc.es客户端地址：https://utteranc.es/client.js&lt;/p&gt;
-&lt;p&gt;​		获取QQ头像的url:	&lt;code&gt;https://q1.qlogo.cn/g?b=qq&amp;amp;nk=QQ号码&amp;amp;s=640&lt;/code&gt;。用edge浏览器的时候发现，用https访问博客，如果头像url用http的话会被拦截。&lt;/p&gt;
-&lt;p&gt;​		每次输入这么多命令太麻烦了，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。&lt;/p&gt;
-&lt;p&gt;​		还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo -D 
-cd ./public
-git add -A
-git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;脚本提交&amp;#34;&lt;/span&gt;
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;写博客的技巧总结&#34;&gt;写博客的技巧总结&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;放点儿好康的图，开头和中间黑文字多的地方&lt;/li&gt;
-&lt;li&gt;彩蛋永不过时&lt;/li&gt;
-&lt;li&gt;对diary这个主题来说，描述不要写太长，不好看；&lt;/li&gt;
-&lt;li&gt;做主题的还是放相关的图片比较好，你看那些杂七杂八、二次元美图成灾的博客，一点儿都不好看&lt;/li&gt;
-&lt;/ul&gt;
-- https://baiban114.github.io/tablerow.github.io/about/ - </description>
         </item>
     
     
