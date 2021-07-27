@@ -71,6 +71,9 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;partials有评论、head、自定义head、版权、主体js等部分的html&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sidebar:电脑端侧边栏的大纲（说大纲是以为引用了版权页，而版权页单独写在一个html里），移动端这部分有单独页面，不在这里；&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;站点配置文件configtoml&#34;&gt;站点配置文件config.toml&lt;/h1&gt;
@@ -159,7 +162,7 @@
 &lt;td style=&#34;text-align:center&#34;&gt;动态页面&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;被调度、分配资源、随运行时环境而改变；有些==状态转换？==上下文/命名空间等限制&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;被调度、分配资源、随运行时环境而改变；有状态转换？上下文/命名空间等限制&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;程序、作业、镜像&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;操作系统、Docker&lt;/td&gt;
 &lt;/tr&gt;
