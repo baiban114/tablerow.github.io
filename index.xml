@@ -95,7 +95,7 @@
             superSample: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,     &lt;span style=&#34;color:#228b22&#34;&gt;// 超采样等级
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            width: &lt;span style=&#34;color:#b452cd&#34;&gt;120&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas的宽度
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            height: &lt;span style=&#34;color:#b452cd&#34;&gt;300&lt;/span&gt;,        &lt;span style=&#34;color:#228b22&#34;&gt;// canvas的高度
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            position: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#228b22&#34;&gt;// 显示位置：左或右。建议右，移动端不会挡标题，左边还可以放播放器
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            position: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#228b22&#34;&gt;// 显示位置：左或右
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            hOffset: &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas水平偏移
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            vOffset: &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas垂直偏移
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },

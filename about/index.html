@@ -181,6 +181,13 @@
   }
 </script>
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
 </head>
 <body>
     	<div id="app"><div ref="sideContainer" class="side-container">
@@ -258,7 +265,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
            
         
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1818615632&auto=0&height=66"></iframe>
+<meting-js
+	server="netease"
+	type="playlist"
+	id="2284872309">
+</meting-js>
     </div>
     
 </div><div ref="extraContainer" class="extra-container">
@@ -586,7 +597,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
         <div class="single-column-header-title">彦祖，你又来看博客了</div>
                
         
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1818615632&auto=0&height=66"></iframe>
+<meting-js
+	server="netease"
+	type="playlist"
+	id="2284872309">
+</meting-js>
         
 
     </a>
@@ -646,12 +661,14 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>​		获取QQ头像的url:	<code>https://q1.qlogo.cn/g?b=qq&amp;nk=QQ号码&amp;s=640</code>。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。</p>
 <p>​		每次输入这么多命令太麻烦了，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。</p>
 <p>​		还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo -D
+hugo
 <span style="color:#658b00">cd</span> ./public
 git add -A
 git commit -m <span style="color:#cd5555">&#34;脚本提交&#34;</span>
 git push -u origin master
-</code></pre></div><p>​		还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；</p>
+</code></pre></div><p>​		先执行一遍hugo -D是为了将草稿也编译一下；</p>
+<p>​		还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；</p>
 <h1 id="写博客的技巧总结">写博客的技巧总结</h1>
 <ul>
 <li>放点儿好康的图，开头和中间黑文字多的地方</li>
