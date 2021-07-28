@@ -80,7 +80,6 @@
 
 .myfriends a {
   color: black;
-  background-color: #0CC5D2;
 }
 
 .friendurl {
@@ -105,6 +104,8 @@
   margin-top: 10px;
   width: 48%;
   display: inline-block !important;
+  background-color: #0CC5D2;
+  box-shadow: 0 0px 8px rgba(0, 0, 0.1, 0);
 }
 
 .frienddiv:hover {
@@ -1193,10 +1194,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 	
 </div>
             </div>
-    
-<script>
+    <script>
 let app;
-
 
 app = new Vue({
     el: '#app',
@@ -1207,7 +1206,6 @@ app = new Vue({
         mounted: false,
         isDarkMode: false
     },
-
     methods: {
             sgn(t, x) {
                 let k = 1. / (1. - 2 * t);
