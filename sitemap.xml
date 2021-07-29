@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</loc>
+    <loc>/</loc>
     <lastmod>2021-07-26T16:47:18+08:00</lastmod>
   </url><url>
-    <loc>https://baiban114.github.io/tablerow.github.io/posts/</loc>
+    <loc>/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</loc>
     <lastmod>2021-07-26T16:47:18+08:00</lastmod>
   </url><url>
-    <loc>https://baiban114.github.io/tablerow.github.io/</loc>
+    <loc>/posts/</loc>
     <lastmod>2021-07-26T16:47:18+08:00</lastmod>
   </url><url>
-    <loc>https://baiban114.github.io/tablerow.github.io/posts/tips/</loc>
+    <loc>/posts/tips/</loc>
     <lastmod>2021-07-24T18:06:08+08:00</lastmod>
   </url><url>
-    <loc>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</loc>
+    <loc>/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</loc>
     <lastmod>2021-07-21T05:37:27+08:00</lastmod>
   </url><url>
-    <loc>https://baiban114.github.io/tablerow.github.io/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://baiban114.github.io/tablerow.github.io/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

@@ -1,308 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>彦祖，你又来看博客了</title>
-    <link>https://baiban114.github.io/tablerow.github.io/</link>
-    <description>Recent content on 彦祖，你又来看博客了</description>
+    <title></title>
+    <link>/</link>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Jul 2021 16:47:18 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jul 2021 16:47:18 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo使用经验</title>
+      <link>/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
+      
+      <guid>/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
+      <description>写在前面 ​	hugo最强使用技巧：别用hugo
+​	开个玩笑，先从我的角度说说其他静态网站生成器的优点：
+  VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架;
+  Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)，插!件!健!全!可顺便学习node.js；
+  WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；
+然后。。。hugo的优点可能是快？我不知道。。。可我是男人可如果开发速度慢、学习成本高不还相当于慢了。。
+如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。
+当然所有工具都是没有上限的！只是碰壁次数与资料多少、学习成本之类的区别！
+我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。
+  快速开始 中文文档少有的中文233：
+快速入门 | Hugo 中文网 (gohugo.cn)
+其中下载主题这步可以自己选，主题商城也在这个网站中↑；
+我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。自己魔改了一部分，为了添加功能。
+常用命令、脚本 ​	utteranc.es客户端地址：https://utteranc.es/client.js
+​	获取QQ头像的url:	https://q1.qlogo.cn/g?b=qq&amp;amp;nk=QQ号码&amp;amp;s=640。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。
+​	每次输入这么多命令太麻烦了，hugo似乎没有把自己提交到github的命令，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。
+​	还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。
+hugo -D hugo cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master ​	先执行一遍hugo -D是为了将草稿也编译一下；
+​	还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；
+​	也可以使用github Actions来完成持续集成（CI）,学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，
+自己钻研的定制经验 ​	因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。
+​	对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…</description>
+    </item>
     
-        <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tips</title>
+      <link>/posts/tips/</link>
+      <pubDate>Sat, 24 Jul 2021 18:06:08 +0800</pubDate>
+      
+      <guid>/posts/tips/</guid>
+      <description>考研数学 张宇高数第一讲 等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减，换位置，目的是得到想要的； 出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)
+sinx &amp;lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~</description>
+    </item>
     
-    
-    
-        <item>
-        <title>Hugo使用经验</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
-        <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
-        
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/ -&lt;h1 id=&#34;写在前面&#34;&gt;写在前面&lt;/h1&gt;
-&lt;p&gt;​		hugo最强使用技巧：&lt;del&gt;别用hugo&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;​		开个玩笑，先从我的角度说说其他静态网站生成器的优点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架了&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)，插件健全；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持onenote上传笔记（鸡肋）&lt;/p&gt;
-&lt;p&gt;然后。。。hugo的优点可能是快？我不知道。。。&lt;del&gt;可我是男人&lt;/del&gt;可如果开发速度慢、学习成本高不还相当于慢了。。&lt;/p&gt;
-&lt;p&gt;如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。&lt;/p&gt;
-&lt;p&gt;当然所有工具都是没有上限的！只是碰壁次数与资料多少、学习成本之类的区别！&lt;/p&gt;
-&lt;p&gt;我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。似乎不支持渲染Typora中的==标记==。xi ka xi,为了在Typora中好看，我仍然会使用==标记==。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;快速开始&#34;&gt;快速开始&lt;/h1&gt;
-&lt;p&gt;中文文档少有的中文233：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.gohugo.cn/getting-started/quick-start/&#34;&gt;快速入门 | Hugo 中文网 (gohugo.cn)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其中下载主题这步可以自己选，主题商城也在这个网站；我看排第一的Vno主题有些类似大火的那个hexo的主题，但我不喜欢。&lt;/p&gt;
-&lt;h1 id=&#34;常用命令&#34;&gt;常用命令&lt;/h1&gt;
-&lt;p&gt;​		utteranc.es客户端地址：https://utteranc.es/client.js&lt;/p&gt;
-&lt;p&gt;​		获取QQ头像的url:	&lt;code&gt;https://q1.qlogo.cn/g?b=qq&amp;amp;nk=QQ号码&amp;amp;s=640&lt;/code&gt;。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。&lt;/p&gt;
-&lt;p&gt;​		每次输入这么多命令太麻烦了，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。&lt;/p&gt;
-&lt;p&gt;​		还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo -D
-hugo
-&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ./public
-git add -A
-git commit -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;脚本提交&amp;#34;&lt;/span&gt;
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;​		先执行一遍hugo -D是为了将草稿也编译一下；&lt;/p&gt;
-&lt;p&gt;​		还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；&lt;/p&gt;
-&lt;h1 id=&#34;自己钻研的定制经验&#34;&gt;自己钻研的定制经验&lt;/h1&gt;
-&lt;p&gt;​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。&lt;/p&gt;
-&lt;p&gt;​		对Diary主题定制了不少了，有点儿想提PR的冲动。。。不过经验还差太多，不知道合不合适。。。羞(．． )…&lt;/p&gt;
-&lt;h2 id=&#34;目录结构&#34;&gt;目录结构&lt;/h2&gt;
-&lt;p&gt;以Diary为例，主题文件夹下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;exampleSite为主题的例子&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;layout放置了页面的主体框架，其中&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;shortcodes目录定义shortcode，可以在其他html中当组件用&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;_default下存放了主体部分的html框架（即body中的主div内的内容，正中间的主体）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;baseof.html是全html页面的框架，其中head部分被放到了partials文件夹下&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;single.html是文章内容的html&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可以自定义友链、“关于我”这种功能的页面在这里，记得将single中的主体框架部分拷贝过来，修改{{.Content}}附近；&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;踩坑：自定义页面的时候，要全用{{define main}}包裹起来，我把css放在外边，结果只编译了css&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;partials有评论、head、自定义head、版权、主体js等部分的html&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;sidebar:电脑端侧边栏的大纲（说是大纲是因为引用了版权页，而版权页单独写在一个html里），移动端这部分有单独页面，不在这里（见baseof.html）；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;站点配置文件configtoml&#34;&gt;站点配置文件config.toml&lt;/h2&gt;
-&lt;h2 id=&#34;博文开头的元数据配置&#34;&gt;博文开头的元数据配置&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;layout: &amp;quot;&amp;quot;	不用带后缀；该md文件会寻找layout下同名html文件进行渲染；&lt;/li&gt;
-&lt;li&gt;draft: true   为true时是草稿，hugo命令不会编译、在首页显示草稿；带上-D参数可以。这也是为什么我要在脚本里先后执行两次命令。
-&lt;ul&gt;
-&lt;li&gt;关于我、友链等页面可以用这种方式隐藏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其他的可以见主题文件夹下/archetypes/default.md&lt;/p&gt;
-&lt;h1 id=&#34;拓展&#34;&gt;拓展&lt;/h1&gt;
-&lt;h2 id=&#34;live2d看板娘&#34;&gt;Live2d看板娘&lt;/h2&gt;
-&lt;h3 id=&#34;基础款&#34;&gt;基础款&lt;/h3&gt;
-&lt;p&gt;​		基础款&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;charset&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;&amp;gt;
-    L2Dwidget.init({
-        model: {
-            scale: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,
-            hHeadPos: &lt;span style=&#34;color:#b452cd&#34;&gt;0.5&lt;/span&gt;,
-            vHeadPos: &lt;span style=&#34;color:#b452cd&#34;&gt;0.618&lt;/span&gt;,
-            jsonPath: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/shizuku.model.json&amp;#39;&lt;/span&gt;,       &lt;span style=&#34;color:#228b22&#34;&gt;// xxx.model.json 的路径,换人物修改这个
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
-        display: {
-            superSample: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,     &lt;span style=&#34;color:#228b22&#34;&gt;// 超采样等级
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            width: &lt;span style=&#34;color:#b452cd&#34;&gt;120&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas的宽度
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            height: &lt;span style=&#34;color:#b452cd&#34;&gt;300&lt;/span&gt;,        &lt;span style=&#34;color:#228b22&#34;&gt;// canvas的高度
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            position: &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#228b22&#34;&gt;// 显示位置：左或右
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            hOffset: &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas水平偏移
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            vOffset: &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// canvas垂直偏移
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
-        mobile: {
-            show: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;,         &lt;span style=&#34;color:#228b22&#34;&gt;// 是否在移动设备上显示
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            scale: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,           &lt;span style=&#34;color:#228b22&#34;&gt;// 移动设备上的缩放
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            motion: &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;,       &lt;span style=&#34;color:#228b22&#34;&gt;// 移动设备是否开启重力感应
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
-        react: {
-            opacityDefault: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#228b22&#34;&gt;// 默认透明度
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;            opacityOnHover: &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;,  &lt;span style=&#34;color:#228b22&#34;&gt;// 鼠标移上透明度
-&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;        },
-     });
-&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;加到哪儿应该都行，我是粘到了extended_head里，这样会加载到head标签中。人物长什么样子可以直接百度“live2d 看板娘 ”+名字、长相什么的。我个人喜欢shizuku，双马尾好可爱ヽ(✿ﾟ▽ﾟ)ノ!!!  hibiki也不错&lt;/p&gt;
-&lt;h2 id=&#34;音乐插件&#34;&gt;音乐插件&lt;/h2&gt;
-&lt;p&gt;使用了APlayer &amp;amp;&amp;amp; MetingJS。直接看MetingJS的github仓库即可：&lt;a href=&#34;https://github.com/metowolf/MetingJS&#34;&gt;MetingJS&lt;/a&gt;，Readme中已经给出了继承APlayer的用法，CV大法好（doge）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;rel&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#658b00&#34;&gt;src&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;script&lt;/span&gt;&amp;gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;&amp;lt;!-- 放在想生成播放器的地方⬇ --&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;meting-js&lt;/span&gt;
-	&lt;span style=&#34;color:#658b00&#34;&gt;server&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;netease&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#658b00&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;playlist&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#658b00&#34;&gt;id&lt;/span&gt;=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;					
-	&lt;span style=&#34;color:#658b00&#34;&gt;list-folded &lt;/span&gt;= &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;	
-	&lt;span style=&#34;color:#658b00&#34;&gt;volume &lt;/span&gt;= &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0.3&amp;#34;&lt;/span&gt;			
-&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;meting-js&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aplay是一个Html5音乐播放器，而MetingJS结合了国内几大音乐平台的api。网易云官方现在似乎不提供可用的歌单外链。&lt;/p&gt;
-&lt;p&gt;注：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;我在使用Meting提供的网易云api时，无法获取有170+首歌曲的歌单的数据（没有返回数据），最后选择了一个70+的歌单。&lt;/li&gt;
-&lt;li&gt;需要的js、css文件在头文件中&lt;code&gt;按顺序&lt;/code&gt;引入（有依赖关系）&lt;/li&gt;
-&lt;li&gt;Aplayer官方提出了好多静态博客插件，唯独没有hugo的。~~《如果早知道，用hugo会被孤立。。。》~~虽然我也没用那些插件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;评论&#34;&gt;评论&lt;/h2&gt;
-&lt;h1 id=&#34;我为什么用hugo&#34;&gt;我为什么用hugo?&lt;/h1&gt;
-&lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh&lt;/p&gt;
-&lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的页面突然就生不出来了。。。QAQ&lt;/p&gt;
-&lt;p&gt;​	改了配置文件、添加了新文章、执行hugo命令后也没有生成新的、正确的静态页面。根据提示，安装extended版本 ，结果又报错说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）。现在有经验了，回想回想可能是配置文件或者命令错了。&lt;/p&gt;
-&lt;p&gt;​		最后用了windows版+github pages。省时又省心，效果还一样。之前尝试部署到服务器上的我简直是个可爱的小傻瓜。&lt;/p&gt;
-&lt;p&gt;​		另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？&lt;/p&gt;
-&lt;p&gt;​		近日正好收到一篇公众号的推送，是关于hugo搭建博客的，就用上了。最早了解的是wordPress，但没有使用；身边人用的最多的是hexo。年轻时总想着搞个人博客，早就接触到了建站容易的静态博客，但感觉搭建起来对技术提高帮助不大，就没搞。&lt;/p&gt;
-&lt;p&gt;​		现在博客做起来了，能刺激我总结总结经验知识。通过添加各种前端特效、插件，巩固了一下前端基础。这些可以做刚学完前端基础的过渡练习，要是那会儿就来实战练习就好了。那会儿天天做作业，贼枯燥，做完还就扔了忘了，没实战也没效率(* ￣︿￣)&lt;/p&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>tips</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/tips/</link>
-        <pubDate>Sat, 24 Jul 2021 18:06:08 +0800</pubDate>
-        
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/tips/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/tips/ -&lt;h1 id=&#34;考研数学&#34;&gt;考研数学&lt;/h1&gt;
-&lt;h2 id=&#34;张宇高数第一讲&#34;&gt;张宇高数第一讲&lt;/h2&gt;
-&lt;p&gt;等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减，换位置，目的是得到想要的；
-出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)&lt;/p&gt;
-&lt;p&gt;sinx &amp;lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：&lt;img src=&#34;https://img-blog.csdnimg.cn/20201117164621931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NjbnRfMjAxMg==,size_16,color_FFFFFF,t_70&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;
-&lt;p&gt;数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~&lt;/p&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/tips/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>灵鸡一动</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</link>
-        <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
-        
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</guid>
-        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/ -&lt;blockquote&gt;
-&lt;p&gt;使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。&lt;/p&gt;
-&lt;p&gt;知识类分三档：死记硬背的、理解的、容易忘也不好整理进体系的小tips。本页记录理解档内容&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;知识内容都是自己的理解，要时长更新纠错&lt;/p&gt;
-&lt;p&gt;标题灵感来自高中物理老师ᕕ( ᐛ )ᕗ&lt;/p&gt;
-&lt;h1 id=&#34;老生常谈的概念&#34;&gt;老生常谈的概念&lt;/h1&gt;
-&lt;h2 id=&#34;动态和静态&#34;&gt;动态和静态&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;动态&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;静态&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;出处&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;随数据而变的&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;写死的文件&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;动态页面&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;被调度、分配资源、随运行时环境而改变；有状态转换？上下文/命名空间等限制&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;程序、作业、镜像&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;操作系统、Docker&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;应该雀食哈，动态才有状态转换的概念&lt;/p&gt;
-&lt;h2 id=&#34;线性&#34;&gt;线性：&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;感觉真的像一条线上的关系，&lt;/p&gt;
-&lt;p&gt;是连续的么？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;线性关系&#34;&gt;线性关系：&lt;/h6&gt;
-&lt;p&gt;​	两个变量之间存在一次方&lt;a href=&#34;https://baike.baidu.com/item/%E5%87%BD%E6%95%B0%E5%85%B3%E7%B3%BB/9846826&#34;&gt;函数关系&lt;/a&gt;，就称它们之间存在线性关系。&lt;a href=&#34;https://baike.baidu.com/item/%E6%AD%A3%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8192987&#34;&gt;正比例关系&lt;/a&gt;是线性关系中的特例，&lt;a href=&#34;https://baike.baidu.com/item/%E5%8F%8D%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8193245&#34;&gt;反比例关系&lt;/a&gt;不是线性关系。&lt;/p&gt;
-&lt;p&gt;​	&lt;em&gt;反比例关系：两个变量乘积不变&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。&lt;/p&gt;
-&lt;p&gt;这个映射要同时满足两个条件：&lt;/p&gt;
-&lt;p&gt;1，可加性 f(x + y) = f(x) + f(y)&lt;/p&gt;
-&lt;p&gt;2，齐次性（同质性） f(αx) = αf(x)&lt;/p&gt;
-&lt;p&gt;也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;这个齐次性放在齐次线性方程怎么理解？（我连名字都不一定记准。。）&lt;/em&gt;&lt;/p&gt;
-&lt;h6 id=&#34;线性的例子&#34;&gt;线性的例子&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;数组：下标和元素一一对应，线性存储&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;线性代数中学到的&#34;&gt;线性代数中学到的&lt;/h6&gt;
-&lt;p&gt;行列式中两个向量可以互相表示，说明他们是&lt;strong&gt;线性相关&lt;/strong&gt;的(行列式得0，因为向量平行)&lt;/p&gt;
-&lt;h2 id=&#34;流批&#34;&gt;流批！&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;流、流处理&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;批处理&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;出处or举例&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;流水一样源源不断的；来一个搞一个&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;先攒一批，一次搞一批&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Mybatis流式查询（可实现分页）/win脚本（批处理）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;一般需要注意open和close&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;有些不处理完一批不停&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;字符流、字节流、IO流&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;联机命令接口（算吗？）可交互&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;脱机命令接口&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;操作系统（再看书研究）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h1 id=&#34;云计算&#34;&gt;云计算&lt;/h1&gt;
-&lt;p&gt;（cloud computing）是分布式计算的一种，通过网络“云”将计算处理程序分解成小程序计算。（有点儿像分治？mapreduce?）&lt;/p&gt;
-&lt;h2 id=&#34;云计算三种服务模式&#34;&gt;云计算三种服务模式&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;IaaS&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SaaS：(Software as a Service)通过网络进行程序提供的服务&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;PaaS:（Platform as a Service）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;是指&lt;a href=&#34;https://baike.baidu.com/item/%E5%B9%B3%E5%8F%B0%E5%8D%B3%E6%9C%8D%E5%8A%A1/4329761&#34;&gt;平台即服务&lt;/a&gt;。  把服务器平台作为一种服务提供的商业模式，以SaaS的模式提交给用户。因此，PaaS也是&lt;a href=&#34;https://baike.baidu.com/item/SaaS&#34;&gt;SaaS&lt;/a&gt;模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度(位于中间件层，提供企业进行定制化研发的中间件平台、数据库、应用服务器等)。&lt;/li&gt;
-&lt;li&gt;在2007年国内外SaaS厂商先后推出自己的PAAS平台&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在云计算范围内（分布式、网络）考虑这仨的概念！&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cloud Foundry是业界第一个开源PaaS云平台。诞生了“容器”？由Vmware小组开发&lt;/p&gt;
-&lt;p&gt;而Docker打包时带上了环境（操作系统）？（这里还不明白。其他教程谈到Docker和虚拟机技术的区别是没有抽象出操作系统内核和硬件。但以py为例，创建的py容器雀食带linux操作系统），不用再在另一台机器的配置上麻烦。但单独的docker只是部署小项目的小工具，用容器编排(Docker Compose)和容器集群才算提供Paas。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;单个容器的应用肯定不足以支撑项目，不用集群用不了分布式、云计算？&lt;/p&gt;
-&lt;p&gt;Dockerfile和脚本差不多&lt;/p&gt;
-&lt;/blockquote&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/ - </description>
-        </item>
-    
+    <item>
+      <title>灵鸡一动</title>
+      <link>/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</link>
+      <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
+      
+      <guid>/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</guid>
+      <description>使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。
+知识类分三档：死记硬背的、理解的、容易忘也不好整理进体系的小tips。本页记录理解档内容
+ 知识内容都是自己的理解，要时长更新纠错
+标题灵感来自高中物理老师ᕕ( ᐛ )ᕗ
+老生常谈的概念 动态和静态    动态 静态 出处     随数据而变的 写死的文件 动态页面   被调度、分配资源、随运行时环境而改变；有状态转换？上下文/命名空间等限制 程序、作业、镜像 操作系统、Docker    应该雀食哈，动态才有状态转换的概念
+线性：  感觉真的像一条线上的关系，
+是连续的么？
+ 线性关系： ​	两个变量之间存在一次方函数关系，就称它们之间存在线性关系。正比例关系是线性关系中的特例，反比例关系不是线性关系。
+​	反比例关系：两个变量乘积不变
+​	如果把这两个变量分别作为点的横坐标与纵坐标，其图象是平面上的一条直线，则这两个变量之间的关系就是线性关系。即如果可以用一个二元一次方程来表达两个变量之间关系的话，这两个变量之间的关系称为线性关系，因而，二元一次方程也称为线性方程。
+ 数学里，一般说的线性，是说的线性映射，这是一个函数（或称为映射，function or map），而不是方程 (equation)。
+这个映射要同时满足两个条件：
+1，可加性 f(x + y) = f(x) + f(y)
+2，齐次性（同质性） f(αx) = αf(x)
+也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的
+ 这个齐次性放在齐次线性方程怎么理解？（我连名字都不一定记准。。）
+线性的例子  数组：下标和元素一一对应，线性存储  线性代数中学到的 行列式中两个向量可以互相表示，说明他们是线性相关的(行列式得0，因为向量平行)</description>
+    </item>
     
   </channel>
-</rss> 
+</rss>
