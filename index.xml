@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <link>/</link>
-    <description>Recent content on </description>
+    <title>彦祖，你又来看博客了</title>
+    <link>https://baiban114.github.io/tablerow.github.io/</link>
+    <description>Recent content on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 26 Jul 2021 16:47:18 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 26 Jul 2021 16:47:18 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo使用经验</title>
-      <link>/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
       <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
       
-      <guid>/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
       <description>写在前面 ​	hugo最强使用技巧：别用hugo
 ​	开个玩笑，先从我的角度说说其他静态网站生成器的优点：
   VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架;
@@ -38,20 +39,20 @@ hugo -D hugo cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34;
     
     <item>
       <title>tips</title>
-      <link>/posts/tips/</link>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/tips/</link>
       <pubDate>Sat, 24 Jul 2021 18:06:08 +0800</pubDate>
       
-      <guid>/posts/tips/</guid>
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/tips/</guid>
       <description>考研数学 张宇高数第一讲 等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减，换位置，目的是得到想要的； 出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)
 sinx &amp;lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~</description>
     </item>
     
     <item>
       <title>灵鸡一动</title>
-      <link>/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</link>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</link>
       <pubDate>Wed, 21 Jul 2021 05:37:27 +0800</pubDate>
       
-      <guid>/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</guid>
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/</guid>
       <description>使用次数少的（比如安装软件，也没遇到意外情况）就不需要记录了。相同主题整理的多了要考虑拆分，像分库分表一样。
 知识类分三档：死记硬背的、理解的、容易忘也不好整理进体系的小tips。本页记录理解档内容
  知识内容都是自己的理解，要时长更新纠错

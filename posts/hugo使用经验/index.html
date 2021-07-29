@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<head>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+    
+    
+    <title>Hugo使用经验 - 彦祖，你又来看博客了</title>
+    
+     
+    
+    
+    <meta property="og:title" content="Hugo使用经验" />
+<meta property="og:description" content="写在前面 ​	hugo最强使用技巧：别用hugo
+​	开个玩笑，先从我的角度说说其他静态网站生成器的优点：
+  VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架;
+  Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)，插!件!健!全!可顺便学习node.js；
+  WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&quot;shortcode&quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；
+然后。。。hugo的优点可能是快？我不知道。。。可我是男人可如果开发速度慢、学习成本高不还相当于慢了。。
+如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。
+当然所有工具都是没有上限的！只是碰壁次数与资料多少、学习成本之类的区别！
+我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。
+  快速开始 中文文档少有的中文233：
+快速入门 | Hugo 中文网 (gohugo.cn)
+其中下载主题这步可以自己选，主题商城也在这个网站中↑；
+我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。自己魔改了一部分，为了添加功能。
+常用命令、脚本 ​	utteranc.es客户端地址：https://utteranc.es/client.js
+​	获取QQ头像的url:	https://q1.qlogo.cn/g?b=qq&amp;nk=QQ号码&amp;s=640。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。
+​	每次输入这么多命令太麻烦了，hugo似乎没有把自己提交到github的命令，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。
+​	还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。
+hugo -D hugo cd ./public git add -A git commit -m &#34;脚本提交&#34; git push -u origin master ​	先执行一遍hugo -D是为了将草稿也编译一下；
+​	还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；
+​	也可以使用github Actions来完成持续集成（CI）,学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，
+自己钻研的定制经验 ​	因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。
+​	对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-26T16:47:18&#43;08:00" />
+<meta property="article:modified_time" content="2021-07-26T16:47:18&#43;08:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo使用经验"/>
+<meta name="twitter:description" content="写在前面 ​	hugo最强使用技巧：别用hugo
+​	开个玩笑，先从我的角度说说其他静态网站生成器的优点：
+  VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架;
+  Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)，插!件!健!全!可顺便学习node.js；
+  WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&quot;shortcode&quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；
+然后。。。hugo的优点可能是快？我不知道。。。可我是男人可如果开发速度慢、学习成本高不还相当于慢了。。
+如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。
+当然所有工具都是没有上限的！只是碰壁次数与资料多少、学习成本之类的区别！
+我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。
+  快速开始 中文文档少有的中文233：
+快速入门 | Hugo 中文网 (gohugo.cn)
+其中下载主题这步可以自己选，主题商城也在这个网站中↑；
+我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。自己魔改了一部分，为了添加功能。
+常用命令、脚本 ​	utteranc.es客户端地址：https://utteranc.es/client.js
+​	获取QQ头像的url:	https://q1.qlogo.cn/g?b=qq&amp;nk=QQ号码&amp;s=640。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。
+​	每次输入这么多命令太麻烦了，hugo似乎没有把自己提交到github的命令，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。
+​	还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。
+hugo -D hugo cd ./public git add -A git commit -m &#34;脚本提交&#34; git push -u origin master ​	先执行一遍hugo -D是为了将草稿也编译一下；
+​	还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；
+​	也可以使用github Actions来完成持续集成（CI）,学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，
+自己钻研的定制经验 ​	因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。
+​	对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…"/>
+
+
+    
+    
+    <link rel="stylesheet" href="https://baiban114.github.io/tablerow.github.io/scss/main.min.14635237847ee06fac20c60448319b125af2da01a23efd86ed8c80affa4f8353.css" integrity="sha256-FGNSN4R&#43;4G&#43;sIMYESDGbElry2gGiPv2G7YyAr/pPg1M=" crossorigin="anonymous" media="screen">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    
+    
+    
+
+
+</head>
+  
+</head>
+<body>
+  <span class="mobile btn-mobile-menu">
+
+    <i class="fa fa-list btn-mobile-menu__icon"></i>
+    <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+
+  </span>
+
+  <header class="panel-cover " style="background-image: url('/images/background-cover.jpg')">
+    <div class="panel-main">
+  
+      <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+  
+          <a href="/#blog" title="前往 彦祖，你又来看博客了 的主页" class="blog-button"><img src="/images/avatar.jpg" width="80" alt="彦祖，你又来看博客了 logo" class="panel-cover__logo logo" /></a>
+          <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 彦祖，你又来看博客了" class="blog-button">彦祖，你又来看博客了</a></h1>
+          
+          <hr class="panel-cover__divider" />
+          <p class="panel-cover__description"></p>
+          <hr class="panel-cover__divider panel-cover__divider--secondary" />
+          
+          
+          
+          <div class="navigation-wrapper">
+            <div>
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="/#blog" title="" class="blog-button"></a></li>
+                  
+                </ul>
+              </nav>
+            </div>
+            
+            <div><nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+  
+    
+  
+    
+    
+    
+  
+    
+  
+    
+    <li class="navigation__item">
+      <a href="/index.xml" rel="author" title="RSS" target="_blank">
+        <i class='social fa fa-rss'></i>
+        <span class="label">RSS</span>
+      </a>
+    </li>
+  
+    
+  
+    </ul>
+  </nav>
+  </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="panel-cover--overlay cover-disabled"></div>
+      
+    </div>
+  </header>
+  
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+
+        
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <div class="post-meta">
+            <time datetime=" 2021-07-26 16:47:18 &#43;0800 " itemprop="datePublished" class="post-meta__date date">2021-07-26</time>
+            
+        </div>
+        <h1 class="post-title">Hugo使用经验</h1>
+    </header>
+    <section class="post">
+        <h1 id="写在前面">写在前面</h1>
+<p>​		hugo最强使用技巧：<del>别用hugo</del></p>
+<p>​		开个玩笑，先从我的角度说说其他静态网站生成器的优点：</p>
+<ul>
+<li>
+<p>VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架;</p>
+</li>
+<li>
+<p>Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)，插!件!健!全!可顺便学习node.js；</p>
+</li>
+<li>
+<p>WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&quot;shortcode&quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；</p>
+<p>然后。。。hugo的优点可能是快？我不知道。。。<del>可我是男人</del>可如果开发速度慢、学习成本高不还相当于慢了。。</p>
+<p>如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。</p>
+<p>当然所有工具都是没有上限的！只是碰壁次数与资料多少、学习成本之类的区别！</p>
+<p>我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。</p>
+</li>
+</ul>
+<h1 id="快速开始">快速开始</h1>
+<p>中文文档少有的中文233：</p>
+<p><a href="https://www.gohugo.cn/getting-started/quick-start/">快速入门 | Hugo 中文网 (gohugo.cn)</a></p>
+<p>其中下载主题这步可以自己选，主题商城也在这个网站中↑；</p>
+<p>我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。自己魔改了一部分，为了添加功能。</p>
+<h1 id="常用命令脚本">常用命令、脚本</h1>
+<p>​		utteranc.es客户端地址：https://utteranc.es/client.js</p>
+<p>​		获取QQ头像的url:	<code>https://q1.qlogo.cn/g?b=qq&amp;nk=QQ号码&amp;s=640</code>。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。</p>
+<p>​		每次输入这么多命令太麻烦了，hugo似乎没有把自己提交到github的命令，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。</p>
+<p>​		还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo -D
+hugo
+cd ./public
+git add -A
+git commit -m <span style="color:#e6db74">&#34;脚本提交&#34;</span>
+git push -u origin master
+</code></pre></div><p>​		先执行一遍hugo -D是为了将草稿也编译一下；</p>
+<p>​		还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；</p>
+<p>​		也可以使用github Actions来完成持续集成（CI）,学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，</p>
+<h1 id="自己钻研的定制经验">自己钻研的定制经验</h1>
+<p>​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。</p>
+<p>​		对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…</p>
+<h2 id="目录结构">目录结构</h2>
+<p>根站点和主题站点有相同的目录结构，hugo会优先使用根站点下的配置。</p>
+<p>以Diary为例，主题根文件夹下：</p>
+<ul>
+<li>
+<p>layout放置了页面的主体框架，其中</p>
+<ul>
+<li>
+<p>shortcodes目录定义shortcode，可以在其他html中当组件用</p>
+</li>
+<li>
+<p>_default下存放了主体部分的html框架（即body中的主div内的内容，正中间的主体）</p>
+<ul>
+<li>
+<p>baseof.html是全html页面的框架，其中head部分被放到了partials文件夹下</p>
+</li>
+<li>
+<p>single.html是文章内容的html</p>
+</li>
+<li>
+<p>可以自定义友链、“关于我”这种功能的页面在这里，记得将single中的主体框架部分拷贝过来，修改{{.Content}}附近；</p>
+<ul>
+<li>踩坑：自定义页面的时候，要全用{{define main}}包裹起来，我把css放在外边，结果只编译了css</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>partials有评论、head、自定义head、版权、主体js等部分的html</p>
+<ul>
+<li>sidebar:电脑端侧边栏的大纲（说是大纲是因为引用了版权页，而版权页单独写在一个html里），移动端这部分有单独页面，不在这里（见baseof.html）；</li>
+</ul>
+</li>
+<li>
+<p>data 存储数据文件供模板使用</p>
+</li>
+<li>
+<p><em>public</em> 生成的静态网站文件会放在这里</p>
+</li>
+</ul>
+<h2 id="站点配置文件configtoml">站点配置文件config.toml</h2>
+<h2 id="博文开头的元数据配置">博文开头的元数据配置</h2>
+<ul>
+<li>layout: &quot;&quot;	不用带后缀；该md文件会寻找layout下同名html文件渲该页染；</li>
+<li>draft: true   为true时是草稿，hugo命令不会编译、在首页显示草稿；带上-D参数可以。这也是为什么我要在脚本里先后执行两次命令。
+<ul>
+<li>关于我、友链等页面可以用这种方式隐藏</li>
+</ul>
+</li>
+</ul>
+<p>其他的可以见主题文件夹下/archetypes/default.md</p>
+<h1 id="拓展">拓展</h1>
+<h2 id="live2d看板娘">Live2d看板娘</h2>
+<h3 id="基础款">基础款</h3>
+<p>​		基础款</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>  <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+    <span style="color:#a6e22e">L2Dwidget</span>.<span style="color:#a6e22e">init</span>({
+        <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">scale</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+            <span style="color:#a6e22e">hHeadPos</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.5</span>,
+            <span style="color:#a6e22e">vHeadPos</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.618</span>,
+            <span style="color:#a6e22e">jsonPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/shizuku.model.json&#39;</span>,       <span style="color:#75715e">// xxx.model.json 的路径,换人物修改这个
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">superSample</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,     <span style="color:#75715e">// 超采样等级
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">120</span>,         <span style="color:#75715e">// canvas的宽度
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">300</span>,        <span style="color:#75715e">// canvas的高度
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">position</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;right&#39;</span>,   <span style="color:#75715e">// 显示位置：左或右
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">hOffset</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,         <span style="color:#75715e">// canvas水平偏移
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">vOffset</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,         <span style="color:#75715e">// canvas垂直偏移
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">mobile</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">show</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,         <span style="color:#75715e">// 是否在移动设备上显示
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">scale</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,           <span style="color:#75715e">// 移动设备上的缩放
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">motion</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,       <span style="color:#75715e">// 移动设备是否开启重力感应
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">react</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">opacityDefault</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,  <span style="color:#75715e">// 默认透明度
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">opacityOnHover</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,  <span style="color:#75715e">// 鼠标移上透明度
+</span><span style="color:#75715e"></span>        },
+     });
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>加到哪儿应该都行，我是粘到了extended_head里，这样会加载到head标签中。人物长什么样子可以直接百度“live2d 看板娘 ”+名字、长相什么的。我个人喜欢shizuku，双马尾好可爱ヽ(✿ﾟ▽ﾟ)ノ!!!  hibiki也不错</p>
+<h2 id="音乐插件">音乐插件</h2>
+<blockquote>
+<p>7月29日，无法获得网易音乐数据，应该是api出了问题，原因未知</p>
+</blockquote>
+<p>使用了APlayer &amp;&amp; MetingJS。直接看MetingJS的github仓库即可：<a href="https://github.com/metowolf/MetingJS">MetingJS</a>，Readme中已经给出了继承APlayer的用法，CV大法好（doge）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<span style="color:#75715e">&lt;!-- 放在想生成播放器的地方⬇ --&gt;</span>
+&lt;<span style="color:#f92672">meting-js</span>
+	<span style="color:#a6e22e">server</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;netease&#34;</span>
+	<span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;playlist&#34;</span>
+	<span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>					
+	<span style="color:#a6e22e">list-folded </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;true&#34;</span>	
+	<span style="color:#a6e22e">volume </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.3&#34;</span>			
+&gt;
+&lt;/<span style="color:#f92672">meting-js</span>&gt;
+</code></pre></div><p>Aplay是一个Html5音乐播放器，而MetingJS结合了国内几大音乐平台的api。网易云官方现在似乎不提供可用的歌单外链。</p>
+<p>注：</p>
+<ul>
+<li>我在使用Meting提供的网易云api时，无法获取有170+首歌曲的歌单的数据（没有返回数据），最后选择了一个70+的歌单。</li>
+<li>需要的js、css文件在头文件中<code>按顺序</code>引入（有依赖关系）</li>
+<li>Aplayer官方提出了好多静态博客插件，唯独没有hugo的。~~《如果早知道，用hugo会被孤立。。。》~~虽然我也没用那些插件</li>
+</ul>
+<h2 id="评论">评论</h2>
+<h1 id="我为什么用hugo">我为什么用hugo?</h1>
+<p>​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh</p>
+<p>​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的页面突然就生不出来了。。。QAQ</p>
+<p>​	改了配置文件、添加了新文章、执行hugo命令后也没有生成新的、正确的静态页面。根据提示，安装extended版本 ，结果又报错说缺少c++的新版动态库，但我的确是新版了（跟CSDN上的博客比）。现在有经验了，回想回想可能是配置文件或者命令错了。</p>
+<p>​		最后用了windows版+github pages。省时又省心，效果还一样。之前尝试部署到服务器上的我简直是个可爱的小傻瓜。</p>
+<p>​		另，gitee的Pages服务这几个月关闭了，预计8月左右恢复。说是为了建设绿色网络环境什么的，可能不符合规定的要被清除？</p>
+<p>​		近日正好收到一篇公众号的推送，是关于hugo搭建博客的，就用上了。最早了解的是wordPress，但没有使用；身边人用的最多的是hexo。年轻时总想着搞个人博客，早就接触到了建站容易的静态博客，但感觉搭建起来对技术提高帮助不大，就没搞。</p>
+<p>​		现在博客做起来了，能刺激我总结总结经验知识。通过添加各种前端特效、插件，巩固了一下前端基础。这些可以做刚学完前端基础的过渡练习，要是那会儿就来实战练习就好了。那会儿天天做作业，贼枯燥，做完还就扔了忘了，没实战也没效率(* ￣︿￣)</p>
+
+    </section>
+</article>
+<section class="read-more">
+    
+
+
+    
+    <div class="read-more-item">
+        <span class="read-more-item-dim">更早的文章</span>
+        <h2 class="post-list__post-title post-title"><a href="/tablerow.github.io/posts/tips/" title="link to tips">tips</a></h2>
+        <p class="excerpt">考研数学 张宇高数第一讲 等式 =&gt; 两边取极限、倒数、积分、同乘同除同加减，换位置，目的是得到想要的； 出题套路 =&gt; 改变数字顺序，把本来该在一起的拆开(例1.1)
+sinx &lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~&hellip;</p>
+        <div class="post-list__meta">
+            <time datetime=" 2021-07-26 16:47:18 &#43;0800" class="post-list__meta--date date">2021-07-24</time>
+            
+            <a class="btn-border-small" href="/tablerow.github.io/posts/tips/">继续阅读</a></div>
+        </div>
+    
+ </section>
+ 
+<section class="post-comments">
+    
+
+    
+    
+  </section>
+  
+
+        <section class="footer">
+    <footer>
+        <span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://gohugo.io/">Hugo</a> 于 2021-07-30 生成，采用<a href="https://github.com/xslingcn/vno-hugo"> Vno - Hugo </a>作为主题</span>
+    </footer>
+</section>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+  
+</body>
+
