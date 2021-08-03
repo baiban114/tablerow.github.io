@@ -372,8 +372,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" onclick="onNavClick(`#目录结构-nav`)" id="目录结构-nav">
-									目录结构
+								<a href="#%e7%ab%99%e7%82%b9%e4%b8%bb%e9%a2%98%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" onclick="onNavClick(`#站点主题目录结构-nav`)" id="站点主题目录结构-nav">
+									站点&amp;&amp;主题目录结构
 								</a>
 							</li>
 						
@@ -723,8 +723,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" onclick="onNavClick(`#目录结构-nav`)" id="目录结构-nav">
-									目录结构
+								<a href="#%e7%ab%99%e7%82%b9%e4%b8%bb%e9%a2%98%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" onclick="onNavClick(`#站点主题目录结构-nav`)" id="站点主题目录结构-nav">
+									站点&amp;&amp;主题目录结构
 								</a>
 							</li>
 						
@@ -986,21 +986,32 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 <div class="post-body" v-pre>
                 
                     <h1 id="写在前面">写在前面</h1>
-<p>​		hugo最强使用技巧：<del>别用hugo</del></p>
-<p>​		开个玩笑，先从我的角度说说其他静态网站生成器的优点：</p>
+<p>​		hugo最强使用技巧：<del>别用hugo</del>开个玩笑(狗头)</p>
+<p>​		这个世界上的静态网站生成器至少有<a href="https://jamstack.org/generators/">333</a>个，先从我的角度说说其他静态网站生成器的优点：</p>
 <ul>
 <li>
-<p>VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架;</p>
+<p>VuePress：基于vue构建，可以顺便练习vue，减小web开发者的学习成本;</p>
+<ul>
+<li>[√]中文文档</li>
+<li>[√]主题丰富（在github主页有）</li>
+<li>插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！</li>
+<li>文档说是单页应用！</li>
+</ul>
 </li>
 <li>
-<p>Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)，插!件!健!全!可顺便学习node.js；</p>
+<p>Hexo：由中国台湾人创建，咱们用的人多所以网上教程丰富；</p>
+<ul>
+<li>√]中文文档</li>
+<li>[√]主题丰富</li>
+<li>[√]插件齐全（几乎不用敲代码，npm上都一堆插件）</li>
+<li>多个静态页面，像Aplayer这样的播放器一换页面就重新加载了！淦！多换几次页面人家api还限流！</li>
+</ul>
 </li>
 <li>
 <p>WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&quot;shortcode&quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；</p>
-<p>然后。。。hugo的优点可能是快？我不知道。。。<del>可我是男人</del>可如果开发速度慢、学习成本高不还相当于慢了。。</p>
-<p>如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。</p>
-<p>当然所有工具都是没有上限的！只是碰壁次数与资料多少、学习成本之类的区别！</p>
-<p>我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。</p>
+<p>然后。。。hugo的优点可能是快？我不知道。。。<del>可我是男人</del>可如果开发速度慢、学习成本高不还相当于慢了。。中文文档还相当于没有！</p>
+<p>如果重命名content下的md文件，hugo编译时不会把删掉该替换的文件。不知道其他工具怎么样。</p>
+<p>当然所有工具都是没有上限的！只是==碰壁次数与资料多少、学习成本==之类的区别！</p>
 </li>
 </ul>
 <h1 id="快速开始">快速开始</h1>
@@ -1019,14 +1030,14 @@ hugo
 git add -A
 git commit -m <span style="color:#cd5555">&#34;脚本提交&#34;</span>
 git push -u origin master
-</code></pre></div><p>​		先执行一遍hugo -D是为了将草稿也编译一下；</p>
-<p>​		还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；</p>
-<p>​		也可以使用github Actions来完成持续集成（CI）,学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，</p>
+</code></pre></div><p>​		先执行一遍hugo -D是为了将草稿也编译一下；再不带-D，这样主页不会显示草稿；</p>
+<p>​		还有一个博客生成测试脚本，执行hugo server命令，用于在本地实时查看页面；</p>
+<p>​		也可以使用github Actions来完成持续集成（CI）,顺道学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，</p>
 <h1 id="自己钻研的定制经验">自己钻研的定制经验</h1>
 <p>​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。</p>
 <p>​		对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…</p>
-<h2 id="目录结构">目录结构</h2>
-<p>根站点和主题站点有相同的目录结构，hugo会优先使用根站点下的配置。</p>
+<h2 id="站点主题目录结构">站点&amp;&amp;主题目录结构</h2>
+<p>根站点和主题文件夹有相同的目录结构，hugo会优先使用根站点下的配置。</p>
 <p>以Diary为例，主题根文件夹下：</p>
 <ul>
 <li>
@@ -1071,9 +1082,9 @@ git push -u origin master
 <h2 id="博文开头的元数据配置">博文开头的元数据配置</h2>
 <ul>
 <li>layout: &quot;&quot;	不用带后缀；该md文件会寻找layout下同名html文件渲该页染；</li>
-<li>draft: true   为true时是草稿，hugo命令不会编译、在首页显示草稿；带上-D参数可以。这也是为什么我要在脚本里先后执行两次命令。
+<li>draft: true   为true时是草稿，不带-D参数的hugo命令不会编译、在首页显示草稿；这也是为什么我要在脚本里先后执行两次命令。
 <ul>
-<li>关于我、友链等页面可以用这种方式隐藏</li>
+<li>关于我、友链等页面可以用这种方式从隐藏，只在特定页面出现</li>
 </ul>
 </li>
 </ul>
@@ -1112,10 +1123,7 @@ git push -u origin master
 &lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
 </code></pre></div><p>加到哪儿应该都行，我是粘到了extended_head里，这样会加载到head标签中。人物长什么样子可以直接百度“live2d 看板娘 ”+名字、长相什么的。我个人喜欢shizuku，双马尾好可爱ヽ(✿ﾟ▽ﾟ)ノ!!!  hibiki也不错</p>
 <h2 id="音乐插件">音乐插件</h2>
-<blockquote>
-<p>7月29日，无法获得网易音乐数据，应该是api出了问题，原因未知</p>
-</blockquote>
-<p>使用了APlayer &amp;&amp; MetingJS。直接看MetingJS的github仓库即可：<a href="https://github.com/metowolf/MetingJS">MetingJS</a>，Readme中已经给出了继承APlayer的用法，CV大法好（doge）</p>
+<p>使用了APlayer &amp;&amp; MetingJS。直接看MetingJS的github仓库即可：<a href="https://github.com/metowolf/MetingJS">MetingJS</a>，暂时不用看Aplayer用法，CV大法好（doge）</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#8b008b;font-weight:bold">link</span> <span style="color:#658b00">rel</span>=<span style="color:#cd5555">&#34;stylesheet&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;</span>&gt;
 &lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
 &lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
@@ -1128,10 +1136,10 @@ git push -u origin master
 	<span style="color:#658b00">volume </span>= <span style="color:#cd5555">&#34;0.3&#34;</span>			
 &gt;
 &lt;/<span style="color:#8b008b;font-weight:bold">meting-js</span>&gt;
-</code></pre></div><p>Aplay是一个Html5音乐播放器，而MetingJS结合了国内几大音乐平台的api。网易云官方现在似乎不提供可用的歌单外链。</p>
+</code></pre></div><p>Aplay是一个Html5音乐播放器，而MetingJS结合了国内几大音乐平台的api。本想直接用外链，但网易云官方现在似乎不提供可用的歌单外链。</p>
 <p>注：</p>
 <ul>
-<li>我在使用Meting提供的网易云api时，无法获取有170+首歌曲的歌单的数据（没有返回数据），最后选择了一个70+的歌单。</li>
+<li>在使用Meting提供的网易云api时，歌单里歌曲太多或使用“我喜欢的音乐”歌单可能无法从api获取数据！</li>
 <li>需要的js、css文件在头文件中<code>按顺序</code>引入（有依赖关系）</li>
 <li>Aplayer官方提出了好多静态博客插件，唯独没有hugo的。~~《如果早知道，用hugo会被孤立。。。》~~虽然我也没用那些插件</li>
 </ul>

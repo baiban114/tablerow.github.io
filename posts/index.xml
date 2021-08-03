@@ -13,15 +13,14 @@
       <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
       
       <guid>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
-      <description>写在前面 ​	hugo最强使用技巧：别用hugo
-​	开个玩笑，先从我的角度说说其他静态网站生成器的优点：
-  VuePress：基于vue构建的，虽然可能不是vue3吧，但可以顺便练习使用前端框架;
-  Hexo：由中国台湾人创建，中文文档健全(hugo中文网相当于没有)，插!件!健!全!可顺便学习node.js；
-  WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；
-然后。。。hugo的优点可能是快？我不知道。。。可我是男人可如果开发速度慢、学习成本高不还相当于慢了。。
-如果重命名content下的md文件，hugo编译时不会把原来的文件删掉。不知道其他工具怎么样。
-当然所有工具都是没有上限的！只是碰壁次数与资料多少、学习成本之类的区别！
-我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。
+      <description>写在前面 ​	hugo最强使用技巧：别用hugo开个玩笑(狗头)
+​	这个世界上的静态网站生成器至少有333个，先从我的角度说说其他静态网站生成器的优点：
+  VuePress：基于vue构建，可以顺便练习vue，减小web开发者的学习成本;
+ [√]中文文档 [√]主题丰富（在github主页有） 插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！ 文档说是单页应用！    Hexo：由中国台湾人创建，咱们用的人多所以网上教程丰富；
+ √]中文文档 [√]主题丰富 [√]插件齐全（几乎不用敲代码，npm上都一堆插件） 多个静态页面，像Aplayer这样的播放器一换页面就重新加载了！淦！多换几次页面人家api还限流！    WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；
+然后。。。hugo的优点可能是快？我不知道。。。可我是男人可如果开发速度慢、学习成本高不还相当于慢了。。中文文档还相当于没有！
+如果重命名content下的md文件，hugo编译时不会把删掉该替换的文件。不知道其他工具怎么样。
+当然所有工具都是没有上限的！只是==碰壁次数与资料多少、学习成本==之类的区别！
   快速开始 中文文档少有的中文233：
 快速入门 | Hugo 中文网 (gohugo.cn)
 其中下载主题这步可以自己选，主题商城也在这个网站中↑；
@@ -30,11 +29,7 @@
 ​	获取QQ头像的url:	https://q1.qlogo.cn/g?b=qq&amp;amp;nk=QQ号码&amp;amp;s=640。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。
 ​	每次输入这么多命令太麻烦了，hugo似乎没有把自己提交到github的命令，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。
 ​	还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。
-hugo -D hugo cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master ​	先执行一遍hugo -D是为了将草稿也编译一下；
-​	还有一个博客生成脚本，执行hugo 和 pause命令，用于查看博客生成后打印的信息；
-​	也可以使用github Actions来完成持续集成（CI）,学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，
-自己钻研的定制经验 ​	因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。
-​	对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…</description>
+hugo -D hugo cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master ​	先执行一遍hugo -D是为了将草稿也编译一下；再不带-D，这样主页不会显示草稿；</description>
     </item>
     
     <item>
@@ -43,8 +38,12 @@ hugo -D hugo cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34;
       <pubDate>Sat, 24 Jul 2021 18:06:08 +0800</pubDate>
       
       <guid>https://baiban114.github.io/tablerow.github.io/posts/tips/</guid>
-      <description>考研数学 张宇高数第一讲 等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减，换位置，目的是得到想要的； 出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)
-sinx &amp;lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~</description>
+      <description>数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~
+考研数学 张宇高数第一讲 等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减，换位置，目的是得到想要的； 出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)
+换元：无法拆开的xt、x-t等换元。比如f(xt)
+数形结合百般好；别光给哪儿捯饬等式，画图啊！看看性状面积啥的
+第二讲 已知不等式：
+ sinx &amp;lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：  例2.13：</description>
     </item>
     
     <item>
