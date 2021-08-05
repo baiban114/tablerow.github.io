@@ -5,9 +5,29 @@
     <description>Recent content on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Jul 2021 16:47:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Aug 2021 17:07:35 +0800</lastBuildDate>
     
         <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>文件系统</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link>
+        <pubDate>Thu, 05 Aug 2021 17:07:35 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/ -&lt;blockquote&gt;
+&lt;p&gt;文件系统是操作系统用于明确存储设备（常见的是磁盘，也有基于NAND Flash的固态硬盘）或分区上的文件的方法和数据结构；即在存储设备上组织文件的方法。操作系统中负责管理和存储文件信息的软件机构称为文件管理系统，简称文件系统。&lt;/p&gt;
+&lt;p&gt;文件系统由三部分组成：文件系统的接口，对对象操作和管理的软件集合，对象及属性。从系统角度来看，文件系统是对文件存储设备的空间进行组织和分配，负责文件存储并对存入的文件进行保护和检索的系统。具体地说，它负责为用户建立文件，存入、读出、修改、转储文件，控制文件的存取，当用户不再使用时撤销文件等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;ufs联合文件系统&#34;&gt;UFS：联合文件系统&lt;/h1&gt;
+&lt;p&gt;Docker使用的系统&lt;/p&gt;
+&lt;p&gt;UnionFs（联合文件系统）：Union文件系统（UnionFs）是一种分层、轻量级并且高性能的文件系统，他支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下（ unite several directories into a single virtual filesystem)。Union文件系统是 Docker镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像 特性：一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。&lt;/p&gt;
+&lt;h1 id=&#34;hdfs&#34;&gt;HDFS&lt;/h1&gt;
+&lt;p&gt;Hadoop生态系统中的分布式文件系统&lt;/p&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/ - </description>
+        </item>
     
     
     
@@ -111,6 +131,7 @@ git push -u origin master
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;站点配置文件configtoml&#34;&gt;站点配置文件config.toml&lt;/h2&gt;
+&lt;p&gt;注意不要在主题文件夹下放config！那儿也会生效！&lt;/p&gt;
 &lt;h2 id=&#34;博文开头的元数据配置&#34;&gt;博文开头的元数据配置&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;layout: &amp;quot;&amp;quot;	不用带后缀；该md文件会寻找layout下同名html文件渲该页染；&lt;/li&gt;
@@ -175,7 +196,7 @@ git push -u origin master
 &lt;li&gt;需要的js、css文件在头文件中&lt;code&gt;按顺序&lt;/code&gt;引入（有依赖关系）&lt;/li&gt;
 &lt;li&gt;Aplayer官方提出了好多静态博客插件，唯独没有hugo的。~~《如果早知道，用hugo会被孤立。。。》~~虽然我也没用那些插件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;评论&#34;&gt;评论&lt;/h2&gt;
+&lt;h2 id=&#34;评论功能&#34;&gt;评论功能&lt;/h2&gt;
 &lt;h1 id=&#34;我为什么用hugo&#34;&gt;我为什么用hugo?&lt;/h1&gt;
 &lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh&lt;/p&gt;
 &lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的页面突然就生不出来了。。。QAQ&lt;/p&gt;
@@ -198,8 +219,8 @@ git push -u origin master
         <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/tips/ -&lt;p&gt;数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~&lt;/p&gt;
 &lt;h1 id=&#34;考研数学&#34;&gt;考研数学&lt;/h1&gt;
 &lt;h2 id=&#34;张宇高数第一讲&#34;&gt;张宇高数第一讲&lt;/h2&gt;
-&lt;p&gt;等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减，换位置，目的是得到想要的；
-出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)&lt;/p&gt;
+&lt;p&gt;等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减、取对数，换位置，目的是得到想要的。&lt;/p&gt;
+&lt;p&gt;出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)；有些将来会被消掉，不用怕。&lt;/p&gt;
 &lt;p&gt;换元：无法拆开的xt、x-t等换元。比如f(xt)&lt;/p&gt;
 &lt;p&gt;数形结合百般好；别光给哪儿捯饬等式，画图啊！看看性状面积啥的&lt;/p&gt;
 &lt;h2 id=&#34;第二讲&#34;&gt;第二讲&lt;/h2&gt;
@@ -209,6 +230,8 @@ git push -u origin master
 &lt;/ul&gt;
 &lt;p&gt;例2.13：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://gitee.com/baiban114/tianrun/raw/master/imgs/20210802172809.png&#34; alt=&#34;image-20210802172757774&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第四讲之前&#34;&gt;第四讲之前&lt;/h2&gt;
+&lt;p&gt;奇奇得偶；奇函数泰勒展开不会有偶数次方；&lt;/p&gt;
 - https://baiban114.github.io/tablerow.github.io/posts/tips/ - </description>
         </item>
     
@@ -250,10 +273,13 @@ git push -u origin master
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;应该雀食哈，动态才有状态转换的概念&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;常见概念：线性、连续、离散、顺序、索引、链式&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;线性&#34;&gt;线性：&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;感觉真的像一条线上的关系，&lt;/p&gt;
-&lt;p&gt;是连续的么？&lt;/p&gt;
+&lt;p&gt;感觉真的像一条线上的关系；曾听人说就是一对一的关系&lt;/p&gt;
+&lt;p&gt;是连续的么？和离散是什么关系？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h6 id=&#34;线性关系&#34;&gt;线性关系：&lt;/h6&gt;
 &lt;p&gt;​	两个变量之间存在一次方&lt;a href=&#34;https://baike.baidu.com/item/%E5%87%BD%E6%95%B0%E5%85%B3%E7%B3%BB/9846826&#34;&gt;函数关系&lt;/a&gt;，就称它们之间存在线性关系。&lt;a href=&#34;https://baike.baidu.com/item/%E6%AD%A3%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8192987&#34;&gt;正比例关系&lt;/a&gt;是线性关系中的特例，&lt;a href=&#34;https://baike.baidu.com/item/%E5%8F%8D%E6%AF%94%E4%BE%8B%E5%85%B3%E7%B3%BB/8193245&#34;&gt;反比例关系&lt;/a&gt;不是线性关系。&lt;/p&gt;
@@ -269,16 +295,35 @@ git push -u origin master
 &lt;p&gt;&lt;em&gt;这个齐次性放在齐次线性方程怎么理解？（我连名字都不一定记准。。）&lt;/em&gt;&lt;/p&gt;
 &lt;h6 id=&#34;线性的例子&#34;&gt;线性的例子&lt;/h6&gt;
 &lt;ul&gt;
-&lt;li&gt;数组：下标和元素一一对应，线性存储&lt;/li&gt;
+&lt;li&gt;线性表：最基本的是：
+&lt;ul&gt;
+&lt;li&gt;数组（顺序表）：下标和元素一一对应，可随机存取：随便选一个位置存取&lt;/li&gt;
+&lt;li&gt;链表：唯一前缀唯一后继;查找、表的合并不便&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;非线性&#34;&gt;非线性&lt;/h5&gt;
+&lt;p&gt;树、图，一对多或多对多&lt;/p&gt;
 &lt;h6 id=&#34;线性代数中学到的&#34;&gt;线性代数中学到的&lt;/h6&gt;
 &lt;p&gt;行列式中两个向量可以互相表示，说明他们是&lt;strong&gt;线性相关&lt;/strong&gt;的(行列式得0，因为向量平行)&lt;/p&gt;
+&lt;h2 id=&#34;顺序&#34;&gt;顺序&lt;/h2&gt;
+&lt;p&gt;一个接一个的（连续的？还是有序的？前驱和后缀关系？）&lt;/p&gt;
+&lt;p&gt;顺序存储指的是，集合里面的元素都是按照次序排列在一块连续的存储空间中；&lt;/p&gt;
+&lt;p&gt;在文件中的话&lt;/p&gt;
+&lt;p&gt;顺序文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优势:读、写一大批记录&lt;/li&gt;
+&lt;li&gt;缺点： 查找、修改、增加、删除单条记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
+&lt;p&gt;建立索引表，从索引表直接读取地址&lt;/p&gt;
+&lt;p&gt;文件结构的索引表是定长记录的顺序文件&lt;/p&gt;
 &lt;h2 id=&#34;流批&#34;&gt;流批！&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;流、流处理&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;批处理&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;批&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;出处or举例&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -291,12 +336,34 @@ git push -u origin master
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;一般需要注意open和close&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;有些不处理完一批不停&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;字符流、字节流、IO流&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;字符流、字节流、IO流、代码流&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;联机命令接口（算吗？）可交互&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;脱机命令接口&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;操作系统（再看书研究）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;流式文件-无结构&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;（感觉记录式文件和批的概念没相似之处）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;抽象与具体&#34;&gt;抽象与具体&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;抽象&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;具体&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;出处or举例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只有概念没有实体&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;实体&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类和对象/抽象函数&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -320,11 +387,77 @@ git push -u origin master
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Cloud Foundry是业界第一个开源PaaS云平台。诞生了“容器”？由Vmware小组开发&lt;/p&gt;
-&lt;p&gt;而Docker打包时带上了环境（操作系统）？（这里还不明白。其他教程谈到Docker和虚拟机技术的区别是没有抽象出操作系统内核和硬件。但以py为例，创建的py容器雀食带linux操作系统），不用再在另一台机器的配置上麻烦。但单独的docker只是部署小项目的小工具，用容器编排(Docker Compose)和容器集群才算提供Paas。&lt;/p&gt;
+&lt;p&gt;而Docker打包时带上了环境（操作系统的rootfs，很小，内核直接用宿主机的），不用再在另一台机器的配置上麻烦。但单独的docker只是部署小项目的小工具，用容器编排(Docker Compose)和容器集群才算提供Paas。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;单个容器的应用肯定不足以支撑项目，不用集群用不了分布式、云计算？&lt;/p&gt;
-&lt;p&gt;Dockerfile和脚本差不多&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h1 id=&#34;猜想&#34;&gt;猜想&lt;/h1&gt;
+&lt;h2 id=&#34;用于联系的数学公式&#34;&gt;用于联系的数学公式&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可根据提供的条件互相转化&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数列与极限：归结原则&lt;/p&gt;
+&lt;h1 id=&#34;充要条件们&#34;&gt;充要条件们&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;函数值存在 &amp;lt;=&amp;gt; 该点极限存在&lt;/li&gt;
+&lt;li&gt;可导 &amp;lt;=&amp;gt; 左导数等于右导数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;操作系统-引导程序&#34;&gt;操作系统-引导程序&lt;/h1&gt;
+&lt;p&gt;Linux: init&lt;/p&gt;
+&lt;h1 id=&#34;数据库离散数学文件系统oop&#34;&gt;数据库、离散数学、文件系统、OOP&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;数据库&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;离散数学&lt;/th&gt;
+&lt;th&gt;文件系统&lt;/th&gt;
+&lt;th&gt;OOP&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;某种属性的，是数据中可命名的最小逻辑数据单位&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;列&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;数据项&lt;/td&gt;
+&lt;td&gt;成员&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据项的集合&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;记录；行&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;元组？&lt;/td&gt;
+&lt;td&gt;记录（定长、可变长）&lt;/td&gt;
+&lt;td&gt;对象、类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;实体表&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;记录式文件&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;系统调用&#34;&gt;系统调用&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;文件
+&lt;ul&gt;
+&lt;li&gt;open:
+&lt;ul&gt;
+&lt;li&gt;将指明文件的属性（包括在外存的物理位置）从外存复制到内存==打开文件表==的一个表目中，&lt;/li&gt;
+&lt;li&gt;同时返回索引（王道又说是指针？编号？），以后就操作指针&lt;/li&gt;
+&lt;li&gt;打开计数器&lt;code&gt;++&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;close&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;控制块&#34;&gt;控制块&lt;/h1&gt;
+&lt;h2 id=&#34;文件控制块fcb&#34;&gt;文件控制块FCB&lt;/h2&gt;
+&lt;h2 id=&#34;进程控制块pcb&#34;&gt;进程控制块PCB&lt;/h2&gt;
+&lt;h2 id=&#34;作业控制块jcb&#34;&gt;作业控制块JCB&lt;/h2&gt;
 - https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/ - </description>
         </item>
     
