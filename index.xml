@@ -5,9 +5,107 @@
     <description>Recent content on 彦祖，你又来看博客了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 Aug 2021 17:07:35 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Aug 2021 16:16:32 +0800</lastBuildDate>
     
         <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>SSH</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/ssh/</link>
+        <pubDate>Sat, 28 Aug 2021 16:16:32 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/ssh/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/ssh/ -&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;​	Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;命令行ssh可以文件互传吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安全！&lt;/li&gt;
+&lt;li&gt;方便！两台机器间不用输入账号密码就可验证身份！（通过保存在服务器和客户端上的密钥）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ssh的安全机制&#34;&gt;SSH的安全机制&lt;/h2&gt;
+&lt;p&gt;SSH之所以能够保证安全，原因在于它采用了==非对称加密技术(RSA)==加密了所有传输的数据。&lt;/p&gt;
+&lt;p&gt;传统的网络服务程序，如FTP、Pop和Telnet其本质上都是不安全的；因为它们在网络上用明文传送数据、用户帐号和用户口令，很容易受到==中间人==（man-in-the-middle）攻击方式的攻击。就是存在另一个人或者一台机器冒充真正的服务器接收用户传给服务器的数据，然后再冒充用户把数据传给真正的服务器。&lt;/p&gt;
+&lt;p&gt;但并不是说SSH就是绝对安全的，因为它本身提供两种级别的验证方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一种级别（基于口令的安全验证）：只要你知道自己帐号和口令，就可以登录到远程主机。所有传输的数据都会被加密，但是不能保证你正在连接的服务器就是你想连接的服务器。可能会有别的服务器在冒充真正的服务器，也就是受到“中间人攻击”这种方式的攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;传统的账号密码验证？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。如果你要连接到SSH服务器上，客户端软件就会向服务器发出请求，请求用你的密钥进行安全验证。服务器收到请求之后，先在该服务器上你的主目录下寻找你的公钥，然后把它和你发送过来的公钥进行比较。如果两个密钥一致，服务器就用公钥加密“质询”(challenge)并把它发送给客户端软件。客户端软件收到“质询”之后就可以用你的私钥在本地解密再把它发送给服务器完成登录。与第一种级别相比，第二种级别不仅加密所有传输的数据，也不需要在网络上传送口令，因此安全性更高，可以有效防止中间人攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##基于密钥的安全验证-命令示例&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在本机生成一对密钥（即私钥与公钥）：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh-keygen -t rsa   &lt;span style=&#34;color:#228b22&#34;&gt;#-t表示类型选项，这里采用rsa加密算法&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后根据提示一步步的按enter键即可（其中有一个提示是要求设置私钥口令passphrase，不设置则为空，这里看心情吧，如果不放心私钥的安全可以设置一下），执行结束以后会在 /home/当前用户 目录下生成一个 .ssh 文件夹,其中包含私钥文件 id_rsa 和公钥文件 id_rsa.pub。
+&lt;strong&gt;将公钥复制到远程主机中&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用ssh-copy-id命令将公钥复制到远程主机。ssh-copy-id会将公钥写到远程主机的 ~/ .ssh/authorized_keys文件中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh-copy-id 用户名@ip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样以后登录这台远程主机就不用账号密码了~&lt;/p&gt;
+&lt;h1 id=&#34;使用&#34;&gt;使用&lt;/h1&gt;
+&lt;p&gt;centos7和windows默认带有SSH工具；（OpenSSH?）&lt;/p&gt;
+&lt;p&gt;首先确认服务器上的ssh-server是否已经启动了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ps -e | grep ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SSH默认使用22端口。&lt;/p&gt;
+&lt;p&gt;每登录一台新的主机，就会将它添加到已知主机列表。&lt;/p&gt;
+&lt;h1 id=&#34;拓展github码云上的ssh&#34;&gt;拓展：github、码云上的SSH&lt;/h1&gt;
+&lt;p&gt;可以在网页端操作，为账户生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；&lt;/p&gt;
+&lt;p&gt;毕竟拉可以随便拉，推需要验证身份；&lt;/p&gt;
+&lt;p&gt;这也是在SSH相对于https的优越之处：每次fetch和push时不再需要麻烦地输入账号密码（远程登陆也不需要账号密码了）；&lt;/p&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/ssh/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>管理计算机上的软件</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/</link>
+        <pubDate>Mon, 23 Aug 2021 16:45:08 +0800</pubDate>
+        
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/</guid>
+        <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/ -&lt;h1 id=&#34;什么是软件&#34;&gt;什么是软件?&lt;/h1&gt;
+&lt;h1 id=&#34;软件安装方式&#34;&gt;软件安装方式&lt;/h1&gt;
+&lt;h2 id=&#34;源码编译&#34;&gt;源码编译&lt;/h2&gt;
+&lt;p&gt;下载源代码（如redis使用C语言开发的），然后使用对应版本的编译器（如gcc）在源码文件夹下编译：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在x86\x64\arm架构下会有区别,因为底层的指令集不同；&lt;/p&gt;
+&lt;h2 id=&#34;安装包&#34;&gt;安装包&lt;/h2&gt;
+&lt;p&gt;msi\exe\rpm\ipk\apk\aab;&lt;/p&gt;
+&lt;p&gt;安装包也是由源码编译而成的二进制文件；&lt;/p&gt;
+&lt;p&gt;二进制和可执行有什么区别？&lt;/p&gt;
+&lt;h2 id=&#34;包管理器&#34;&gt;包管理器&lt;/h2&gt;
+&lt;p&gt;pip&lt;/p&gt;
+&lt;p&gt;应用商店等也是类似的角色,在官方的服务器上统一管理安装包;&lt;/p&gt;
+&lt;p&gt;apt、yum等，从源（保管安装包的服务器）上下载安装软件；可以通过写配置文件来指定多个源；&lt;/p&gt;
+&lt;h2 id=&#34;安装脚本&#34;&gt;安装脚本&lt;/h2&gt;
+&lt;p&gt;如docker;&lt;/p&gt;
+&lt;h2 id=&#34;可执行文件&#34;&gt;可执行文件&lt;/h2&gt;
+&lt;p&gt;有时被称为“绿色免安装”版，“安装包”其实就是全部程序压缩一下；这种软件安装时不去注册表注册。&lt;/p&gt;
+&lt;p&gt;如windows下的exe;&lt;/p&gt;
+&lt;p&gt;pyinstaller可以把py程序打包成exe程序，然后在没有安装python环境的电脑上能运行啦！&lt;/p&gt;
+&lt;p&gt;why MC还需要装java&lt;/p&gt;
+&lt;h1 id=&#34;软件卸载&#34;&gt;软件卸载&lt;/h1&gt;
+&lt;h1 id=&#34;管理器&#34;&gt;管理器&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;使用包管理器的命令卸载&lt;/li&gt;
+&lt;li&gt;windows的控制面板:找到对应的卸载程序并运行;
+&lt;ul&gt;
+&lt;li&gt;这样似乎对exe直接运行的软件不行;是因为他们没去注册表报道吗?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;软件官方提供卸载程序&#34;&gt;软件官方提供卸载程序&lt;/h1&gt;
+&lt;p&gt;windows下比较常见;&lt;/p&gt;
+&lt;h2 id=&#34;可执行文件-1&#34;&gt;可执行文件&lt;/h2&gt;
+&lt;p&gt;直接删除即可；注意不要被快捷方式迷惑了。可以对快捷方式右键-&amp;gt;打开文件位置找到真正的文件所在处。&lt;/p&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/ - </description>
+        </item>
     
     
     
@@ -47,7 +145,7 @@
 &lt;li&gt;[√]中文文档&lt;/li&gt;
 &lt;li&gt;[√]主题丰富（在github主页有）&lt;/li&gt;
 &lt;li&gt;插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！&lt;/li&gt;
-&lt;li&gt;文档说是单页应用！&lt;/li&gt;
+&lt;li&gt;文档说是单页应用，解决路由时音乐播放器重新加载播放的问题应该简单一些；&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -56,7 +154,7 @@
 &lt;li&gt;√]中文文档&lt;/li&gt;
 &lt;li&gt;[√]主题丰富&lt;/li&gt;
 &lt;li&gt;[√]插件齐全（几乎不用敲代码，npm上都一堆插件）&lt;/li&gt;
-&lt;li&gt;多个静态页面，像Aplayer这样的播放器一换页面就重新加载了！淦！多换几次页面人家api还限流！&lt;/li&gt;
+&lt;li&gt;多个静态页面&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -218,6 +316,9 @@ git push -u origin master
         <guid>https://baiban114.github.io/tablerow.github.io/posts/tips/</guid>
         <description>彦祖，你又来看博客了 https://baiban114.github.io/tablerow.github.io/posts/tips/ -&lt;p&gt;数学嘛，又不是主业，实用的该用时想起来就好，其他的看兴趣啦~高中我不都是按兴趣学的嘛~&lt;/p&gt;
 &lt;h1 id=&#34;考研数学&#34;&gt;考研数学&lt;/h1&gt;
+&lt;h2 id=&#34;出题套路&#34;&gt;出题套路&lt;/h2&gt;
+&lt;p&gt;加过来减过去；四则运算；没思路时先试试&lt;/p&gt;
+&lt;p&gt;2020把加减又变成大于小于；&lt;/p&gt;
 &lt;h2 id=&#34;张宇高数第一讲&#34;&gt;张宇高数第一讲&lt;/h2&gt;
 &lt;p&gt;等式 =&amp;gt; 两边取极限、倒数、积分、同乘同除同加减、取对数，换位置，目的是得到想要的。&lt;/p&gt;
 &lt;p&gt;出题套路 =&amp;gt; 改变数字顺序，把本来该在一起的拆开(例1.1)；有些将来会被消掉，不用怕。&lt;/p&gt;
@@ -276,9 +377,41 @@ git push -u origin master
 &lt;blockquote&gt;
 &lt;p&gt;常见概念：线性、连续、离散、顺序、索引、链式&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;线性&#34;&gt;线性：&lt;/h2&gt;
+&lt;h2 id=&#34;物理存储上的概念&#34;&gt;物理存储上的概念：&lt;/h2&gt;
+&lt;p&gt;这四项在逻辑结构中也有对应的表：顺序表（数组）、链表、索引表、哈希表。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;顺序&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个接一个的，连续的，有序的（唯一前驱和后缀关系）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;链式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;哈希&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;顺序&#34;&gt;顺序&lt;/h2&gt;
+&lt;p&gt;顺序存储指的是，集合里面的元素都是按照次序排列在一块连续的存储空间中；&lt;/p&gt;
+&lt;p&gt;在文件中的话&lt;/p&gt;
+&lt;p&gt;顺序文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优势:读、写一大批记录&lt;/li&gt;
+&lt;li&gt;缺点： 查找、修改、增加、删除单条记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
+&lt;p&gt;建立索引表，从索引表直接读取地址&lt;/p&gt;
+&lt;p&gt;文件结构的索引表是定长记录的顺序文件&lt;/p&gt;
+&lt;h2 id=&#34;逻辑结构上的概念&#34;&gt;逻辑结构上的概念&lt;/h2&gt;
+&lt;p&gt;分为线性和非线性&lt;/p&gt;
+&lt;h3 id=&#34;线性&#34;&gt;线性：&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;感觉真的像一条线上的关系；曾听人说就是一对一的关系&lt;/p&gt;
+&lt;p&gt;感觉真的像一条线上的关系；&lt;/p&gt;
 &lt;p&gt;是连续的么？和离散是什么关系？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h6 id=&#34;线性关系&#34;&gt;线性关系：&lt;/h6&gt;
@@ -293,6 +426,7 @@ git push -u origin master
 &lt;p&gt;也有用 叠加特性：f(ax+by)=af(x)+bf(y) 合起来表示的&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;这个齐次性放在齐次线性方程怎么理解？（我连名字都不一定记准。。）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;数据结构上：一对一的关系&lt;/p&gt;
 &lt;h6 id=&#34;线性的例子&#34;&gt;线性的例子&lt;/h6&gt;
 &lt;ul&gt;
 &lt;li&gt;线性表：最基本的是：
@@ -302,22 +436,10 @@ git push -u origin master
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;非线性&#34;&gt;非线性&lt;/h5&gt;
+&lt;h6 id=&#34;非线性&#34;&gt;非线性&lt;/h6&gt;
 &lt;p&gt;树、图，一对多或多对多&lt;/p&gt;
 &lt;h6 id=&#34;线性代数中学到的&#34;&gt;线性代数中学到的&lt;/h6&gt;
 &lt;p&gt;行列式中两个向量可以互相表示，说明他们是&lt;strong&gt;线性相关&lt;/strong&gt;的(行列式得0，因为向量平行)&lt;/p&gt;
-&lt;h2 id=&#34;顺序&#34;&gt;顺序&lt;/h2&gt;
-&lt;p&gt;一个接一个的（连续的？还是有序的？前驱和后缀关系？）&lt;/p&gt;
-&lt;p&gt;顺序存储指的是，集合里面的元素都是按照次序排列在一块连续的存储空间中；&lt;/p&gt;
-&lt;p&gt;在文件中的话&lt;/p&gt;
-&lt;p&gt;顺序文件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;优势:读、写一大批记录&lt;/li&gt;
-&lt;li&gt;缺点： 查找、修改、增加、删除单条记录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
-&lt;p&gt;建立索引表，从索引表直接读取地址&lt;/p&gt;
-&lt;p&gt;文件结构的索引表是定长记录的顺序文件&lt;/p&gt;
 &lt;h2 id=&#34;流批&#34;&gt;流批！&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -331,7 +453,7 @@ git push -u origin master
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;流水一样源源不断的；来一个搞一个&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;先攒一批，一次搞一批&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Mybatis流式查询（可实现分页）/win脚本（批处理）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Mybatis流式查询（可实现分页）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;一般需要注意open和close&lt;/td&gt;
@@ -339,9 +461,9 @@ git push -u origin master
 &lt;td style=&#34;text-align:center&#34;&gt;字符流、字节流、IO流、代码流&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;联机命令接口（算吗？）可交互&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;联机命令接口&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;脱机命令接口&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;操作系统（再看书研究）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;操作系统/win脚本（批处理）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;流式文件-无结构&lt;/td&gt;
@@ -350,6 +472,7 @@ git push -u origin master
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;联机命令接口：命令行的方式，又叫交互模式；批处理模式，又叫脚本模式&lt;/p&gt;
 &lt;h2 id=&#34;抽象与具体&#34;&gt;抽象与具体&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -397,13 +520,13 @@ git push -u origin master
 &lt;p&gt;可根据提供的条件互相转化&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;数列与极限：归结原则&lt;/p&gt;
+&lt;p&gt;拉格朗日中值定理：连接f与f`&lt;/p&gt;
+&lt;p&gt;连续连接函数与导数（还有极限）&lt;/p&gt;
 &lt;h1 id=&#34;充要条件们&#34;&gt;充要条件们&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;函数值存在 &amp;lt;=&amp;gt; 该点极限存在&lt;/li&gt;
 &lt;li&gt;可导 &amp;lt;=&amp;gt; 左导数等于右导数&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;操作系统-引导程序&#34;&gt;操作系统-引导程序&lt;/h1&gt;
-&lt;p&gt;Linux: init&lt;/p&gt;
 &lt;h1 id=&#34;数据库离散数学文件系统oop&#34;&gt;数据库、离散数学、文件系统、OOP&lt;/h1&gt;
 &lt;table&gt;
 &lt;thead&gt;

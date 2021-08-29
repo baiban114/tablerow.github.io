@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>文件系统</title>
+<title>计算机网络</title>
 
 
 
@@ -51,10 +51,6 @@
 
 
 
-
-  
-    <script src="/tablerow.github.io/js/toc.js"></script>
-  
 
 
 
@@ -215,9 +211,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/tablerow.github.io/tags/">
+            
+            <a class="a-block nav-link-item active" href="/tablerow.github.io/tags/">
                 标签
             </a>
             
@@ -272,60 +270,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div><div ref="extraContainer" class="extra-container">
     
     
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#ufs%e8%81%94%e5%90%88%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f" onclick="onNavClick(`#ufs联合文件系统-nav`)" id="ufs联合文件系统-nav">
-									UFS：联合文件系统
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#hdfs" onclick="onNavClick(`#hdfs-nav`)" id="hdfs-nav">
-									HDFS
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -341,6 +285,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 brightness_7
             </i>
         </a>
+        
+        
         
         
     </div>
@@ -367,9 +313,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/tablerow.github.io/tags/">
+                
+                <a class="a-block drawer-menu-item active" href="/tablerow.github.io/tags/">
                     标签
                 </a>
                 
@@ -394,60 +342,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 </a>
                 
             
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#ufs%e8%81%94%e5%90%88%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f" onclick="onNavClick(`#ufs联合文件系统-nav`)" id="ufs联合文件系统-nav">
-									UFS：联合文件系统
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#hdfs" onclick="onNavClick(`#hdfs-nav`)" id="hdfs-nav">
-									HDFS
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
             
         </div>
     </div>
@@ -499,98 +393,41 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
-
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    文件系统
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2021-08-05 17:07
-                        </time>
-                        
-
-                        
-
-                        
-                            <i class="material-icons" style="">label</i>
-                            
-                                <a href="/tablerow.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">操作系统</a>
-                                &nbsp;
-                            
-                        
-                        
+        <div class="post-item-wrapper post-item-wrapper-no-hover">
+            <div class="post-item post-item-no-gaps">
+                <div class="post-item-info-wrapper">
+                    <div class="post-item-title  post-item-title-small">
+                        <a href="https://baiban114.github.io/tablerow.github.io/">彦祖，你又来看博客了</a> / 计算机网络
                     </div>
                 </div>
             </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <blockquote>
-<p>文件系统是操作系统用于明确存储设备（常见的是磁盘，也有基于NAND Flash的固态硬盘）或分区上的文件的方法和数据结构；即在存储设备上组织文件的方法。操作系统中负责管理和存储文件信息的软件机构称为文件管理系统，简称文件系统。</p>
-<p>文件系统由三部分组成：文件系统的接口，对对象操作和管理的软件集合，对象及属性。从系统角度来看，文件系统是对文件存储设备的空间进行组织和分配，负责文件存储并对存入的文件进行保护和检索的系统。具体地说，它负责为用户建立文件，存入、读出、修改、转储文件，控制文件的存取，当用户不再使用时撤销文件等。</p>
-</blockquote>
-<h1 id="ufs联合文件系统">UFS：联合文件系统</h1>
-<p>Docker使用的系统</p>
-<p>UnionFs（联合文件系统）：Union文件系统（UnionFs）是一种分层、轻量级并且高性能的文件系统，他支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下（ unite several directories into a single virtual filesystem)。Union文件系统是 Docker镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像 特性：一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。</p>
-<h1 id="hdfs">HDFS</h1>
-<p>Hadoop生态系统中的分布式文件系统</p>
-
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2021-08-05</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/">
-			Next<br>管理计算机上的软件
-                </a>
-                
-                
-                
-                <a class="older-posts" href="https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/">
-			Previous<br>Hugo使用经验
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="utter" alt="baiban114/tablerow.github.io"></div>
-
-
-
-            </div>
-        </div>
-    </div>
+        </div><a href="/tablerow.github.io/posts/ssh/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            SSH
+                        </div>
+                        <div class="post-item-meta">
+    2021-08-28
+    &emsp;
+    
+    
+    
+    &emsp;
+    
 </div>
 
-            </div><div id="single-column-footer">
+                    </div>
+                </div>
+            </div>
+        </a></div>
+</div>
+
+            </div>
+
+
+<div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -852,18 +689,6 @@ app = new Vue({
 
 		
 		
-		const utterances = document.createElement('script');
-        utterances.type = 'text/javascript';
-        utterances.async = true;
-        utterances.setAttribute('theme','github-light')
-        utterances.setAttribute('repo','baiban114\/tablerow.github.io')
-		utterances.setAttribute('issue-term', 'pathname')
-        utterances.crossorigin = 'anonymous';
-        utterances.src = 'https://utteranc.es/client.js';
- 
-        window.document.getElementById('utter').appendChild(utterances);
-	
-		
 
 
         document.querySelectorAll("table").forEach(function(elem){
@@ -873,9 +698,6 @@ app = new Vue({
             elem.classList.add("table-hover");
         })
 
-        
-        spy();
-        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         
         
     },

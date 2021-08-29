@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机网络 on 彦祖，你又来看博客了</title>
+    <link>https://baiban114.github.io/tablerow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 计算机网络 on 彦祖，你又来看博客了</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 28 Aug 2021 16:16:32 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH</title>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/ssh/</link>
+      <pubDate>Sat, 28 Aug 2021 16:16:32 +0800</pubDate>
+      
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/ssh/</guid>
+      <description>简介 ​	Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。
+ 命令行ssh可以文件互传吗？
+ 有点：
+ 安全！ 方便！两台机器间不用输入账号密码就可验证身份！（通过保存在服务器和客户端上的密钥）  SSH的安全机制 SSH之所以能够保证安全，原因在于它采用了==非对称加密技术(RSA)==加密了所有传输的数据。
+传统的网络服务程序，如FTP、Pop和Telnet其本质上都是不安全的；因为它们在网络上用明文传送数据、用户帐号和用户口令，很容易受到==中间人==（man-in-the-middle）攻击方式的攻击。就是存在另一个人或者一台机器冒充真正的服务器接收用户传给服务器的数据，然后再冒充用户把数据传给真正的服务器。
+但并不是说SSH就是绝对安全的，因为它本身提供两种级别的验证方法：
+ 第一种级别（基于口令的安全验证）：只要你知道自己帐号和口令，就可以登录到远程主机。所有传输的数据都会被加密，但是不能保证你正在连接的服务器就是你想连接的服务器。可能会有别的服务器在冒充真正的服务器，也就是受到“中间人攻击”这种方式的攻击。   传统的账号密码验证？
+  第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。如果你要连接到SSH服务器上，客户端软件就会向服务器发出请求，请求用你的密钥进行安全验证。服务器收到请求之后，先在该服务器上你的主目录下寻找你的公钥，然后把它和你发送过来的公钥进行比较。如果两个密钥一致，服务器就用公钥加密“质询”(challenge)并把它发送给客户端软件。客户端软件收到“质询”之后就可以用你的私钥在本地解密再把它发送给服务器完成登录。与第一种级别相比，第二种级别不仅加密所有传输的数据，也不需要在网络上传送口令，因此安全性更高，可以有效防止中间人攻击。  ##基于密钥的安全验证-命令示例
+在本机生成一对密钥（即私钥与公钥）：
+ssh-keygen -t rsa #-t表示类型选项，这里采用rsa加密算法 然后根据提示一步步的按enter键即可（其中有一个提示是要求设置私钥口令passphrase，不设置则为空，这里看心情吧，如果不放心私钥的安全可以设置一下），执行结束以后会在 /home/当前用户 目录下生成一个 .ssh 文件夹,其中包含私钥文件 id_rsa 和公钥文件 id_rsa.pub。 将公钥复制到远程主机中
+使用ssh-copy-id命令将公钥复制到远程主机。ssh-copy-id会将公钥写到远程主机的 ~/ .ssh/authorized_keys文件中
+ssh-copy-id 用户名@ip 这样以后登录这台远程主机就不用账号密码了~
+使用 centos7和windows默认带有SSH工具；（OpenSSH?）
+首先确认服务器上的ssh-server是否已经启动了
+ps -e | grep ssh SSH默认使用22端口。
+每登录一台新的主机，就会将它添加到已知主机列表。
+拓展：github、码云上的SSH 可以在网页端操作，为账户生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；
+毕竟拉可以随便拉，推需要验证身份；
+这也是在SSH相对于https的优越之处：每次fetch和push时不再需要麻烦地输入账号密码（远程登陆也不需要账号密码了）；</description>
+    </item>
+    
+  </channel>
+</rss>
