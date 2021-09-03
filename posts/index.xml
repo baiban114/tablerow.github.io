@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 彦祖，你又来看博客了</title>
+    <title>Posts on 彦祖，你又来了</title>
     <link>https://baiban114.github.io/tablerow.github.io/posts/</link>
-    <description>Recent content in Posts on 彦祖，你又来看博客了</description>
+    <description>Recent content in Posts on 彦祖，你又来了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 28 Aug 2021 16:16:32 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -25,13 +25,11 @@
 ssh-keygen -t rsa #-t表示类型选项，这里采用rsa加密算法 然后根据提示一步步的按enter键即可（其中有一个提示是要求设置私钥口令passphrase，不设置则为空，这里看心情吧，如果不放心私钥的安全可以设置一下），执行结束以后会在 /home/当前用户 目录下生成一个 .ssh 文件夹,其中包含私钥文件 id_rsa 和公钥文件 id_rsa.pub。 将公钥复制到远程主机中
 使用ssh-copy-id命令将公钥复制到远程主机。ssh-copy-id会将公钥写到远程主机的 ~/ .ssh/authorized_keys文件中
 ssh-copy-id 用户名@ip 这样以后登录这台远程主机就不用账号密码了~
-使用 centos7和windows默认带有SSH工具；（OpenSSH?）
-首先确认服务器上的ssh-server是否已经启动了
+使用 centos7和windows默认带有SSH工具；（OpenSSH?）可以用一下命令检查：
+rpm -qa | grep ssh 首先确认服务器上的ssh-server是否已经启动了
 ps -e | grep ssh SSH默认使用22端口。
 每登录一台新的主机，就会将它添加到已知主机列表。
-拓展：github、码云上的SSH 可以在网页端操作，为账户生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；
-毕竟拉可以随便拉，推需要验证身份；
-这也是在SSH相对于https的优越之处：每次fetch和push时不再需要麻烦地输入账号密码（远程登陆也不需要账号密码了）；</description>
+拓展：github、码云上的SSH 可以在网页端操作，为账户生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；</description>
     </item>
     
     <item>
@@ -40,21 +38,28 @@ ps -e | grep ssh SSH默认使用22端口。
       <pubDate>Mon, 23 Aug 2021 16:45:08 +0800</pubDate>
       
       <guid>https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/</guid>
-      <description>什么是软件? 软件安装方式 源码编译 下载源代码（如redis使用C语言开发的），然后使用对应版本的编译器（如gcc）在源码文件夹下编译：
-make &amp;amp;&amp;amp; make install 在x86\x64\arm架构下会有区别,因为底层的指令集不同；
+      <description>前置知识 代码+文档（bushi）
+装在计算机上的软件，在硬盘上是静态的一系列代码、文件的集合，运行时成为动态的进程；
+但想要保证软件正常运行，需要环境+软件+库/依赖相匹配才行
+ 环境：  操作系统：基本环境，也是可执行文件的直接运行环境； 运行环境：如java字节码文件需要运行在jvm里，解释型语言要运行在有解释器的操作系统上，js要在浏览器or Node.js运行一样；似乎都是非纯编译运行的语言需要；在自己的环境中运行，就不需要转换成操作系统的可执行文件； java、python等环境安装后，需要将环境的位置添加到操作系统的PATH环境变量中，以确保操作系统能找到他们。   软件  比程序要大一点的概念，也是一系列指令； 因此软件最终都会成为机器能看懂的语言，在硬盘上不论是被编译成的可执行文件，还是脚本语言文件（由解释器读入内存一行就解释一行？可能要看看py和js的原理才懂），在cpu接触前，都会成为机器语言；   库  自己的库，如C语言#include的库;Java中的jre就是jvm+基础类库 系统提供的动态链接库，如win下的dll、linux的lib文件夹内容；    软件安装方式 源码编译 下载源代码（如redis使用C语言开发的），然后使用对应版本的编译器（如gcc）在源码文件夹下编译，最终形成可执行文件：
+make &amp;amp;&amp;amp; make install 在不同cpu架构下源码包和编译器会有区别,因为底层的指令集不同；
+安装流程和C语言源文件运行流程类似
 安装包 msi\exe\rpm\ipk\apk\aab;
-安装包也是由源码编译而成的二进制文件；
-二进制和可执行有什么区别？
-包管理器 pip
-应用商店等也是类似的角色,在官方的服务器上统一管理安装包;
-apt、yum等，从源（保管安装包的服务器）上下载安装软件；可以通过写配置文件来指定多个源；
-安装脚本 如docker;
-可执行文件 有时被称为“绿色免安装”版，“安装包”其实就是全部程序压缩一下；这种软件安装时不去注册表注册。
+安装包也是由源码编译而成的二进制文件；但已经过官方封装，开箱即用。
+单独安装安装包可能会遇到安装包之间的依赖问题。
+包管理器 应用商店等也是类似的角色,在官方的服务器上统一管理安装包;
+apt、yum、pip、maven?、nodejs等，从源（保管安装包的服务器）上下载安装软件；可以通过写配置文件来指定多个源；
+一些包管理器可以帮助解决依赖问题。
+安装脚本 如docker，网上有提供脚本直接安装;
+可执行文件 可执行文件 (executable file) 指的是可以由操作系统进行加载执行的文件。在不同的操作系统环境下，可执行程序的呈现方式不一样。
+有时被称为“绿色免安装”版，“安装包”其实就是全部程序压缩一下；这种软件安装时不去注册表注册。
 如windows下的exe;
-pyinstaller可以把py程序打包成exe程序，然后在没有安装python环境的电脑上能运行啦！
-why MC还需要装java
-软件卸载 管理器  使用包管理器的命令卸载 windows的控制面板:找到对应的卸载程序并运行;  这样似乎对exe直接运行的软件不行;是因为他们没去注册表报道吗?    软件官方提供卸载程序 windows下比较常见;
-可执行文件 直接删除即可；注意不要被快捷方式迷惑了。可以对快捷方式右键-&amp;gt;打开文件位置找到真正的文件所在处。</description>
+任何文件都是有数字（编码）组成的，即使是文本在物理上也是以二进制存储的；在一些编辑器下，exe也可以直接被文本编辑器以字符的形式查看。图片、视频也是二进制文件，但不是可执行文件。
+大家都知道计算机的存储在物理上是二进制的，所以文本文件与二进制文件的区别并不是物理上的，而是逻辑上的。这两者只是在编码层次上有差异。
+可执行文件就是操作系统可以执行的、不需要指定其他软件来执行的文件。一个文件是不是可执行文件要看操作系统的定义。
+pyInstaller可以把py程序打包成exe程序，然后在没有安装python环境的电脑上能运行啦！
+But why MC还需要装java，而不是打包成exe?java应该可以打包吧
+软件卸载 管理器/控制面板  使用包管理器的命令卸载 windows的控制面板:操作系统找到对应的卸载程序并运行;  这样似乎对exe直接运行的软件不行;是因为他们没去注册表报道吗?    软件官方提供卸载程序 windows下比较常见;</description>
     </item>
     
     <item>

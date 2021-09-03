@@ -192,7 +192,7 @@
     <a class="a-block nav-head false" href="https://baiban114.github.io/tablerow.github.io/">
     
         <div class="nav-title">
-            彦祖，你又来看博客了
+            彦祖，你又来了
         </div>
         
     </a>
@@ -255,7 +255,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2021 彦祖，你又来看博客了
+	2021 彦祖，你又来了
 	
 
            
@@ -556,7 +556,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             </i>
         </button>
         <a ref="navTitle" class="navbar-brand" href="https://baiban114.github.io/tablerow.github.io/">
-            彦祖，你又来看博客了
+            彦祖，你又来了
         </a>
         
         <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
@@ -573,7 +573,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <div class="single-column-header-container" ref="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
     <a href="https://baiban114.github.io/tablerow.github.io/">
-        <div class="single-column-header-title">彦祖，你又来看博客了</div>        
+        <div class="single-column-header-title">彦祖，你又来了</div>        
         
     </a>
     
@@ -650,6 +650,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <ul>
 <li>第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。如果你要连接到SSH服务器上，客户端软件就会向服务器发出请求，请求用你的密钥进行安全验证。服务器收到请求之后，先在该服务器上你的主目录下寻找你的公钥，然后把它和你发送过来的公钥进行比较。如果两个密钥一致，服务器就用公钥加密“质询”(challenge)并把它发送给客户端软件。客户端软件收到“质询”之后就可以用你的私钥在本地解密再把它发送给服务器完成登录。与第一种级别相比，第二种级别不仅加密所有传输的数据，也不需要在网络上传送口令，因此安全性更高，可以有效防止中间人攻击。</li>
 </ul>
+<p><img src="https://gitee.com/baiban114/tianrun/raw/master/imgs/20210831010042.png" alt="image-20210831010041400"></p>
 <p>##基于密钥的安全验证-命令示例</p>
 <p><strong>在本机生成一对密钥（即私钥与公钥）：</strong></p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa   <span style="color:#228b22">#-t表示类型选项，这里采用rsa加密算法</span>
@@ -659,8 +660,9 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id 用户名@ip
 </code></pre></div><p>这样以后登录这台远程主机就不用账号密码了~</p>
 <h1 id="使用">使用</h1>
-<p>centos7和windows默认带有SSH工具；（OpenSSH?）</p>
-<p>首先确认服务器上的ssh-server是否已经启动了</p>
+<p>centos7和windows默认带有SSH工具；（OpenSSH?）可以用一下命令检查：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rpm -qa | grep ssh
+</code></pre></div><p>首先确认服务器上的ssh-server是否已经启动了</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps -e | grep ssh
 </code></pre></div><p>SSH默认使用22端口。</p>
 <p>每登录一台新的主机，就会将它添加到已知主机列表。</p>
@@ -722,7 +724,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2021 彦祖，你又来看博客了
+	2021 彦祖，你又来了
 	
 </div>
             </div>
