@@ -81,12 +81,12 @@
 &lt;p&gt;这菜鸟教程不还是if else么（半恼&lt;/p&gt;
 &lt;h2 id=&#34;单例模式singleton-pattern&#34;&gt;单例模式（Singleton Pattern）&lt;/h2&gt;
 &lt;p&gt;**意图：**保证一个类仅有一个实例，并提供一个访问它的全局访问点。&lt;/p&gt;
-&lt;p&gt;**主要解决：**一个全局使用的类频繁地创建与销毁。(创建与销毁是有成本的，创建不必要的页会浪费资源)&lt;/p&gt;
-&lt;p&gt;**如何解决：**判断系统是否已经有这个单例，如果有则返回，如果没有则创建。&lt;/p&gt;
-&lt;p&gt;**关键代码：**构造函数是私有的。&lt;/p&gt;
+&lt;p&gt;**主要解决：**一个全局使用的类频繁地创建与销毁。(创建与销毁是有成本的，创建不必要的也会浪费资源)&lt;/p&gt;
+&lt;p&gt;**关键代码：**构造函数是私有的。在类内部创建一个自己的静态实例。&lt;/p&gt;
 &lt;h3 id=&#34;缺点&#34;&gt;缺点&lt;/h3&gt;
 &lt;p&gt;没有接口，不能继承，与==单一职责原则==（？）冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化&lt;/p&gt;
 &lt;h3 id=&#34;饿汉式&#34;&gt;饿汉式&lt;/h3&gt;
+&lt;p&gt;==定义静态成员变量时就创建对象==&lt;/p&gt;
 &lt;p&gt;**是否 Lazy 初始化：**否&lt;/p&gt;
 &lt;p&gt;**是否多线程安全：**是&lt;/p&gt;
 &lt;p&gt;**实现难度：**易&lt;/p&gt;
@@ -94,8 +94,33 @@
 优点：没有加锁，执行效率会提高。
 缺点：类加载时就初始化，浪费内存。
 它基于 classloader 机制避免了多线程的同步问题，不过，实例在==类装载==时就实例化，虽然导致类装载的原因有很多种，这时候初始化 instance 显然没有达到 lazy loading 的效果。&lt;/p&gt;
-&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ - </description>
+&lt;p&gt;在getInstance()方法中不用再考虑实例是否在为空时需要创建，直接返回即可。&lt;/p&gt;
+&lt;p&gt;###懒汉式&lt;/p&gt;
+&lt;p&gt;等到调用getInstance()方法的时候再创建对象。&lt;/p&gt;
+&lt;p&gt;由于创建对象时已进入临界区，如果不加Synchronized锁的话不能线程安全。&lt;/p&gt;
+&lt;h3 id=&#34;双检锁双重校验锁dcl-double-checked-locking&#34;&gt;双检锁/双重校验锁（DCL， double-checked locking）&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;why双锁模式下还有高性能？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1.使用volatile修饰我们的对象引用
+2.外部if判断对象是否为null，为null往下执行，不为null直接返回对象
+3.使用syn同步进入代码块，使用if判断对象是否为null，为null就创建对象
+4.使用volatile修饰成员变量的原因就是防止重排序的问题&amp;mdash;&amp;gt;变量还未完全初始化就被线程B返回了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#008b45;font-weight:bold&#34;&gt;Singleton&lt;/span&gt; {  
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;volatile&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton singleton;  
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Singleton&lt;/span&gt; (){}  
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;static&lt;/span&gt; Singleton &lt;span style=&#34;color:#008b45&#34;&gt;getSingleton&lt;/span&gt;() {  
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (singleton == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) {  
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;synchronized&lt;/span&gt; (Singleton.&lt;span style=&#34;color:#658b00&#34;&gt;class&lt;/span&gt;) {  
+        &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (singleton == &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;null&lt;/span&gt;) {  
+            singleton = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;new&lt;/span&gt; Singleton();  
+        }  
+        }  
+    }  
+    &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; singleton;  
+    }  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://baiban114.github.io/tablerow.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ - </description>
         </item>
     
     

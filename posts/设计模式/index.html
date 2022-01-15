@@ -433,6 +433,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%8c%e6%a3%80%e9%94%81%e5%8f%8c%e9%87%8d%e6%a0%a1%e9%aa%8c%e9%94%81dcl-double-checked-locking" onclick="onNavClick(`#双检锁双重校验锁dcl-double-checked-locking-nav`)" id="双检锁双重校验锁dcl-double-checked-locking-nav">
+									双检锁/双重校验锁（DCL， double-checked locking）
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -668,6 +686,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%8c%e6%a3%80%e9%94%81%e5%8f%8c%e9%87%8d%e6%a0%a1%e9%aa%8c%e9%94%81dcl-double-checked-locking" onclick="onNavClick(`#双检锁双重校验锁dcl-double-checked-locking-nav`)" id="双检锁双重校验锁dcl-double-checked-locking-nav">
+									双检锁/双重校验锁（DCL， double-checked locking）
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -828,12 +864,12 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>这菜鸟教程不还是if else么（半恼</p>
 <h2 id="单例模式singleton-pattern">单例模式（Singleton Pattern）</h2>
 <p>**意图：**保证一个类仅有一个实例，并提供一个访问它的全局访问点。</p>
-<p>**主要解决：**一个全局使用的类频繁地创建与销毁。(创建与销毁是有成本的，创建不必要的页会浪费资源)</p>
-<p>**如何解决：**判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</p>
-<p>**关键代码：**构造函数是私有的。</p>
+<p>**主要解决：**一个全局使用的类频繁地创建与销毁。(创建与销毁是有成本的，创建不必要的也会浪费资源)</p>
+<p>**关键代码：**构造函数是私有的。在类内部创建一个自己的静态实例。</p>
 <h3 id="缺点">缺点</h3>
 <p>没有接口，不能继承，与==单一职责原则==（？）冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化</p>
 <h3 id="饿汉式">饿汉式</h3>
+<p>==定义静态成员变量时就创建对象==</p>
 <p>**是否 Lazy 初始化：**否</p>
 <p>**是否多线程安全：**是</p>
 <p>**实现难度：**易</p>
@@ -841,8 +877,33 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 优点：没有加锁，执行效率会提高。
 缺点：类加载时就初始化，浪费内存。
 它基于 classloader 机制避免了多线程的同步问题，不过，实例在==类装载==时就实例化，虽然导致类装载的原因有很多种，这时候初始化 instance 显然没有达到 lazy loading 的效果。</p>
-<h3 id="heading"></h3>
-
+<p>在getInstance()方法中不用再考虑实例是否在为空时需要创建，直接返回即可。</p>
+<p>###懒汉式</p>
+<p>等到调用getInstance()方法的时候再创建对象。</p>
+<p>由于创建对象时已进入临界区，如果不加Synchronized锁的话不能线程安全。</p>
+<h3 id="双检锁双重校验锁dcl-double-checked-locking">双检锁/双重校验锁（DCL， double-checked locking）</h3>
+<blockquote>
+<p>why双锁模式下还有高性能？</p>
+</blockquote>
+<p>1.使用volatile修饰我们的对象引用
+2.外部if判断对象是否为null，为null往下执行，不为null直接返回对象
+3.使用syn同步进入代码块，使用if判断对象是否为null，为null就创建对象
+4.使用volatile修饰成员变量的原因就是防止重排序的问题&mdash;&gt;变量还未完全初始化就被线程B返回了</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Singleton</span> {  
+    <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#8b008b;font-weight:bold">volatile</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton singleton;  
+    <span style="color:#8b008b;font-weight:bold">private</span> <span style="color:#008b45">Singleton</span> (){}  
+    <span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">static</span> Singleton <span style="color:#008b45">getSingleton</span>() {  
+    <span style="color:#8b008b;font-weight:bold">if</span> (singleton == <span style="color:#8b008b;font-weight:bold">null</span>) {  
+        <span style="color:#8b008b;font-weight:bold">synchronized</span> (Singleton.<span style="color:#658b00">class</span>) {  
+        <span style="color:#8b008b;font-weight:bold">if</span> (singleton == <span style="color:#8b008b;font-weight:bold">null</span>) {  
+            singleton = <span style="color:#8b008b;font-weight:bold">new</span> Singleton();  
+        }  
+        }  
+    }  
+    <span style="color:#8b008b;font-weight:bold">return</span> singleton;  
+    }  
+}
+</code></pre></div>
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">Last modified on 2022-01-11</p>
