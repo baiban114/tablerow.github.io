@@ -512,10 +512,15 @@ git push -u origin master
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;动态&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;静态&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;出处&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;出处|例子&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运行时、在内存中==结构==可变的&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;编译后确定，&lt;strong&gt;运行时不可变的&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;动/静语言&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;随数据而变的&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;写死的文件&lt;/td&gt;
@@ -738,6 +743,8 @@ git push -u origin master
 &lt;h2 id=&#34;文件控制块fcb&#34;&gt;文件控制块FCB&lt;/h2&gt;
 &lt;h2 id=&#34;进程控制块pcb&#34;&gt;进程控制块PCB&lt;/h2&gt;
 &lt;h2 id=&#34;作业控制块jcb&#34;&gt;作业控制块JCB&lt;/h2&gt;
+&lt;h1 id=&#34;控制反转依赖注入&#34;&gt;控制反转&amp;amp;&amp;amp;依赖注入&lt;/h1&gt;
+&lt;p&gt;控制权不是代码；可以从配置文件向代码注入值；方法是IO；修改时不用改代码，修改文件即可；适合搞配置&lt;/p&gt;
 - https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/ - </description>
         </item>
     
