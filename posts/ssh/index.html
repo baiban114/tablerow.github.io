@@ -333,10 +333,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 						
-							
-								</ul>
-							
-						
 						
 						
 							<li>
@@ -354,6 +350,36 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%9c%8d%e5%8a%a1%e7%ab%af%e5%87%86%e5%a4%87" onclick="onNavClick(`#服务端准备-nav`)" id="服务端准备-nav">
+									服务端准备
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
 						
 						
 						
@@ -502,10 +528,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 						
-							
-								</ul>
-							
-						
 						
 						
 							<li>
@@ -523,6 +545,36 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%9c%8d%e5%8a%a1%e7%ab%af%e5%87%86%e5%a4%87" onclick="onNavClick(`#服务端准备-nav`)" id="服务端准备-nav">
+									服务端准备
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
 						
 						
 						
@@ -632,7 +684,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <blockquote>
 <p>命令行ssh可以文件互传吗？</p>
 </blockquote>
-<p>有点：</p>
+<p>优点：</p>
 <ul>
 <li>安全！</li>
 <li>方便！两台机器间不用输入账号密码就可验证身份！（通过保存在服务器和客户端上的密钥）</li>
@@ -648,28 +700,33 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>传统的账号密码验证？</p>
 </blockquote>
 <ul>
-<li>第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。如果你要连接到SSH服务器上，客户端软件就会向服务器发出请求，请求用你的密钥进行安全验证。服务器收到请求之后，先在该服务器上你的主目录下寻找你的公钥，然后把它和你发送过来的公钥进行比较。如果两个密钥一致，服务器就用公钥加密“质询”(challenge)并把它发送给客户端软件。客户端软件收到“质询”之后就可以用你的私钥在本地解密再把它发送给服务器完成登录。与第一种级别相比，第二种级别不仅加密所有传输的数据，也不需要在网络上传送口令，因此安全性更高，可以有效防止中间人攻击。</li>
+<li>第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。如果你要连接到SSH服务器上，客户端软件就会向服务器发出请求，请求用你的密钥进行安全验证。服务器收到请求之后，先在该服务器上你的主目录下（该服务器上你用的账号）寻找你（客户端）的公钥，然后把它和你发送过来的公钥进行比较。如果两个密钥一致，服务器就用公钥加密“质询”(challenge)并把它发送给客户端软件。客户端软件收到“质询”之后就可以用你的私钥在本地解密再把它发送给服务器完成登录。与第一种级别相比，第二种级别不仅加密所有传输的数据，也不需要在网络上传送口令，因此安全性更高，可以有效防止中间人攻击。</li>
 </ul>
-<p><img src="https://gitee.com/baiban114/tianrun/raw/master/imgs/20210831010042.png" alt="image-20210831010041400"></p>
-<p>##基于密钥的安全验证-命令示例</p>
+<p><img src="https://gitee.com/tablerows/tianrun/raw/master/imgs/20210831010042.png" alt="ssh"></p>
+<h2 id="使用">使用</h2>
+<p>###基于密钥的安全验证-事前准备</p>
 <p><strong>在本机生成一对密钥（即私钥与公钥）：</strong></p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa   <span style="color:#228b22">#-t表示类型选项，这里采用rsa加密算法</span>
-</code></pre></div><p>然后根据提示一步步的按enter键即可（其中有一个提示是要求设置私钥口令passphrase，不设置则为空，这里看心情吧，如果不放心私钥的安全可以设置一下），执行结束以后会在 /home/当前用户 目录下生成一个 .ssh 文件夹,其中包含私钥文件 id_rsa 和公钥文件 id_rsa.pub。
+</code></pre></div><p>然后根据提示一步步的按enter键即可（其中有一个提示是要求设置私钥口令passphrase，不设置则为空，这里看心情吧，如果不放心私钥的安全可以设置一下），执行结束以后会在 /home/当前用户 目录下生成一个 .ssh 文件夹,其中包含私钥文件 id_rsa 和公钥文件 id_rsa.pub。（还有known_hosts不知道有用没）
 <strong>将公钥复制到远程主机中</strong></p>
 <p>使用ssh-copy-id命令将公钥复制到远程主机。ssh-copy-id会将公钥写到远程主机的 ~/ .ssh/authorized_keys文件中</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id 用户名@ip
 </code></pre></div><p>这样以后登录这台远程主机就不用账号密码了~</p>
-<h1 id="使用">使用</h1>
+<h3 id="服务端准备">服务端准备</h3>
 <p>centos7和windows默认带有SSH工具；（OpenSSH?）可以用一下命令检查：</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rpm -qa | grep ssh
 </code></pre></div><p>首先确认服务器上的ssh-server是否已经启动了</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps -e | grep ssh
-</code></pre></div><p>SSH默认使用22端口。</p>
+</code></pre></div><p>SSH默认使用22端口，注意开放端口。</p>
 <p>每登录一台新的主机，就会将它添加到已知主机列表。</p>
+<p>###远程登陆</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh 用户名@ip
+</code></pre></div><p>口令（密码）级别使用时会提示输入密码；</p>
+<p>若不填写用户名，则会默认以当前计算机登录的用户名尝试登录服务器</p>
 <h1 id="拓展github码云上的ssh">拓展：github、码云上的SSH</h1>
-<p>可以在网页端操作，为账户生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；</p>
-<p>毕竟拉可以随便拉，推需要验证身份；</p>
-<p>这也是在SSH相对于https的优越之处：每次fetch和push时不再需要麻烦地输入账号密码（远程登陆也不需要账号密码了）；</p>
+<p>可以在网页端操作，为==账户==生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；</p>
+<p>毕竟仓库拉可以随便拉，推需要验证身份；</p>
+<p>这也是SSH相对于https的优越之处：每次fetch和push时不再需要麻烦地输入账号密码（远程登陆也不需要账号密码了）；</p>
 
                     
                     <HR width="100%" id="EOF">
