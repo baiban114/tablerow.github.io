@@ -8,14 +8,13 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 28 Aug 2021 16:16:32 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SSH</title>
-      <link>https://baiban114.github.io/tablerow.github.io/posts/ssh/</link>
+      <title>应用层网络协议</title>
+      <link>https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</link>
       <pubDate>Sat, 28 Aug 2021 16:16:32 +0800</pubDate>
       
-      <guid>https://baiban114.github.io/tablerow.github.io/posts/ssh/</guid>
-      <description>简介 ​	Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。
- 命令行ssh可以文件互传吗？
- 优点：
+      <guid>https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</guid>
+      <description>网络协议：约定的信息传输的格式，如几个字节是消息头、消息头记录什么信息之类的； c/s架构：不一定是两台计算机，而是两个应用、两个端口 工具：实际使用中不用手动封装协议再发消息，而是直接使用封装的软件、库等实现功能。如SSH工具OpenSSH  SSH Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。
+  命令行ssh可以文件互传吗?  为什么这么问来着？想不起来就删了     优点：
  安全！ 方便！两台机器间不用输入账号密码就可验证身份！（通过保存在服务器和客户端上的密钥）  SSH的安全机制 SSH之所以能够保证安全，原因在于它采用了==非对称加密技术(RSA)==加密了所有传输的数据。
 传统的网络服务程序，如FTP、Pop和Telnet其本质上都是不安全的；因为它们在网络上用明文传送数据、用户帐号和用户口令，很容易受到==中间人==（man-in-the-middle）攻击方式的攻击。就是存在另一个人或者一台机器冒充真正的服务器接收用户传给服务器的数据，然后再冒充用户把数据传给真正的服务器。
 但并不是说SSH就是绝对安全的，因为它本身提供两种级别的验证方法：
@@ -26,10 +25,7 @@ ssh-keygen -t rsa #-t表示类型选项，这里采用rsa加密算法 然后根�
 使用ssh-copy-id命令将公钥复制到远程主机。ssh-copy-id会将公钥写到远程主机的 ~/ .ssh/authorized_keys文件中
 ssh-copy-id 用户名@ip 这样以后登录这台远程主机就不用账号密码了~
 服务端准备 centos7和windows默认带有SSH工具；（OpenSSH?）可以用一下命令检查：
-rpm -qa | grep ssh 首先确认服务器上的ssh-server是否已经启动了
-ps -e | grep ssh SSH默认使用22端口，注意开放端口。
-每登录一台新的主机，就会将它添加到已知主机列表。
-###远程登陆</description>
+rpm -qa | grep ssh 首先确认服务器上的ssh-server是否已经启动了</description>
     </item>
     
   </channel>

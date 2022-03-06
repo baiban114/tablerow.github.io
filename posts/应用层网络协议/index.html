@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html><head>
-	<meta name="generator" content="Hugo 0.84.1" />
-<title>彦祖，你又来了</title>
+<title>应用层网络协议</title>
 
 
-
-  
 
 
 <meta charset="utf-8">
@@ -54,6 +51,10 @@
 
 
 
+
+  
+    <script src="/tablerow.github.io/js/toc.js"></script>
+  
 
 
 
@@ -188,7 +189,7 @@
 <body>
     	<div id="app"><div ref="sideContainer" class="side-container">
     
-    <a class="a-block nav-head active" href="https://baiban114.github.io/tablerow.github.io/">
+    <a class="a-block nav-head false" href="https://baiban114.github.io/tablerow.github.io/">
     
         <div class="nav-title">
             彦祖，你又来了
@@ -271,6 +272,194 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ssh" onclick="onNavClick(`#ssh-nav`)" id="ssh-nav">
+									SSH
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#ssh%e7%9a%84%e5%ae%89%e5%85%a8%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#ssh的安全机制-nav`)" id="ssh的安全机制-nav">
+									SSH的安全机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bd%bf%e7%94%a8" onclick="onNavClick(`#使用-nav`)" id="使用-nav">
+									使用
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%9c%8d%e5%8a%a1%e7%ab%af%e5%87%86%e5%a4%87" onclick="onNavClick(`#服务端准备-nav`)" id="服务端准备-nav">
+									服务端准备
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%8b%93%e5%b1%95github%e7%a0%81%e4%ba%91%e4%b8%8a%e7%9a%84ssh" onclick="onNavClick(`#拓展github码云上的ssh-nav`)" id="拓展github码云上的ssh-nav">
+									拓展：github、码云上的SSH
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#ftp" onclick="onNavClick(`#ftp-nav`)" id="ftp-nav">
+									FTP
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8b%93%e5%b1%95" onclick="onNavClick(`#拓展-nav`)" id="拓展-nav">
+									拓展
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%b5%8f%e8%a7%88%e5%99%a8%e5%8f%af%e4%bb%a5%e8%bf%90%e8%a1%8c%e7%9a%84%e5%8d%8f%e8%ae%ae" onclick="onNavClick(`#浏览器可以运行的协议-nav`)" id="浏览器可以运行的协议-nav">
+									浏览器可以运行的协议
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -286,8 +475,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 brightness_7
             </i>
         </a>
-        
-        
         
         
     </div>
@@ -342,6 +529,194 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
             
             
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ssh" onclick="onNavClick(`#ssh-nav`)" id="ssh-nav">
+									SSH
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#ssh%e7%9a%84%e5%ae%89%e5%85%a8%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#ssh的安全机制-nav`)" id="ssh的安全机制-nav">
+									SSH的安全机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bd%bf%e7%94%a8" onclick="onNavClick(`#使用-nav`)" id="使用-nav">
+									使用
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%9c%8d%e5%8a%a1%e7%ab%af%e5%87%86%e5%a4%87" onclick="onNavClick(`#服务端准备-nav`)" id="服务端准备-nav">
+									服务端准备
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%8b%93%e5%b1%95github%e7%a0%81%e4%ba%91%e4%b8%8a%e7%9a%84ssh" onclick="onNavClick(`#拓展github码云上的ssh-nav`)" id="拓展github码云上的ssh-nav">
+									拓展：github、码云上的SSH
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#ftp" onclick="onNavClick(`#ftp-nav`)" id="ftp-nav">
+									FTP
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8b%93%e5%b1%95" onclick="onNavClick(`#拓展-nav`)" id="拓展-nav">
+									拓展
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%b5%8f%e8%a7%88%e5%99%a8%e5%8f%af%e4%bb%a5%e8%bf%90%e8%a1%8c%e7%9a%84%e5%8d%8f%e8%ae%ae" onclick="onNavClick(`#浏览器可以运行的协议-nav`)" id="浏览器可以运行的协议-nav">
+									浏览器可以运行的协议
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
         </div>
     </div>
 </div>
@@ -390,259 +765,162 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div>
 
             <div id="content">
-
 <div ref="streamContainer" class="stream-container">
-    <div class="post-list-container post-list-container-no-background">
-        
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
             
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                设计模式
-                            </div>
-                            <div class="post-item-summary">
-                                Java设计模式学习笔记
-                            </div>
-                            <div class="post-item-meta">
-    2022-01-11
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            
+            
 
-                        </div>
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    应用层网络协议
+                    
+                    <div class="post-meta">
                         
+                        <time itemprop="datePublished">
+                            2021-08-28 16:16
+                        </time>
                         
-                            
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            
-                                 style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190902/714391addcc3437a8815488465748aea.jpeg')"
-                            
-                            ></div>
-                            </div>
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                应用层网络协议
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2021-08-28
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tablerow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C">计算机网络</a>
+                                &nbsp;
+                            
                         
                         
                     </div>
                 </div>
+            </div>
             
-        
-            
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                管理计算机上的软件
-                            </div>
-                            <div class="post-item-summary">
-                                常用安装、卸载、管理软件的方式汇总
-                            </div>
-                            <div class="post-item-meta">
-    2021-08-23
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <ul>
+<li>网络协议：约定的信息传输的格式，如几个字节是消息头、消息头记录什么信息之类的；</li>
+<li>c/s架构：不一定是两台计算机，而是两个应用、两个端口</li>
+<li>工具：实际使用中不用手动封装协议再发消息，而是直接使用封装的软件、库等实现功能。如SSH工具OpenSSH</li>
+</ul>
+<p><img src="https://gitee.com/tablerows/tianrun/raw/master/imgs/20220306212211.jpg" alt="网络协议"></p>
+<h1 id="ssh">SSH</h1>
+<p>Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。</p>
+<blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> 命令行ssh可以文件互传吗?
+<ul>
+<li><input disabled="" type="checkbox"> 为什么这么问来着？想不起来就删了</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>优点：</p>
+<ul>
+<li>安全！</li>
+<li>方便！两台机器间不用输入账号密码就可验证身份！（通过保存在服务器和客户端上的密钥）</li>
+</ul>
+<h2 id="ssh的安全机制">SSH的安全机制</h2>
+<p>SSH之所以能够保证安全，原因在于它采用了==非对称加密技术(RSA)==加密了所有传输的数据。</p>
+<p>传统的网络服务程序，如FTP、Pop和Telnet其本质上都是不安全的；因为它们在网络上用明文传送数据、用户帐号和用户口令，很容易受到==中间人==（man-in-the-middle）攻击方式的攻击。就是存在另一个人或者一台机器冒充真正的服务器接收用户传给服务器的数据，然后再冒充用户把数据传给真正的服务器。</p>
+<p>但并不是说SSH就是绝对安全的，因为它本身提供两种级别的验证方法：</p>
+<ul>
+<li>第一种级别（基于口令的安全验证）：只要你知道自己帐号和口令，就可以登录到远程主机。所有传输的数据都会被加密，但是不能保证你正在连接的服务器就是你想连接的服务器。可能会有别的服务器在冒充真正的服务器，也就是受到“中间人攻击”这种方式的攻击。</li>
+</ul>
+<blockquote>
+<p>传统的账号密码验证？</p>
+</blockquote>
+<ul>
+<li>第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。如果你要连接到SSH服务器上，客户端软件就会向服务器发出请求，请求用你的密钥进行安全验证。服务器收到请求之后，先在该服务器上你的主目录下（该服务器上你用的账号）寻找你（客户端）的公钥，然后把它和你发送过来的公钥进行比较。如果两个密钥一致，服务器就用公钥加密“质询”(challenge)并把它发送给客户端软件。客户端软件收到“质询”之后就可以用你的私钥在本地解密再把它发送给服务器完成登录。与第一种级别相比，第二种级别不仅加密所有传输的数据，也不需要在网络上传送口令，因此安全性更高，可以有效防止中间人攻击。</li>
+</ul>
+<p><img src="https://gitee.com/tablerows/tianrun/raw/master/imgs/20210831010042.png" alt="ssh"></p>
+<h2 id="使用">使用</h2>
+<p>###基于密钥的安全验证-事前准备</p>
+<p><strong>在本机生成一对密钥（即私钥与公钥）：</strong></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa   <span style="color:#228b22">#-t表示类型选项，这里采用rsa加密算法</span>
+</code></pre></div><p>然后根据提示一步步的按enter键即可（其中有一个提示是要求设置私钥口令passphrase，不设置则为空，这里看心情吧，如果不放心私钥的安全可以设置一下），执行结束以后会在 /home/当前用户 目录下生成一个 .ssh 文件夹,其中包含私钥文件 id_rsa 和公钥文件 id_rsa.pub。（还有known_hosts不知道有用没）
+<strong>将公钥复制到远程主机中</strong></p>
+<p>使用ssh-copy-id命令将公钥复制到远程主机。ssh-copy-id会将公钥写到远程主机的 ~/ .ssh/authorized_keys文件中</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id 用户名@ip
+</code></pre></div><p>这样以后登录这台远程主机就不用账号密码了~</p>
+<h3 id="服务端准备">服务端准备</h3>
+<p>centos7和windows默认带有SSH工具；（OpenSSH?）可以用一下命令检查：</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rpm -qa | grep ssh
+</code></pre></div><p>首先确认服务器上的ssh-server是否已经启动了</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps -e | grep ssh
+</code></pre></div><p>SSH默认使用22端口，注意开放端口。</p>
+<p>每登录一台新的主机，就会将它添加到已知主机列表。</p>
+<p>###远程登陆</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh 用户名@ip
+</code></pre></div><p>口令（密码）级别使用时会提示输入密码；</p>
+<p>若不填写用户名，则会默认以当前计算机登录的用户名尝试登录服务器</p>
+<p>**退出：**输入logout（linux命令？） 或者exit，或直接关闭终端/进程</p>
+<h2 id="拓展github码云上的ssh">拓展：github、码云上的SSH</h2>
+<p>可以在网页端操作，为==账户==生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；</p>
+<p>毕竟仓库拉可以随便拉，推需要验证身份；</p>
+<p>这也是SSH相对于https的优越之处：每次fetch和push时不再需要麻烦地输入账号密码（远程登陆也不需要账号密码了）；</p>
+<p>#SSL</p>
+<h1 id="ftp">FTP</h1>
+<p>文件传输协议（File Transfer Protocol，FTP）是用于在<a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C">网络</a>上进行文件传输的一套标准协议。</p>
+<p>FTP允许用户以文件操作的方式（如文件的增、删、改、查、传送等）与另一主机相互通信。然而， 用户并不真正登录到自己想要存取的计算机上面而成为完全用户， 可用FTP程序访问远程资源， 实现用户往返传输文件、目录管理以及访问电子邮件等等， 即使双方计算机可能配有不同的操作系统和文件存储方式。</p>
+<p>FTP 的独特的优势同时也是与其它客户服务器程序最大的不同点就在于它在两台通信的主机之间使用了两条 TCP 连接，一条是数据连接，用于数据传送；另一条是控制连接，用于传送控制信息（命令和响应），这种将命令和数据分开传送的思想大大提高了 FTP 的效率，而其它客户服务器应用程序一般只有一条 TCP 连接。</p>
+<h1 id="拓展">拓展</h1>
+<h2 id="浏览器可以运行的协议">浏览器可以运行的协议</h2>
+<p>http/https</p>
+<p>file</p>
+<p>ftp</p>
 
-                        </div>
-                        
-                        
-                            
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            
-                                 style="background-image: url('https://gitee.com/baiban114/tianrun/raw/master/imgs/20210318183943.png')"
-                            
-                            ></div>
-                            </div>
-                        
-                    </div>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-08-28</p>
+                    
                 </div>
+            </div>
             
-        
             
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                文件系统
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2021-08-05
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <nav class="post-pagination">
 
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Hugo使用经验
-                            </div>
-                            <div class="post-item-summary">
-                                《别用》
-                            </div>
-                            <div class="post-item-meta">
-    2021-07-26
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+                
+                <a class="newer-posts" href="https://baiban114.github.io/tablerow.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+			Next<br>设计模式
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://baiban114.github.io/tablerow.github.io/posts/%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%BD%AF%E4%BB%B6/">
+			Previous<br>管理计算机上的软件
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
 
-                        </div>
-                        
-                        
-                            
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            
-                                 style="background-image: url('https://img-blog.csdnimg.cn/c0b511f31c864b22b873b6aee915dfd5.png')"
-                            
-                            ></div>
-                            </div>
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/tips/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                tips
-                            </div>
-                            <div class="post-item-summary">
-                                总结小技巧，该用时要能想起来
-                            </div>
-                            <div class="post-item-meta">
-    2021-07-24
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                        
-                        
-                            
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            
-                                 style="background-image: url('https://gitee.com/tablerows/tianrun/raw/master/imgs/20210725162744.webp')"
-                            
-                            ></div>
-                            </div>
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://baiban114.github.io/tablerow.github.io/posts/%E7%81%B5%E9%B8%A1%E4%B8%80%E5%8A%A8/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                灵鸡一动
-                            </div>
-                            <div class="post-item-summary">
-                                本篇记录突然出现的灵感、没来及整理的知识点、寻找知识间思想的联系。具体知识点要写到对应的笔记上
-                            </div>
-                            <div class="post-item-meta">
-    2021-07-21
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                        
-                        
-                            
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            
-                                 style="background-image: url('https://gitee.com/tablerows/tianrun/raw/master/imgs/20210725162900.png')"
-                            
-                            ></div>
-                            </div>
-                        
-                    </div>
-                </div>
-            
-        
-        </a>
+
+
+
+
+
+
+
+
+
+<div id="utter" alt="baiban114/tablerow.github.io"></div>
+
+
+
+            </div>
+        </div>
     </div>
 </div>
 
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -904,6 +1182,18 @@ app = new Vue({
 
 		
 		
+		const utterances = document.createElement('script');
+        utterances.type = 'text/javascript';
+        utterances.async = true;
+        utterances.setAttribute('theme','github-light')
+        utterances.setAttribute('repo','baiban114\/tablerow.github.io')
+		utterances.setAttribute('issue-term', 'pathname')
+        utterances.crossorigin = 'anonymous';
+        utterances.src = 'https://utteranc.es/client.js';
+ 
+        window.document.getElementById('utter').appendChild(utterances);
+	
+		
 
 
         document.querySelectorAll("table").forEach(function(elem){
@@ -913,6 +1203,9 @@ app = new Vue({
             elem.classList.add("table-hover");
         })
 
+        
+        spy();
+        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         
         
     },

@@ -126,15 +126,27 @@
     
     
         <item>
-        <title>SSH</title>
-        <link>https://baiban114.github.io/tablerow.github.io/posts/ssh/</link>
+        <title>应用层网络协议</title>
+        <link>https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</link>
         <pubDate>Sat, 28 Aug 2021 16:16:32 +0800</pubDate>
         
-        <guid>https://baiban114.github.io/tablerow.github.io/posts/ssh/</guid>
-        <description>彦祖，你又来了 https://baiban114.github.io/tablerow.github.io/posts/ssh/ -&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-&lt;p&gt;​	Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。&lt;/p&gt;
+        <guid>https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</guid>
+        <description>彦祖，你又来了 https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ -&lt;ul&gt;
+&lt;li&gt;网络协议：约定的信息传输的格式，如几个字节是消息头、消息头记录什么信息之类的；&lt;/li&gt;
+&lt;li&gt;c/s架构：不一定是两台计算机，而是两个应用、两个端口&lt;/li&gt;
+&lt;li&gt;工具：实际使用中不用手动封装协议再发消息，而是直接使用封装的软件、库等实现功能。如SSH工具OpenSSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/tablerows/tianrun/raw/master/imgs/20220306212211.jpg&#34; alt=&#34;网络协议&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;ssh&#34;&gt;SSH&lt;/h1&gt;
+&lt;p&gt;Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;命令行ssh可以文件互传吗？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 命令行ssh可以文件互传吗?
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 为什么这么问来着？想不起来就删了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;优点：&lt;/p&gt;
 &lt;ul&gt;
@@ -175,11 +187,22 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh 用户名@ip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;口令（密码）级别使用时会提示输入密码；&lt;/p&gt;
 &lt;p&gt;若不填写用户名，则会默认以当前计算机登录的用户名尝试登录服务器&lt;/p&gt;
-&lt;h1 id=&#34;拓展github码云上的ssh&#34;&gt;拓展：github、码云上的SSH&lt;/h1&gt;
+&lt;p&gt;**退出：**输入logout（linux命令？） 或者exit，或直接关闭终端/进程&lt;/p&gt;
+&lt;h2 id=&#34;拓展github码云上的ssh&#34;&gt;拓展：github、码云上的SSH&lt;/h2&gt;
 &lt;p&gt;可以在网页端操作，为==账户==生成SSH key公钥；除了账户SSH key外，仓库也有key，但只供拉取权限；&lt;/p&gt;
 &lt;p&gt;毕竟仓库拉可以随便拉，推需要验证身份；&lt;/p&gt;
 &lt;p&gt;这也是SSH相对于https的优越之处：每次fetch和push时不再需要麻烦地输入账号密码（远程登陆也不需要账号密码了）；&lt;/p&gt;
-- https://baiban114.github.io/tablerow.github.io/posts/ssh/ - </description>
+&lt;p&gt;#SSL&lt;/p&gt;
+&lt;h1 id=&#34;ftp&#34;&gt;FTP&lt;/h1&gt;
+&lt;p&gt;文件传输协议（File Transfer Protocol，FTP）是用于在&lt;a href=&#34;https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C&#34;&gt;网络&lt;/a&gt;上进行文件传输的一套标准协议。&lt;/p&gt;
+&lt;p&gt;FTP允许用户以文件操作的方式（如文件的增、删、改、查、传送等）与另一主机相互通信。然而， 用户并不真正登录到自己想要存取的计算机上面而成为完全用户， 可用FTP程序访问远程资源， 实现用户往返传输文件、目录管理以及访问电子邮件等等， 即使双方计算机可能配有不同的操作系统和文件存储方式。&lt;/p&gt;
+&lt;p&gt;FTP 的独特的优势同时也是与其它客户服务器程序最大的不同点就在于它在两台通信的主机之间使用了两条 TCP 连接，一条是数据连接，用于数据传送；另一条是控制连接，用于传送控制信息（命令和响应），这种将命令和数据分开传送的思想大大提高了 FTP 的效率，而其它客户服务器应用程序一般只有一条 TCP 连接。&lt;/p&gt;
+&lt;h1 id=&#34;拓展&#34;&gt;拓展&lt;/h1&gt;
+&lt;h2 id=&#34;浏览器可以运行的协议&#34;&gt;浏览器可以运行的协议&lt;/h2&gt;
+&lt;p&gt;http/https&lt;/p&gt;
+&lt;p&gt;file&lt;/p&gt;
+&lt;p&gt;ftp&lt;/p&gt;
+- https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/ - </description>
         </item>
     
     
@@ -482,10 +505,10 @@ git push -u origin master
 &lt;h2 id=&#34;第二讲&#34;&gt;第二讲&lt;/h2&gt;
 &lt;p&gt;已知不等式：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;sinx &amp;lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：&lt;img src=&#34;https://img-blog.csdnimg.cn/20201117164621931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NjbnRfMjAxMg==,size_16,color_FFFFFF,t_70&#34; alt=&#34;alt&#34;&gt;&lt;/li&gt;
+&lt;li&gt;sinx &amp;lt;= x；sinx其实比x小，看泰勒展开式就知道；同济书里的证明：&lt;img src=&#34;https://img-blog.csdnimg.cn/20201117164621931.png&#34; alt=&#34;alt&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;例2.13：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/baiban114/tianrun/raw/master/imgs/20210802172809.png&#34; alt=&#34;image-20210802172757774&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/tablerows/tianrun/raw/master/imgs/20210802172809.png&#34; alt=&#34;image-20210802172757774&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第四讲之前&#34;&gt;第四讲之前&lt;/h2&gt;
 &lt;p&gt;奇奇得偶；奇函数泰勒展开不会有偶数次方；&lt;/p&gt;
 &lt;h1 id=&#34;辞典&#34;&gt;辞典&lt;/h1&gt;
