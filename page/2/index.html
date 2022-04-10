@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html><head>
-<title>管理计算机上的软件</title>
+	<meta name="generator" content="Hugo 0.84.1" />
+<title>彦祖，你又来了</title>
 
 
+
+  
 
 
 <meta charset="utf-8">
@@ -10,7 +13,7 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="常用安装、卸载、管理软件的方式汇总">
+<meta name="description" content="">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -51,10 +54,6 @@
 
 
 
-
-  
-    <script src="/tablerow.github.io/js/toc.js"></script>
-  
 
 
 
@@ -189,7 +188,7 @@
 <body>
     	<div id="app"><div ref="sideContainer" class="side-container">
     
-    <a class="a-block nav-head false" href="https://baiban114.github.io/tablerow.github.io/">
+    <a class="a-block nav-head active" href="https://baiban114.github.io/tablerow.github.io/">
     
         <div class="nav-title">
             彦祖，你又来了
@@ -272,384 +271,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div><div ref="extraContainer" class="extra-container">
     
     
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%89%8d%e7%bd%ae%e7%9f%a5%e8%af%86" onclick="onNavClick(`#前置知识-nav`)" id="前置知识-nav">
-									前置知识
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e5%ae%89%e8%a3%85%e6%96%b9%e5%bc%8f" onclick="onNavClick(`#软件安装方式-nav`)" id="软件安装方式-nav">
-									软件安装方式
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e6%ba%90%e7%a0%81%e7%bc%96%e8%af%91" onclick="onNavClick(`#源码编译-nav`)" id="源码编译-nav">
-									源码编译
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%ae%89%e8%a3%85%e5%8c%85" onclick="onNavClick(`#安装包-nav`)" id="安装包-nav">
-									安装包
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8" onclick="onNavClick(`#包管理器-nav`)" id="包管理器-nav">
-									包管理器
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#npm" onclick="onNavClick(`#npm-nav`)" id="npm-nav">
-									npm
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#yarn" onclick="onNavClick(`#yarn-nav`)" id="yarn-nav">
-									yarn
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e5%ae%89%e8%a3%85%e8%84%9a%e6%9c%ac" onclick="onNavClick(`#安装脚本-nav`)" id="安装脚本-nav">
-									安装脚本
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8f%af%e6%89%a7%e8%a1%8c%e6%96%87%e4%bb%b6%e8%84%9a%e6%9c%ac%e6%96%87%e4%bb%b6" onclick="onNavClick(`#可执行文件脚本文件-nav`)" id="可执行文件脚本文件-nav">
-									可执行文件/脚本文件
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e5%8d%b8%e8%bd%bd" onclick="onNavClick(`#软件卸载-nav`)" id="软件卸载-nav">
-									软件卸载
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e7%ae%a1%e7%90%86%e5%99%a8%e6%8e%a7%e5%88%b6%e9%9d%a2%e6%9d%bf" onclick="onNavClick(`#管理器控制面板-nav`)" id="管理器控制面板-nav">
-									管理器/控制面板
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e5%ae%98%e6%96%b9%e6%8f%90%e4%be%9b%e5%8d%b8%e8%bd%bd%e7%a8%8b%e5%ba%8f" onclick="onNavClick(`#软件官方提供卸载程序-nav`)" id="软件官方提供卸载程序-nav">
-									软件官方提供卸载程序
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8f%af%e6%89%a7%e8%a1%8c%e6%96%87%e4%bb%b6" onclick="onNavClick(`#可执行文件-nav`)" id="可执行文件-nav">
-									可执行文件
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e8%bf%90%e8%a1%8c" onclick="onNavClick(`#软件运行-nav`)" id="软件运行-nav">
-									软件运行
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%95" onclick="onNavClick(`#附录-nav`)" id="附录-nav">
-									附录
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%951%e6%b3%a8%e5%86%8c%e8%a1%a8" onclick="onNavClick(`#附录1注册表-nav`)" id="附录1注册表-nav">
-									附录1：注册表
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%952%e5%ae%89%e8%a3%85%e5%8c%85%e9%80%89%e6%8b%a9" onclick="onNavClick(`#附录2安装包选择-nav`)" id="附录2安装包选择-nav">
-									附录2：安装包选择
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%953%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e8%a6%81%e5%ae%89%e8%a3%85%e5%9c%a8%e4%b8%ad%e6%96%87%e8%b7%af%e5%be%84%e4%b8%8b" onclick="onNavClick(`#附录3为什么不要安装在中文路径下-nav`)" id="附录3为什么不要安装在中文路径下-nav">
-									附录3：为什么不要安装在中文路径下？
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -665,6 +286,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 brightness_7
             </i>
         </a>
+        
+        
+        
+            <div class="pagination-indicator">
+                <span style="text-align: center">
+                    2<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>2
+                </span>
+            </div>
+            
+            
+            <a class="pagination-action" href="/tablerow.github.io/">
+                <i class="material-icons pagination-action-icon">
+                    chevron_left
+                </i>
+            </a>
+            
+
+            
         
         
     </div>
@@ -719,384 +358,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
             
             
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%89%8d%e7%bd%ae%e7%9f%a5%e8%af%86" onclick="onNavClick(`#前置知识-nav`)" id="前置知识-nav">
-									前置知识
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e5%ae%89%e8%a3%85%e6%96%b9%e5%bc%8f" onclick="onNavClick(`#软件安装方式-nav`)" id="软件安装方式-nav">
-									软件安装方式
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e6%ba%90%e7%a0%81%e7%bc%96%e8%af%91" onclick="onNavClick(`#源码编译-nav`)" id="源码编译-nav">
-									源码编译
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%ae%89%e8%a3%85%e5%8c%85" onclick="onNavClick(`#安装包-nav`)" id="安装包-nav">
-									安装包
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8" onclick="onNavClick(`#包管理器-nav`)" id="包管理器-nav">
-									包管理器
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#npm" onclick="onNavClick(`#npm-nav`)" id="npm-nav">
-									npm
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#yarn" onclick="onNavClick(`#yarn-nav`)" id="yarn-nav">
-									yarn
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e5%ae%89%e8%a3%85%e8%84%9a%e6%9c%ac" onclick="onNavClick(`#安装脚本-nav`)" id="安装脚本-nav">
-									安装脚本
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8f%af%e6%89%a7%e8%a1%8c%e6%96%87%e4%bb%b6%e8%84%9a%e6%9c%ac%e6%96%87%e4%bb%b6" onclick="onNavClick(`#可执行文件脚本文件-nav`)" id="可执行文件脚本文件-nav">
-									可执行文件/脚本文件
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e5%8d%b8%e8%bd%bd" onclick="onNavClick(`#软件卸载-nav`)" id="软件卸载-nav">
-									软件卸载
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e7%ae%a1%e7%90%86%e5%99%a8%e6%8e%a7%e5%88%b6%e9%9d%a2%e6%9d%bf" onclick="onNavClick(`#管理器控制面板-nav`)" id="管理器控制面板-nav">
-									管理器/控制面板
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e5%ae%98%e6%96%b9%e6%8f%90%e4%be%9b%e5%8d%b8%e8%bd%bd%e7%a8%8b%e5%ba%8f" onclick="onNavClick(`#软件官方提供卸载程序-nav`)" id="软件官方提供卸载程序-nav">
-									软件官方提供卸载程序
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8f%af%e6%89%a7%e8%a1%8c%e6%96%87%e4%bb%b6" onclick="onNavClick(`#可执行文件-nav`)" id="可执行文件-nav">
-									可执行文件
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e8%bd%af%e4%bb%b6%e8%bf%90%e8%a1%8c" onclick="onNavClick(`#软件运行-nav`)" id="软件运行-nav">
-									软件运行
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%95" onclick="onNavClick(`#附录-nav`)" id="附录-nav">
-									附录
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%951%e6%b3%a8%e5%86%8c%e8%a1%a8" onclick="onNavClick(`#附录1注册表-nav`)" id="附录1注册表-nav">
-									附录1：注册表
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%952%e5%ae%89%e8%a3%85%e5%8c%85%e9%80%89%e6%8b%a9" onclick="onNavClick(`#附录2安装包选择-nav`)" id="附录2安装包选择-nav">
-									附录2：安装包选择
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%99%84%e5%bd%953%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e8%a6%81%e5%ae%89%e8%a3%85%e5%9c%a8%e4%b8%ad%e6%96%87%e8%b7%af%e5%be%84%e4%b8%8b" onclick="onNavClick(`#附录3为什么不要安装在中文路径下-nav`)" id="附录3为什么不要安装在中文路径下-nav">
-									附录3：为什么不要安装在中文路径下？
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
         </div>
     </div>
 </div>
@@ -1145,186 +406,70 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div>
 
             <div id="content">
+
 <div ref="streamContainer" class="stream-container">
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
+    <div class="post-list-container post-list-container-no-background">
+        
             
-            
-            
-                
-            
+            <a href="https://baiban114.github.io/tablerow.github.io/about/" class="a-block">
+                <div class="post-item-wrapper">
+                    <div class="post-item post-item-no-divider">
+                        <div class="post-item-info-wrapper">
+                            <div class="post-item-title">
+                                放飞自我的第一篇
+                            </div>
+                            <div class="post-item-summary">
+                                
+                            </div>
+                            <div class="post-item-meta">
+    2021-07-12
+    &emsp;
+    
+    
+    
+    &emsp;
+    
+    <span class="draft-label">DRAFT</span>
+    
+</div>
 
-            <div class="post-head-wrapper"
-                
-                    
-                    
-                    style="background-image: url('https://gitee.com/baiban114/tianrun/raw/master/imgs/20210318183943.png')"
-                    
-                
-            >
-                <div class="post-title">
-                    管理计算机上的软件
-                    
-                    <div class="post-subtitle">
-                        常用安装、卸载、管理软件的方式汇总
-                    </div>
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2021-08-23 16:45
-                        </time>
-                        
-
-                        
-
+                        </div>
                         
                         
                     </div>
                 </div>
-            </div>
             
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <h1 id="前置知识">前置知识</h1>
-<p>代码+文档（bushi）</p>
-<p>装在计算机上的软件，在硬盘上是静态的一系列代码、文件的集合，运行时成为动态的进程；</p>
-<p>但想要保证软件正常运行，需要环境+软件+库/依赖相匹配才行</p>
-<ul>
-<li>环境：
-<ul>
-<li>操作系统：基本环境，也是可执行文件的直接运行环境；</li>
-<li>运行环境：如java字节码文件需要运行在jvm里，解释型语言要运行在有解释器的操作系统上，js要在浏览器or Node.js运行一样；似乎都是非纯编译运行的语言需要；在自己的环境中运行，就不需要转换成操作系统的可执行文件；</li>
-<li>java、python等环境安装后，需要将环境的位置添加到操作系统的PATH环境变量中，以确保操作系统能找到他们。</li>
-</ul>
-</li>
-<li>软件
-<ul>
-<li>比程序要大一点的概念，也是一系列指令；</li>
-<li>因此软件最终都会成为机器能看懂的语言，在硬盘上不论是被编译成的可执行文件，还是脚本语言文件（由解释器读入内存一行就解释一行？可能要看看py和js的原理才懂），在cpu接触前，都会成为机器语言；</li>
-</ul>
-</li>
-<li>库
-<ul>
-<li>自己的库，如C语言#include的库;Java中的jre就是jvm+基础类库</li>
-<li>系统提供的动态链接库，如win下的dll、linux的lib文件夹内容；</li>
-</ul>
-</li>
-</ul>
-<h1 id="软件安装方式">软件安装方式</h1>
-<h2 id="源码编译">源码编译</h2>
-<p>下载源代码（如redis使用C语言开发的），然后使用对应版本的编译器（如gcc）在源码文件夹下编译，最终形成可执行文件：</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make &amp;&amp; make install
-</code></pre></div><p>在不同cpu架构下源码包和编译器会有区别,因为底层的指令集不同；</p>
-<p>安装流程和C语言源文件运行流程类似</p>
-<h2 id="安装包">安装包</h2>
-<p>msi\exe\rpm\ipk\apk\aab;</p>
-<p>安装包也是由源码编译而成的二进制文件；但已经过官方封装，开箱即用。</p>
-<p>单独安装安装包可能会遇到安装包之间的依赖问题。</p>
-<h2 id="包管理器">包管理器</h2>
-<p>应用商店等也是类似的角色,在官方的服务器上统一管理安装包;</p>
-<p>apt、yum、pip、maven?、nodejs等，从源（保管安装包的服务器）上下载安装软件；可以通过写配置文件来指定多个源；</p>
-<p>一些包管理器可以帮助解决依赖问题、项目环境隔离*（？说法未定）*问题。</p>
-<h3 id="npm">npm</h3>
-<p>npm 是世界上最大的软件注册表，每星期大约有 30 亿次的下载量，包含超过 600000 个 <em>包（package）</em> （即，代码模块）。来自各大洲的开源软件开发者使用 npm 互相分享和借鉴。包的结构使您能够轻松跟踪依赖项和版本。</p>
-<p>npm 由三个独立的部分组成：</p>
-<ul>
-<li>网站</li>
-<li>注册表（registry）</li>
-<li>命令行工具 (CLI)</li>
-</ul>
-<h3 id="yarn">yarn</h3>
-<p>Yarn 是一个软件包管理器，还可以作为项目管理工具。</p>
-<p>代码通过 <strong>软件包（package）</strong> 的方式被共享。一个软件包里包含了所有需要共享的代码，以及一个描述软件包信息的文件 <code>package.json</code> （叫做 <strong>清单</strong>）。</p>
-<p><a href="https://www.yarnpkg.cn/getting-started/install">2 - 安装 | Yarn - JavaScript 软件包管理器 | Yarn 中文文档 - Yarn 中文网 (yarnpkg.cn)</a></p>
-<p>用lockfile隔离单个项目的依赖环境；</p>
-<p>先全局安装yarn的 <strong>二进制文件</strong></p>
-<h2 id="安装脚本">安装脚本</h2>
-<p>如docker，网上有提供脚本直接安装;</p>
-<h2 id="可执行文件脚本文件">可执行文件/脚本文件</h2>
-<p>可执行文件 (executable file) 指的是可以由<strong>操作系统进行加载执行的文件</strong>。在不同的操作系统环境下，可执行程序的呈现方式不一样。</p>
-<p>有时被称为“绿色免安装”版，“安装包”其实就是全部程序压缩一下；这种软件安装时不去注册表注册。</p>
-<p>如windows下的exe;</p>
-<p>任何文件都是有数字（编码）组成的，即使是文本在物理上也是以二进制存储的；在一些编辑器下，exe也可以直接被文本编辑器以字符的形式查看。图片、视频也是二进制文件，但不是可执行文件。</p>
-<p>大家都知道计算机的存储在物理上是二进制的，所以文本文件与二进制文件的区别并不是物理上的，而是<strong>逻辑上</strong>的。这两者只是在编码层次上有差异。</p>
-<p>可执行文件就是操作系统可以执行的、不需要指定其他软件来执行的文件。一个文件是不是可执行文件要看操作系统的定义。</p>
-<p>pyInstaller可以把py程序打包成exe程序，然后在没有安装python环境的电脑上能运行啦！</p>
-<p>But why MC还需要装java，而不是打包成exe?java应该可以打包吧</p>
-<h1 id="软件卸载">软件卸载</h1>
-<h2 id="管理器控制面板">管理器/控制面板</h2>
-<ul>
-<li>使用包管理器的命令卸载</li>
-<li>windows的控制面板:操作系统找到对应的卸载程序并运行;
-<ul>
-<li>这样似乎对exe直接运行的软件不行;是因为他们没去注册表报道吗?</li>
-</ul>
-</li>
-</ul>
-<h2 id="软件官方提供卸载程序">软件官方提供卸载程序</h2>
-<p>windows下比较常见;</p>
-<h2 id="可执行文件">可执行文件</h2>
-<p>直接删除即可；注意不要被快捷方式迷惑了。可以对快捷方式右键-&gt;打开文件位置找到真正的文件所在处。</p>
-<h1 id="软件运行">软件运行</h1>
-<p>有些会在内存被更改</p>
-<p>守护进程：占端口号，后台运行</p>
-<p>阻塞进程：会一直占用当前进程/线程</p>
-<h1 id="附录">附录</h1>
-<h2 id="附录1注册表">附录1：注册表</h2>
-<h2 id="附录2安装包选择">附录2：安装包选择</h2>
-<p>x86:适用于字长为32位的计算机；因为在386年代所以叫x86;</p>
-<p>x86_64、arm64：适用于32位和64位的计算机；只是叫法不同（intel和amd）；</p>
-<p>el7:centos7</p>
-<h2 id="附录3为什么不要安装在中文路径下">附录3：为什么不要安装在中文路径下？</h2>
-<p>安装目录不要有<strong>中文</strong>或<strong>空格</strong>。同一个中文字符在不同字符集下为不同的数值，但大多字符集的前128个字符通常和ASCII字符集保持一致，为了统一且省事，很多软件安装时都不要在中文路径下。</p>
-
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2021-08-23</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="https://baiban114.github.io/tablerow.github.io/posts/%E5%BA%94%E7%94%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">
-			Next<br>应用层网络协议
-                </a>
-                
-                
-                
-                <a class="older-posts" href="https://baiban114.github.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
-			Previous<br>文件系统
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="utter" alt="baiban114/tablerow.github.io"></div>
-
-
-
-            </div>
-        </div>
+        
+        </a>
     </div>
 </div>
 
-            </div><div id="single-column-footer">
+            </div>
+
+<div class="pagination">
+    
+    <a class="pagination-action" href="/tablerow.github.io/" style="opacity:1">
+    
+        <i class="material-icons pagination-action-icon">
+            chevron_left
+        </i>
+    </a>
+
+        <div class="pagination-indicator">
+            <span>2/2</span>
+        </div>
+
+        
+            <a class="pagination-action" style="opacity:0">
+        
+                <i class="material-icons pagination-action-icon">
+                    chevron_right
+                </i>
+            </a>
+</div>
+
+
+<div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -1586,18 +731,6 @@ app = new Vue({
 
 		
 		
-		const utterances = document.createElement('script');
-        utterances.type = 'text/javascript';
-        utterances.async = true;
-        utterances.setAttribute('theme','github-light')
-        utterances.setAttribute('repo','baiban114\/tablerow.github.io')
-		utterances.setAttribute('issue-term', 'pathname')
-        utterances.crossorigin = 'anonymous';
-        utterances.src = 'https://utteranc.es/client.js';
- 
-        window.document.getElementById('utter').appendChild(utterances);
-	
-		
 
 
         document.querySelectorAll("table").forEach(function(elem){
@@ -1607,9 +740,6 @@ app = new Vue({
             elem.classList.add("table-hover");
         })
 
-        
-        spy();
-        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         
         
     },
