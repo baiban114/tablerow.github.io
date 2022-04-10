@@ -933,7 +933,7 @@ git push -u origin master
 &lt;ul&gt;
 &lt;li&gt;github pages&lt;/li&gt;
 &lt;li&gt;gitee pages&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;vercel&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;我为什么用hugo&#34;&gt;我为什么用hugo?&lt;/h1&gt;
 &lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh&lt;/p&gt;
