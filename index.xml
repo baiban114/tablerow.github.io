@@ -181,7 +181,8 @@
 &lt;li&gt;工具：实际使用中不用手动封装协议再发消息，而是直接使用封装的软件、库等实现功能。如SSH工具OpenSSH&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://gitee.com/tablerows/tianrun/raw/master/imgs/20220306212211.jpg&#34; alt=&#34;网络协议&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;命令行可用&#34;&gt;命令行可用&lt;/h1&gt;
+&lt;h1 id=&#34;命令行常用&#34;&gt;命令行常用&lt;/h1&gt;
+&lt;p&gt;一些协议名和命令名一样（或相似）的协议&lt;/p&gt;
 &lt;h2 id=&#34;ssh&#34;&gt;SSH&lt;/h2&gt;
 &lt;p&gt;Secure Shell(SSH 安全外壳协议) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络==协议==。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。SSH最初是UNIX系统上的一个程序，后来又迅速扩展到其他操作平台。SSH在正确使用时可弥补网络中的漏洞。&lt;/p&gt;
 &lt;p&gt;优点：&lt;/p&gt;
@@ -197,7 +198,7 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;ssh的安全机制&#34;&gt;SSH的安全机制&lt;/h3&gt;
 &lt;p&gt;SSH之所以能够保证安全，原因在于它采用了==非对称加密技术(RSA)==加密了所有传输的数据。&lt;/p&gt;
-&lt;p&gt;传统的网络服务程序，如FTP、Pop和Telnet其本质上都是不安全的；因为它们在网络上用明文传送数据、用户帐号和用户口令，很容易受到==中间人==（man-in-the-middle）攻击方式的攻击。就是存在另一个人或者一台机器冒充真正的服务器接收用户传给服务器的数据，然后再冒充用户把数据传给真正的服务器。&lt;/p&gt;
+&lt;p&gt;传统的网络服务程序，如FTP、POP？和Telnet其本质上都是不安全的；因为它们在网络上用明文传送数据、用户帐号和用户口令，很容易受到==中间人==（man-in-the-middle）攻击方式的攻击。就是存在另一个人或者一台机器冒充真正的服务器接收用户传给服务器的数据，然后再冒充用户把数据传给真正的服务器。&lt;/p&gt;
 &lt;p&gt;但并不是说SSH就是绝对安全的，因为它本身提供两种级别的验证方法：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;第一种级别（基于口令的安全验证）：只要你知道自己帐号和口令，就可以登录到远程主机。所有传输的数据都会被加密，但是不能保证你正在连接的服务器就是你想连接的服务器。可能会有别的服务器在冒充真正的服务器，也就是受到“中间人攻击”这种方式的攻击。&lt;/li&gt;
@@ -213,6 +214,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 有没有命令行传文件的例子？传id的是个专门的命令&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;通常使用的软件工具为OpenSSH&lt;/p&gt;
 &lt;p&gt;####基于密钥的安全验证-事前准备&lt;/p&gt;
 &lt;p&gt;常用于免密登录。如果想通过输入密码的方式登录则不需要这步准备。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;在本机生成一对密钥（即私钥与公钥）：&lt;/strong&gt;&lt;/p&gt;
@@ -257,9 +259,79 @@
 &lt;ul&gt;
 &lt;li&gt;明文传输&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;文件传输协议（File Transfer Protocol，FTP）是用于在&lt;a href=&#34;https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C&#34;&gt;网络&lt;/a&gt;上进行文件传输的一套标准协议。&lt;/p&gt;
+&lt;p&gt;文件传输协议（File Transfer Protocol，FTP）是用于在&lt;a href=&#34;https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C&#34;&gt;网络&lt;/a&gt;上进行文件传输的一套标准协议。FTP是ARPANet（阿帕网）的标准文件传输协议。&lt;/p&gt;
 &lt;p&gt;FTP允许用户以文件操作的方式（如文件的增、删、改、查、传送等）与另一主机相互通信。然而， 用户并不真正登录到自己想要存取的计算机上面而成为完全用户， 可用FTP程序访问远程资源， 实现用户往返传输文件、目录管理以及访问电子邮件等等， 即使双方计算机可能配有不同的操作系统和文件存储方式。&lt;/p&gt;
 &lt;p&gt;FTP 的独特的优势同时也是与其它客户服务器程序最大的不同点就在于它在两台通信的主机之间使用了两条 TCP 连接，一条是数据连接，用于数据传送；另一条是控制连接，用于传送控制信息（命令和响应），这种将命令和数据分开传送的思想大大提高了 FTP 的效率，而其它客户服务器应用程序一般只有一条 TCP 连接。&lt;/p&gt;
+&lt;h3 id=&#34;使用-1&#34;&gt;使用&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;centos上自带的ftp工具真他娘的多啊，，反正平时用不到，现在都是用web的http传文件，，了解即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;ftp-1&#34;&gt;ftp&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 怎么搞服务器？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ftp [-dignv][主机名称或IP地址]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;参数&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-d 详细显示指令执行过程，便于排错或分析程序执行的情形。&lt;/li&gt;
+&lt;li&gt;-i 关闭互动模式，不询问任何问题。&lt;/li&gt;
+&lt;li&gt;-g 关闭本地主机文件名称支持特殊字符的扩充特性。&lt;/li&gt;
+&lt;li&gt;-n 不使用自动登陆。&lt;/li&gt;
+&lt;li&gt;-v 显示指令执行过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如使用ftp命令匿名登录ftp.kernel.org服务器，该服务是Linux 内核的官方服务器，可以使用如下命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ftp ftp.kernel.org #发起链接请求 
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;ncftp&#34;&gt;ncftp&lt;/h4&gt;
+&lt;p&gt;Centos有自带的ncftp客户端软件，可用于从ftp服务器接受文件。&lt;/p&gt;
+&lt;p&gt;Linux ncftp命令用于传输文件。&lt;/p&gt;
+&lt;p&gt;当不指定用户名时，ncftp 命令会自动尝试使用匿名账户anonymous 去连接远程FTP 服 务器，不需要用户输入账号和密码。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ncftp [host]
+ncftp [ftp://host.name/directory/]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 不指定端口？是因为固定端口吗？&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 有没有上传的方法？&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 这个似乎只能连接，不能设置为服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ncftp的命令基本上与ftp相同，例如可以使用&amp;quot;cd&amp;quot;命令切换在FTP服务器中的当前目录，使用&amp;quot;ls&amp;quot;命令列出当前目录内容，使用&amp;quot;get 文件名&amp;quot;命令下载&amp;quot;/pub&amp;quot;目录下的README文件、使用&amp;quot;quit&amp;quot;离开ncftp等&lt;/p&gt;
+&lt;p&gt;与ftp不同的是，ncftp此时会提示用户是否将FTP服务器保存为书签，以便于下次登录，用户可以进行自定义书签名等操作，如下所示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;You have not saved a bookmark &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; this site.  &lt;span style=&#34;color:#228b22&#34;&gt;#离开提示信息  &lt;/span&gt;
+Would you like to save a bookmark to:  
+ftp://ftp.kernel.org/pub/  
+Save? (yes/no) yes                            &lt;span style=&#34;color:#228b22&#34;&gt;#确认是否保存  &lt;/span&gt;
+Enter a name &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; this bookmark, or hit enter &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;kernel&amp;#34;&lt;/span&gt;: kernel &lt;span style=&#34;color:#228b22&#34;&gt;#输入书签名  &lt;/span&gt;
+Bookmark &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;kernel&amp;#34;&lt;/span&gt; saved. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;注：在ncftp的官网有一系列Ncftp软件，覆盖服务端、上传下载等功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;tftp&#34;&gt;tftp&lt;/h4&gt;
+&lt;p&gt;tftp是简单的文字模式ftp程序，它所使用的指令和FTP类似。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tftp [主机名称或IP地址]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;其他相关命令&#34;&gt;其他相关命令&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ftpwho 				&lt;span style=&#34;color:#228b22&#34;&gt;#查询当前有哪些用户正在登录FTP服务器&lt;/span&gt;
+ftpcount            &lt;span style=&#34;color:#228b22&#34;&gt;#查询当前FTP用户的人数 &lt;/span&gt;
+ftpshut				&lt;span style=&#34;color:#228b22&#34;&gt;#指定时间关闭ftp服务器&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tftp-1&#34;&gt;tftp&lt;/h2&gt;
+&lt;p&gt;TFTP（Trivial File Transfer Protocol,简单&lt;a href=&#34;https://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE&#34;&gt;文件传输协议&lt;/a&gt;）是TCP/IP协议族中的一个用来在客户机与&lt;a href=&#34;https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8&#34;&gt;服务器&lt;/a&gt;之间进行简单文件传输的协议，提供不复杂、开销不大的&lt;a href=&#34;https://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E6%9C%8D%E5%8A%A1/5389842&#34;&gt;文件传输服务&lt;/a&gt;。&lt;a href=&#34;https://baike.baidu.com/item/%E7%AB%AF%E5%8F%A3%E5%8F%B7/10883658&#34;&gt;端口号&lt;/a&gt;为69。&lt;/p&gt;
+&lt;p&gt;此协议设计的时候是进行小&lt;a href=&#34;https://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93&#34;&gt;文件传输&lt;/a&gt;的。因此它不具备通常的FTP的许多功能，它只能从&lt;a href=&#34;https://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8&#34;&gt;文件服务器&lt;/a&gt;上获得或写入文件，不能列出目录，不进行认证，它传输8位数据。传输中有三种模式：netascii，这是8位的ASCII码形式，另一种是octet，这是8位源&lt;a href=&#34;https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B&#34;&gt;数据类型&lt;/a&gt;；最后一种mail已经不再支持，它将返回的数据直接返回给用户而不是保存为文件。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tftp [主机名称或IP地址]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;连接后使用命令和ftp类似：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;connect：连接到远程tftp服务器&lt;/li&gt;
+&lt;li&gt;mode：文件传输模式&lt;/li&gt;
+&lt;li&gt;put：上传文件&lt;/li&gt;
+&lt;li&gt;get：下载文件&lt;/li&gt;
+&lt;li&gt;quit：退出&lt;/li&gt;
+&lt;li&gt;verbose：显示详细的处理信息&lt;/li&gt;
+&lt;li&gt;trace：显示包路径&lt;/li&gt;
+&lt;li&gt;status：显示当前状态信息&lt;/li&gt;
+&lt;li&gt;binary：二进制传输模式&lt;/li&gt;
+&lt;li&gt;ascii：ascii 传送模式&lt;/li&gt;
+&lt;li&gt;rexmt：设置包传输的超时时间&lt;/li&gt;
+&lt;li&gt;timeout：设置重传的超时时间&lt;/li&gt;
+&lt;li&gt;help：帮助信息&lt;/li&gt;
+&lt;li&gt;? ：帮助信息&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;telnet&#34;&gt;telnet&lt;/h2&gt;
 &lt;p&gt;在命令行实现远程登录、控制。远程登录需要用户名和密码，登陆后可以远程执行命令。属于C/S模型的服务&lt;/p&gt;
 &lt;ul&gt;
@@ -398,7 +470,7 @@ RFC 6455中规定：it is designed to work over HTTP ports 80 and 443 as well as
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/gotodsp/p/6366163.html&#34;&gt;https://www.cnblogs.com/gotodsp/p/6366163.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;如果是默认消息头名称，消息头格式已经固定，即便输入的大小写有误，也会给你翻译成默认的写法，如果自己定义的，会自动给你翻译成小写,所以传参数的名称都用小写字母即可，否则可能取不到值，&lt;/p&gt;
-&lt;h2 id=&#34;什么是长连接短连接&#34;&gt;什么是长连接、短连接？&lt;/h2&gt;
+&lt;h3 id=&#34;什么是长连接短连接&#34;&gt;什么是长连接、短连接？&lt;/h3&gt;
 &lt;p&gt;在HTTP/1.0中默认使用短连接。也就是说，客户端和服务器每进行一次HTTP操作，就建立一次连接，任务结束就中断连接。当客户端浏览器访问的某个HTML或其他类型的Web页中包含有其他的Web资源（如JavaScript文件、图像文件、CSS文件等），每遇到这样一个Web资源，浏览器就会重新建立一个HTTP会话。&lt;/p&gt;
 &lt;p&gt;而从HTTP/1.1起，默认使用长连接，用以保持连接特性。使用长连接的HTTP协议，会在响应头加入这行代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-makefile&#34; data-lang=&#34;makefile&#34;&gt;&lt;span style=&#34;color:#008b45&#34;&gt;Connection&lt;/span&gt;:keep-alive
@@ -492,6 +564,7 @@ x-real-ip: 114.248.238.236
 &lt;blockquote&gt;
 &lt;p&gt;据说是为了向下兼容，HTTP1.1才正式规范Connection头，之前的协议无法升级；如果是HTTP1.0,不认识Conncetion头，就不升级？&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;linux系统中有一个httpd程序，是Apache HTTP服务器程序。直接执行程序可启动服务器的服务，在没有自己安装web服务器软件时可以临时用一下。&lt;/p&gt;
 &lt;h1 id=&#34;邮件常用&#34;&gt;邮件常用&lt;/h1&gt;
 &lt;p&gt;POP\IMAP负责收，SMTP负责发&lt;/p&gt;
 &lt;p&gt;平时我们主要使用网页邮箱，而通过开启IMAP/SMTP服务或POP3/SMTP服务，就可以在其他客户端收发该邮箱的邮件&lt;/p&gt;
@@ -515,10 +588,14 @@ IMAP，即&lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;M&lt;/strong&gt;es
 &lt;p&gt;http/https&lt;/p&gt;
 &lt;p&gt;file&lt;/p&gt;
 &lt;p&gt;ftp&lt;/p&gt;
-&lt;h2 id=&#34;其他网络应用&#34;&gt;其他网络应用&lt;/h2&gt;
+&lt;h2 id=&#34;其他命令行网络工具无对应协议&#34;&gt;其他命令行网络工具/无对应协议&lt;/h2&gt;
+&lt;p&gt;有些在命令行常用的网络工具，使用的协议和命令名没有关联。&lt;/p&gt;
 &lt;h3 id=&#34;curl&#34;&gt;curl&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl ip:端口
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可用于测试端口是否联通&lt;/p&gt;
+&lt;h3 id=&#34;ping&#34;&gt;ping&lt;/h3&gt;
+&lt;p&gt;Linux ping 命令用于检测主机。&lt;/p&gt;
+&lt;p&gt;执行 ping 指令会使用 ICMP 传输协议，发出要求回应的信息，若远端主机的网络功能没有问题，就会回应该信息，因而得知该主机运作正常。&lt;/p&gt;
 &lt;h1 id=&#34;平行的形容词&#34;&gt;平行的形容词&lt;/h1&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -595,8 +672,11 @@ IMAP，即&lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;M&lt;/strong&gt;es
 &lt;p&gt;单独安装安装包可能会遇到安装包之间的依赖问题。&lt;/p&gt;
 &lt;h2 id=&#34;包管理器&#34;&gt;包管理器&lt;/h2&gt;
 &lt;p&gt;应用商店等也是类似的角色,在官方的服务器上统一管理安装包;&lt;/p&gt;
-&lt;p&gt;apt、yum、pip、maven?、nodejs等，从源（保管安装包的服务器）上下载安装软件；可以通过写配置文件来指定多个源；&lt;/p&gt;
-&lt;p&gt;一些包管理器可以帮助解决依赖问题、项目环境隔离*（？说法未定）*问题。&lt;/p&gt;
+&lt;p&gt;apt、yum、rpm、pip、winget等，从源（保管安装包的服务器）上下载安装软件或安装包；可以通过写配置文件等操作来指定多个源；&lt;/p&gt;
+&lt;p&gt;一些包管理器可以帮助解决依赖等问题。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;除了软件下载外，类似的操作还有maven、nodejs、docker等，对库、包进行管理&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;npm&#34;&gt;npm&lt;/h3&gt;
 &lt;p&gt;npm 是世界上最大的软件注册表，每星期大约有 30 亿次的下载量，包含超过 600000 个 &lt;em&gt;包（package）&lt;/em&gt; （即，代码模块）。来自各大洲的开源软件开发者使用 npm 互相分享和借鉴。包的结构使您能够轻松跟踪依赖项和版本。&lt;/p&gt;
 &lt;p&gt;npm 由三个独立的部分组成：&lt;/p&gt;
@@ -714,7 +794,6 @@ IMAP，即&lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;M&lt;/strong&gt;es
 &lt;p&gt;其中下载主题这步可以自己选，主题商城也在这个网站中↑；&lt;/p&gt;
 &lt;p&gt;我所用的主题是Diary，可以在博客左下↙版权那里找到github仓库。自己魔改了一部分，为了添加功能。&lt;/p&gt;
 &lt;h1 id=&#34;常用命令脚本&#34;&gt;常用命令、脚本&lt;/h1&gt;
-&lt;p&gt;​		utteranc.es客户端地址：https://utteranc.es/client.js&lt;/p&gt;
 &lt;p&gt;​		获取QQ头像的url:	&lt;code&gt;https://q1.qlogo.cn/g?b=qq&amp;amp;nk=QQ号码&amp;amp;s=640&lt;/code&gt;。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。&lt;/p&gt;
 &lt;p&gt;​		每次输入这么多命令太麻烦了，hugo似乎没有把自己提交到github的命令，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。&lt;/p&gt;
 &lt;p&gt;​		还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。&lt;/p&gt;
@@ -728,6 +807,7 @@ git push -u origin master
 &lt;p&gt;​		还有一个博客生成测试脚本，执行hugo server命令，用于在本地实时查看页面；&lt;/p&gt;
 &lt;p&gt;​		也可以使用github Actions来完成持续集成（CI）,顺道学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，&lt;/p&gt;
 &lt;h1 id=&#34;自己钻研的定制经验&#34;&gt;自己钻研的定制经验&lt;/h1&gt;
+&lt;p&gt;utteranc.es客户端地址：https://utteranc.es/client.js&lt;/p&gt;
 &lt;p&gt;​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。&lt;/p&gt;
 &lt;p&gt;​		对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…&lt;/p&gt;
 &lt;h2 id=&#34;站点主题目录结构&#34;&gt;站点&amp;amp;&amp;amp;主题目录结构&lt;/h2&gt;
@@ -785,6 +865,17 @@ git push -u origin master
 &lt;/ul&gt;
 &lt;p&gt;其他的可以见主题文件夹下/archetypes/default.md&lt;/p&gt;
 &lt;h1 id=&#34;拓展&#34;&gt;拓展&lt;/h1&gt;
+&lt;h2 id=&#34;评论插件&#34;&gt;评论插件&lt;/h2&gt;
+&lt;p&gt;静态博客要是没有自己的后台的话，评论也只能托管到其他平台上去。我用的是utteranc.es，客户端地址：https://utteranc.es/client.js&lt;/p&gt;
+&lt;p&gt;是将评论套在github的评论区。缺点是要在国内登录github网不好。。也许有gitee的？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 或者自己写个类似的直接评论到B站这类平台？会爬虫or bot应该不难。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;还有很多其他的评论插件更好，但我忘了名字了doge在这里记一下。真不推荐我用的这个。虽然有些平台要带水印之类的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gittalk&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;live2d看板娘&#34;&gt;Live2d看板娘&lt;/h2&gt;
 &lt;h3 id=&#34;基础款&#34;&gt;基础款&lt;/h3&gt;
 &lt;p&gt;​		基础款&lt;/p&gt;
@@ -836,9 +927,14 @@ git push -u origin master
 &lt;ul&gt;
 &lt;li&gt;在使用Meting提供的网易云api时，歌单里歌曲太多或使用“我喜欢的音乐”歌单可能无法从api获取数据！&lt;/li&gt;
 &lt;li&gt;需要的js、css文件在头文件中&lt;code&gt;按顺序&lt;/code&gt;引入（有依赖关系）&lt;/li&gt;
-&lt;li&gt;Aplayer官方提出了好多静态博客插件，唯独没有hugo的。~~《如果早知道，用hugo会被孤立。。。》~~虽然我也没用那些插件&lt;/li&gt;
+&lt;li&gt;Aplayer官方提出了好多静态博客插件，唯独没有hugo的。~~《如果早知道，用hugo会被孤立。。。》~~虽然我也没用那些插件。这个主题用了vue，可以通过vue集成。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;评论功能&#34;&gt;评论功能&lt;/h2&gt;
+&lt;h1 id=&#34;静态页面托管平台&#34;&gt;静态页面托管平台&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;github pages&lt;/li&gt;
+&lt;li&gt;gitee pages&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;我为什么用hugo&#34;&gt;我为什么用hugo?&lt;/h1&gt;
 &lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh&lt;/p&gt;
 &lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的页面突然就生不出来了。。。QAQ&lt;/p&gt;
