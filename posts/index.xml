@@ -129,7 +129,7 @@ HDFS Hadoop生态系统中的分布式文件系统</description>
     </item>
     
     <item>
-      <title>Hugo使用经验</title>
+      <title>Hugo博客搭建经验</title>
       <link>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
       <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
       
@@ -137,8 +137,12 @@ HDFS Hadoop生态系统中的分布式文件系统</description>
       <description>写在前面 ​	hugo最强使用技巧：别用hugo开个玩笑(狗头)
 ​	这个世界上的静态网站生成器至少有333个，先从我的角度说说其他静态网站生成器的优点：
   VuePress：基于vue构建，可以顺便练习vue，减小web开发者的学习成本;
- [√]中文文档 [√]主题丰富（在github主页有） 插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！ 文档说是单页应用，解决路由时音乐播放器重新加载播放的问题应该简单一些；    Hexo：由中国台湾人创建，咱们用的人多所以网上教程丰富；
- √]中文文档 [√]主题丰富 [√]插件齐全（几乎不用敲代码，npm上都一堆插件） 多个静态页面    WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；
+  中文文档
+  主题丰富（在github主页有）
+  插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！
+  文档说是单页应用，解决路由时音乐播放器重新加载播放的问题应该简单一些；
+    Hexo：由中国台湾人创建，咱们用的人多所以网上教程丰富；
+ [√]中文文档 [√]主题丰富 [√]插件齐全（几乎不用敲代码，npm上都一堆插件） 多个静态页面    WordPress:嗯。。和hugo都是老外搞的，风格半斤八两，都用了&amp;quot;shortcode&amp;quot;这种奇怪的东西（类似模板引擎或vue的组件，但还需要额外的学习成本），支持OneNote上传笔记（鸡肋）；可以和PHP配套使用；
 然后。。。hugo的优点可能是快？我不知道。。。可我是男人可如果开发速度慢、学习成本高不还相当于慢了。。中文文档还相当于没有！
 如果重命名content下的md文件，hugo编译时不会把删掉该替换的文件。不知道其他工具怎么样。
 当然所有工具都是没有上限的！只是==碰壁次数与资料多少、学习成本==之类的区别！
@@ -149,8 +153,7 @@ HDFS Hadoop生态系统中的分布式文件系统</description>
 常用命令、脚本 ​	获取QQ头像的url:	https://q1.qlogo.cn/g?b=qq&amp;amp;nk=QQ号码&amp;amp;s=640。用edge浏览器的时候发现，如果用https访问博客，头像url用http访问的话会被拦截。
 ​	每次输入这么多命令太麻烦了，hugo似乎没有把自己提交到github的命令，索性写了一个windows脚本上传博客。提前在path环境变量中配置hugo命令所在目录，以在任意位置执行hugo命令。
 ​	还是第一次主动写windows脚本，上一次写还是上一次（呸，上次是改U盘图标，照网上抄的）。脚本文件后缀名为.bat，直接在里面写命令即可。
-hugo -D hugo cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master ​	先执行一遍hugo -D是为了将草稿也编译一下；再不带-D，这样主页不会显示草稿；
-​	还有一个博客生成测试脚本，执行hugo server命令，用于在本地实时查看页面；</description>
+hugo -D hugo cd ./public git add -A git commit -m &amp;#34;脚本提交&amp;#34; git push -u origin master ​	先执行一遍hugo -D是为了将草稿也编译一下；再不带-D，这样主页不会显示草稿；</description>
     </item>
     
     <item>

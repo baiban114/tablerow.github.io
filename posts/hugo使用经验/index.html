@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Hugo使用经验</title>
+<title>Hugo博客搭建经验</title>
 
 
 
@@ -558,6 +558,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
+								<a href="#%e5%9b%be%e5%ba%8a" onclick="onNavClick(`#图床-nav`)" id="图床-nav">
+									图床
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#%e6%88%91%e4%b8%ba%e4%bb%80%e4%b9%88%e7%94%a8hugo" onclick="onNavClick(`#我为什么用hugo-nav`)" id="我为什么用hugo-nav">
 									我为什么用hugo?
 								</a>
@@ -927,6 +945,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
+								<a href="#%e5%9b%be%e5%ba%8a" onclick="onNavClick(`#图床-nav`)" id="图床-nav">
+									图床
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#%e6%88%91%e4%b8%ba%e4%bb%80%e4%b9%88%e7%94%a8hugo" onclick="onNavClick(`#我为什么用hugo-nav`)" id="我为什么用hugo-nav">
 									我为什么用hugo?
 								</a>
@@ -1007,7 +1043,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
             >
                 <div class="post-title">
-                    Hugo使用经验
+                    Hugo博客搭建经验
                     
                     <div class="post-subtitle">
                         《别用》
@@ -1039,16 +1075,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <li>
 <p>VuePress：基于vue构建，可以顺便练习vue，减小web开发者的学习成本;</p>
 <ul>
-<li>[√]中文文档</li>
-<li>[√]主题丰富（在github主页有）</li>
-<li>插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！</li>
-<li>文档说是单页应用，解决路由时音乐播放器重新加载播放的问题应该简单一些；</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 中文文档</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 主题丰富（在github主页有）</p>
+</li>
+<li>
+<p>插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！</p>
+</li>
+<li>
+<p>文档说是单页应用，解决路由时音乐播放器重新加载播放的问题应该简单一些；</p>
+</li>
 </ul>
 </li>
 <li>
 <p>Hexo：由中国台湾人创建，咱们用的人多所以网上教程丰富；</p>
 <ul>
-<li>√]中文文档</li>
+<li>[√]中文文档</li>
 <li>[√]主题丰富</li>
 <li>[√]插件齐全（几乎不用敲代码，npm上都一堆插件）</li>
 <li>多个静态页面</li>
@@ -1079,7 +1123,9 @@ git push -u origin master
 </code></pre></div><p>​		先执行一遍hugo -D是为了将草稿也编译一下；再不带-D，这样主页不会显示草稿；</p>
 <p>​		还有一个博客生成测试脚本，执行hugo server命令，用于在本地实时查看页面；</p>
 <p>​		也可以使用github Actions来完成持续集成（CI）,顺道学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，</p>
-<h1 id="自己钻研的定制经验">自己钻研的定制经验</h1>
+<p>进阶版脚本：同时提交至github和gitee</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+</code></pre></div><h1 id="自己钻研的定制经验">自己钻研的定制经验</h1>
 <p>utteranc.es客户端地址：https://utteranc.es/client.js</p>
 <p>​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。</p>
 <p>​		对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…</p>
@@ -1208,6 +1254,15 @@ git push -u origin master
 <li>vercel</li>
 </ul>
 <p>我看oschina和CSDN也有项目仓库了，不知道有没有托管功能。</p>
+<h1 id="图床">图床</h1>
+<ul>
+<li>gitee
+<ul>
+<li>对于常用图片后缀不允许外链（通过查看请求头中的Refer）,目前webp格式的还可以。如果只把博客部署在gitee还是可以考虑</li>
+<li><input disabled="" type="checkbox"> 能不能钻个空子利用pages当图床?</li>
+</ul>
+</li>
+</ul>
 <h1 id="我为什么用hugo">我为什么用hugo?</h1>
 <p>​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh</p>
 <p>​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的页面突然就生不出来了。。。QAQ</p>

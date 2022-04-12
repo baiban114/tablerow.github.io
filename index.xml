@@ -764,7 +764,7 @@ CMakelist.txt -----&amp;gt; Makefile ----&amp;gt; Cmds ---&amp;gt; Binary
     
     
         <item>
-        <title>Hugo使用经验</title>
+        <title>Hugo博客搭建经验</title>
         <link>https://baiban114.github.io/tablerow.github.io/posts/hugo%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
         <pubDate>Mon, 26 Jul 2021 16:47:18 +0800</pubDate>
         
@@ -776,16 +776,24 @@ CMakelist.txt -----&amp;gt; Makefile ----&amp;gt; Cmds ---&amp;gt; Binary
 &lt;li&gt;
 &lt;p&gt;VuePress：基于vue构建，可以顺便练习vue，减小web开发者的学习成本;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;[√]中文文档&lt;/li&gt;
-&lt;li&gt;[√]主题丰富（在github主页有）&lt;/li&gt;
-&lt;li&gt;插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！&lt;/li&gt;
-&lt;li&gt;文档说是单页应用，解决路由时音乐播放器重新加载播放的问题应该简单一些；&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 中文文档&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 主题丰富（在github主页有）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;插件挺丰富，不知道常用的有没，但是大丈夫！因为是Vue，自己集成功能很方便！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文档说是单页应用，解决路由时音乐播放器重新加载播放的问题应该简单一些；&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Hexo：由中国台湾人创建，咱们用的人多所以网上教程丰富；&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;√]中文文档&lt;/li&gt;
+&lt;li&gt;[√]中文文档&lt;/li&gt;
 &lt;li&gt;[√]主题丰富&lt;/li&gt;
 &lt;li&gt;[√]插件齐全（几乎不用敲代码，npm上都一堆插件）&lt;/li&gt;
 &lt;li&gt;多个静态页面&lt;/li&gt;
@@ -816,7 +824,9 @@ git push -u origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;​		先执行一遍hugo -D是为了将草稿也编译一下；再不带-D，这样主页不会显示草稿；&lt;/p&gt;
 &lt;p&gt;​		还有一个博客生成测试脚本，执行hugo server命令，用于在本地实时查看页面；&lt;/p&gt;
 &lt;p&gt;​		也可以使用github Actions来完成持续集成（CI）,顺道学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，&lt;/p&gt;
-&lt;h1 id=&#34;自己钻研的定制经验&#34;&gt;自己钻研的定制经验&lt;/h1&gt;
+&lt;p&gt;进阶版脚本：同时提交至github和gitee&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;自己钻研的定制经验&#34;&gt;自己钻研的定制经验&lt;/h1&gt;
 &lt;p&gt;utteranc.es客户端地址：https://utteranc.es/client.js&lt;/p&gt;
 &lt;p&gt;​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。&lt;/p&gt;
 &lt;p&gt;​		对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…&lt;/p&gt;
@@ -945,6 +955,15 @@ git push -u origin master
 &lt;li&gt;vercel&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;我看oschina和CSDN也有项目仓库了，不知道有没有托管功能。&lt;/p&gt;
+&lt;h1 id=&#34;图床&#34;&gt;图床&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;gitee
+&lt;ul&gt;
+&lt;li&gt;对于常用图片后缀不允许外链（通过查看请求头中的Refer）,目前webp格式的还可以。如果只把博客部署在gitee还是可以考虑&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 能不能钻个空子利用pages当图床?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;我为什么用hugo&#34;&gt;我为什么用hugo?&lt;/h1&gt;
 &lt;p&gt;​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh&lt;/p&gt;
 &lt;p&gt;​	一开始尝试在centos7上使用hugo（linux64位0.84.x版本），并用nginx做服务器部署生成的静态页面，遇到了路径问题，样式文件加载不出来；然后修改到一半，新的页面突然就生不出来了。。。QAQ&lt;/p&gt;
