@@ -723,7 +723,7 @@ CMakelist.txt -----&amp;gt; Makefile ----&amp;gt; Cmds ---&amp;gt; Binary
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;软件官方提供卸载程序&#34;&gt;软件官方提供卸载程序&lt;/h2&gt;
-&lt;p&gt;windows下比较常见;&lt;/p&gt;
+&lt;p&gt;windows下比较常见，linux可能会提供卸载脚本。&lt;/p&gt;
 &lt;h2 id=&#34;可执行文件&#34;&gt;可执行文件&lt;/h2&gt;
 &lt;p&gt;直接删除即可；注意不要被快捷方式迷惑了。可以对快捷方式右键-&amp;gt;打开文件位置找到真正的文件所在处。&lt;/p&gt;
 &lt;h1 id=&#34;软件运行&#34;&gt;软件运行&lt;/h1&gt;
