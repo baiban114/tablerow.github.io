@@ -1,23 +1,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>彦祖，你又来了</title>
-    <link>https://baiban114.github.io/tablerow.github.io/</link>
+    <link>http://tablerows.gitee.io/tablerow.github.io/</link>
     <description>Recent content on 彦祖，你又来了</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 09 Apr 2022 18:53:28 +0800</lastBuildDate>
     
-        <atom:link href="https://baiban114.github.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://tablerows.gitee.io/tablerow.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>放飞自我的第一篇</title>
-        <link>https://baiban114.github.io/tablerow.github.io/about/</link>
+        <link>http://tablerows.gitee.io/tablerow.github.io/about/</link>
         <pubDate>Mon, 12 Jul 2021 13:05:36 +0800</pubDate>
         
-        <guid>https://baiban114.github.io/tablerow.github.io/about/</guid>
-        <description>彦祖，你又来了 https://baiban114.github.io/tablerow.github.io/about/ -&lt;p&gt;嘶。。diary这个主题有点儿窄，黑文字多的话感jio还是开头中间都有图片观感好点儿。暂时没时间探究居中，我看我下面六花的图就没居中。。。有时候主页会加载两遍么，，&lt;/p&gt;
+        <guid>http://tablerows.gitee.io/tablerow.github.io/about/</guid>
+        <description>彦祖，你又来了 http://tablerows.gitee.io/tablerow.github.io/about/ -&lt;p&gt;嘶。。diary这个主题有点儿窄，黑文字多的话感jio还是开头中间都有图片观感好点儿。暂时没时间探究居中，我看我下面六花的图就没居中。。。有时候主页会加载两遍么，，&lt;/p&gt;
 &lt;h1 id=&#34;提醒自己&#34;&gt;提醒自己&lt;/h1&gt;
 &lt;p&gt;我对研究技术以及提升自己还是挺感兴趣的，毕竟某个粉红大章鱼有一句名台词：&lt;del&gt;Ko no 迪亚波罗哒&lt;/del&gt;！人的成长，就是战胜自己不成熟的过去。人生是，一场修行，一场面对自己的试炼，总是以别人为目标就会失去自我。&lt;/p&gt;
 &lt;ul&gt;
@@ -86,7 +86,7 @@
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 文章页宽度调整&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 跨域问题导致首页部分图标无法下载&lt;/li&gt;
 &lt;/ul&gt;
-- https://baiban114.github.io/tablerow.github.io/about/ - </description>
+- http://tablerows.gitee.io/tablerow.github.io/about/ - </description>
         </item>
     
     
