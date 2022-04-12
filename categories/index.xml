@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 彦祖，你又来了</title>
-    <link>https://baiban114.github.io/tablerow.github.io/categories/</link>
+    <link>http://tablerows.gitee.io/tablerow.github.io/categories/</link>
     <description>Recent content in Categories on 彦祖，你又来了</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://baiban114.github.io/tablerow.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="http://tablerows.gitee.io/tablerow.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
