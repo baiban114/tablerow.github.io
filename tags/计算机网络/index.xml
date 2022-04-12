@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>计算机网络 on 彦祖，你又来了</title>
+    <title>计算机网络 on ���棬��������</title>
     <link>https://baiban114.github.io/tablerow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
-    <description>Recent content in 计算机网络 on 彦祖，你又来了</description>
+    <description>Recent content in 计算机网络 on ���棬��������</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 09 Apr 2022 18:53:28 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
@@ -23,7 +23,8 @@ URL包含以下信息：
 4、资源在服务器目录结构中的位置
 5、片段标识符（可选）
  端口是只在http默认80还是？  例：https://blog.csdn.net/qq_44915801
-URI URI（统一资源标识符）是标识逻辑或物理资源的字符序列，与URL类似，也是一串字符。通过使用位置，名称或两者来标识Internet上的资源；它允许统一识别资源。
+ URL中有些字符不能出现，有些是有其他含义，比如&#39;+&#39;。想要再url中使用这些符号，可以使用他们的编码，比如数据库连接的url中设置时区的”GMT+8“可以写作”GMT%2B8“
+ URI URI（统一资源标识符）是标识逻辑或物理资源的字符序列，与URL类似，也是一串字符。通过使用位置，名称或两者来标识Internet上的资源；它允许统一识别资源。
 有两种类型的URI，统一资源标识符（URL）和统一资源名称（URN）。
 任何URI的通用形式都是：
 scheme：[// [user：password @] host [：port]] [/] path [？查询] [#片段]

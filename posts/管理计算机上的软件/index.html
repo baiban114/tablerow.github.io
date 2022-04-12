@@ -192,7 +192,7 @@
     <a class="a-block nav-head false" href="https://baiban114.github.io/tablerow.github.io/">
     
         <div class="nav-title">
-            彦祖，你又来了
+            ���棬��������
         </div>
         
     </a>
@@ -208,7 +208,7 @@
             
             
             <a class="a-block nav-link-item active" href="/tablerow.github.io/">
-                首页
+                ��ҳ
             </a>
             
         
@@ -218,7 +218,7 @@
             
             
             <a class="a-block nav-link-item false" href="/tablerow.github.io/tags/">
-                标签
+                ��ǩ
             </a>
             
         
@@ -228,7 +228,7 @@
             
             
             <a class="a-block nav-link-item false" href="/tablerow.github.io/about/">
-                关于我
+                ������
             </a>
             
         
@@ -238,7 +238,7 @@
             
             
             <a class="a-block nav-link-item false" href="/tablerow.github.io/friends/">
-                友链
+                ����
             </a>
             
         
@@ -255,7 +255,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2022 彦祖，你又来了
+	2022 ���棬��������
 	
 
            
@@ -684,7 +684,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 <a class="a-block drawer-menu-item active" href="/tablerow.github.io/">
-                    首页
+                    ��ҳ
                 </a>
                 
             
@@ -694,7 +694,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 <a class="a-block drawer-menu-item false" href="/tablerow.github.io/tags/">
-                    标签
+                    ��ǩ
                 </a>
                 
             
@@ -704,7 +704,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 <a class="a-block drawer-menu-item false" href="/tablerow.github.io/about/">
-                    关于我
+                    ������
                 </a>
                 
             
@@ -714,7 +714,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 <a class="a-block drawer-menu-item false" href="/tablerow.github.io/friends/">
-                    友链
+                    ����
                 </a>
                 
             
@@ -1112,7 +1112,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             </i>
         </button>
         <a ref="navTitle" class="navbar-brand" href="https://baiban114.github.io/tablerow.github.io/">
-            彦祖，你又来了
+            ���棬��������
         </a>
         
         <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
@@ -1129,7 +1129,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <div class="single-column-header-container" ref="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
     <a href="https://baiban114.github.io/tablerow.github.io/">
-        <div class="single-column-header-title">彦祖，你又来了</div>        
+        <div class="single-column-header-title">���棬��������</div>        
         
     </a>
     
@@ -1215,9 +1215,16 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </ul>
 <h1 id="软件安装方式">软件安装方式</h1>
 <h2 id="源码编译">源码编译</h2>
-<p>下载源代码（如redis使用C语言开发的），然后使用对应版本的编译器（如gcc）在源码文件夹下编译，最终形成可执行文件：</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make &amp;&amp; make install
-</code></pre></div><p>在不同cpu架构下源码包和编译器会有区别,因为底层的指令集不同；</p>
+<p>下载源代码（如redis使用C语言开发、nginx基于c++开发），然后使用对应版本的编译器（如gcc）在源码文件夹下编译，最终形成可执行文件。为了方便管理，通常会用到项目管理工具如make</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./configure
+make &amp;&amp; make install
+</code></pre></div><blockquote>
+<p>make 系列命令是GNU下的自由软件，有gcc编译、打包、管理项目（C语言为主，其他语言要调用其他编译/解释器）,和maven类似属于项目管理工具（不知道会不会从网上下载依赖）</p>
+<p>GCC是C/C++语言的编译工具，Make是增量式（编译）批处理工具，CMake是Make脚本生成工具。 在现代C/C++项目的构建中，它们的关系如下。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">              cmake           make       gcc
+CMakelist.txt -----&gt; Makefile ----&gt; Cmds ---&gt; Binary
+</code></pre></div></blockquote>
+<p>在不同cpu架构下源码包和编译器会有区别,因为底层的指令集不同；</p>
 <p>安装流程和C语言源文件运行流程类似</p>
 <h2 id="安装包">安装包</h2>
 <p>msi\exe\rpm\ipk\apk\aab;</p>
@@ -1228,7 +1235,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>apt、yum、rpm、pip、winget等，从源（保管安装包的服务器）上下载安装软件或安装包；可以通过写配置文件等操作来指定多个源；</p>
 <p>一些包管理器可以帮助解决依赖等问题。</p>
 <blockquote>
-<p>除了软件下载外，类似的操作还有maven、nodejs、docker等，对库、包进行管理</p>
+<p>除了软件下载外，类似的操作还有maven、nodejs、docker等，对库、包进行管理（包括下载），同时有些具有项目管理功能</p>
 </blockquote>
 <h3 id="npm">npm</h3>
 <p>npm 是世界上最大的软件注册表，每星期大约有 30 亿次的下载量，包含超过 600000 个 <em>包（package）</em> （即，代码模块）。来自各大洲的开源软件开发者使用 npm 互相分享和借鉴。包的结构使您能够轻松跟踪依赖项和版本。</p>
@@ -1335,7 +1342,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2022 彦祖，你又来了
+	2022 ���棬��������
 	
 </div>
             </div>

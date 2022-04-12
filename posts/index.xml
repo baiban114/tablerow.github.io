@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 彦祖，你又来了</title>
+    <title>Posts on ���棬��������</title>
     <link>https://baiban114.github.io/tablerow.github.io/posts/</link>
-    <description>Recent content in Posts on 彦祖，你又来了</description>
+    <description>Recent content in Posts on ���棬��������</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 09 Apr 2022 18:53:28 +0800</lastBuildDate><atom:link href="https://baiban114.github.io/tablerow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -23,7 +23,8 @@ URL包含以下信息：
 4、资源在服务器目录结构中的位置
 5、片段标识符（可选）
  端口是只在http默认80还是？  例：https://blog.csdn.net/qq_44915801
-URI URI（统一资源标识符）是标识逻辑或物理资源的字符序列，与URL类似，也是一串字符。通过使用位置，名称或两者来标识Internet上的资源；它允许统一识别资源。
+ URL中有些字符不能出现，有些是有其他含义，比如&#39;+&#39;。想要再url中使用这些符号，可以使用他们的编码，比如数据库连接的url中设置时区的”GMT+8“可以写作”GMT%2B8“
+ URI URI（统一资源标识符）是标识逻辑或物理资源的字符序列，与URL类似，也是一串字符。通过使用位置，名称或两者来标识Internet上的资源；它允许统一识别资源。
 有两种类型的URI，统一资源标识符（URL）和统一资源名称（URN）。
 任何URI的通用形式都是：
 scheme：[// [user：password @] host [：port]] [/] path [？查询] [#片段]
@@ -99,8 +100,10 @@ ssh-copy-id 用户名@ip 这样以后登录这台远程主机就不用账号密�
       <description>前置知识 代码+文档（bushi）
 装在计算机上的软件，在硬盘上是静态的一系列代码、文件的集合，运行时成为动态的进程；
 但想要保证软件正常运行，需要环境+软件+库/依赖相匹配才行
- 环境：  操作系统：基本环境，也是可执行文件的直接运行环境； 运行环境：如java字节码文件需要运行在jvm里，解释型语言要运行在有解释器的操作系统上，js要在浏览器or Node.js运行一样；似乎都是非纯编译运行的语言需要；在自己的环境中运行，就不需要转换成操作系统的可执行文件； java、python等环境安装后，需要将环境的位置添加到操作系统的PATH环境变量中，以确保操作系统能找到他们。   软件  比程序要大一点的概念，也是一系列指令； 因此软件最终都会成为机器能看懂的语言，在硬盘上不论是被编译成的可执行文件，还是脚本语言文件（由解释器读入内存一行就解释一行？可能要看看py和js的原理才懂），在cpu接触前，都会成为机器语言；   库  自己的库，如C语言#include的库;Java中的jre就是jvm+基础类库 系统提供的动态链接库，如win下的dll、linux的lib文件夹内容；    软件安装方式 源码编译 下载源代码（如redis使用C语言开发的），然后使用对应版本的编译器（如gcc）在源码文件夹下编译，最终形成可执行文件：
-make &amp;amp;&amp;amp; make install 在不同cpu架构下源码包和编译器会有区别,因为底层的指令集不同；
+ 环境：  操作系统：基本环境，也是可执行文件的直接运行环境； 运行环境：如java字节码文件需要运行在jvm里，解释型语言要运行在有解释器的操作系统上，js要在浏览器or Node.js运行一样；似乎都是非纯编译运行的语言需要；在自己的环境中运行，就不需要转换成操作系统的可执行文件； java、python等环境安装后，需要将环境的位置添加到操作系统的PATH环境变量中，以确保操作系统能找到他们。   软件  比程序要大一点的概念，也是一系列指令； 因此软件最终都会成为机器能看懂的语言，在硬盘上不论是被编译成的可执行文件，还是脚本语言文件（由解释器读入内存一行就解释一行？可能要看看py和js的原理才懂），在cpu接触前，都会成为机器语言；   库  自己的库，如C语言#include的库;Java中的jre就是jvm+基础类库 系统提供的动态链接库，如win下的dll、linux的lib文件夹内容；    软件安装方式 源码编译 下载源代码（如redis使用C语言开发、nginx基于c++开发），然后使用对应版本的编译器（如gcc）在源码文件夹下编译，最终形成可执行文件。为了方便管理，通常会用到项目管理工具如make
+./configure make &amp;amp;&amp;amp; make install  make 系列命令是GNU下的自由软件，有gcc编译、打包、管理项目（C语言为主，其他语言要调用其他编译/解释器）,和maven类似属于项目管理工具（不知道会不会从网上下载依赖）
+GCC是C/C++语言的编译工具，Make是增量式（编译）批处理工具，CMake是Make脚本生成工具。 在现代C/C++项目的构建中，它们的关系如下。
+cmake make gcc CMakelist.txt -----&amp;gt; Makefile ----&amp;gt; Cmds ---&amp;gt; Binary  在不同cpu架构下源码包和编译器会有区别,因为底层的指令集不同；
 安装流程和C语言源文件运行流程类似
 安装包 msi\exe\rpm\ipk\apk\aab;
 安装包也是由源码编译而成的二进制文件；但已经过官方封装，开箱即用。
@@ -108,11 +111,8 @@ make &amp;amp;&amp;amp; make install 在不同cpu架构下源码包和编译器�
 包管理器 应用商店等也是类似的角色,在官方的服务器上统一管理安装包;
 apt、yum、rpm、pip、winget等，从源（保管安装包的服务器）上下载安装软件或安装包；可以通过写配置文件等操作来指定多个源；
 一些包管理器可以帮助解决依赖等问题。
- 除了软件下载外，类似的操作还有maven、nodejs、docker等，对库、包进行管理
- npm npm 是世界上最大的软件注册表，每星期大约有 30 亿次的下载量，包含超过 600000 个 包（package） （即，代码模块）。来自各大洲的开源软件开发者使用 npm 互相分享和借鉴。包的结构使您能够轻松跟踪依赖项和版本。
-npm 由三个独立的部分组成：
- 网站 注册表（registry） 命令行工具 (CLI)  yarn Yarn 是一个软件包管理器，还可以作为项目管理工具。
-代码通过 软件包（package） 的方式被共享。一个软件包里包含了所有需要共享的代码，以及一个描述软件包信息的文件 package.</description>
+ 除了软件下载外，类似的操作还有maven、nodejs、docker等，对库、包进行管理（包括下载），同时有些具有项目管理功能
+ npm npm 是世界上最大的软件注册表，每星期大约有 30 亿次的下载量，包含超过 600000 个 包（package） （即，代码模块）。来自各大洲的开源软件开发者使用 npm 互相分享和借鉴。包的结构使您能够轻松跟踪依赖项和版本。</description>
     </item>
     
     <item>
