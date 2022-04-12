@@ -37,11 +37,11 @@
 
 
 
-<link rel="stylesheet" href="http://tablerows.gitee.io/tablerow.github.io/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css" integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media="screen">
+<link rel="stylesheet" href="https://baiban114.github.io/tablerow.github.io/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css" integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media="screen">
 
 
 
-<link rel="stylesheet" href="http://tablerows.gitee.io/tablerow.github.io/scss/dark-mode.min.c0082f0b082177f6fb3768ff91439a097de49689bd26f4d49f76d94ebb81e02d.css" integrity="sha256-wAgvCwghd/b7N2j/kUOaCX3klom9JvTUn3bZTruB4C0=" media="screen">
+<link rel="stylesheet" href="https://baiban114.github.io/tablerow.github.io/scss/dark-mode.min.c0082f0b082177f6fb3768ff91439a097de49689bd26f4d49f76d94ebb81e02d.css" integrity="sha256-wAgvCwghd/b7N2j/kUOaCX3klom9JvTUn3bZTruB4C0=" media="screen">
 
 
 <script src="/tablerow.github.io/js/loadCSS.js"></script>
@@ -189,7 +189,7 @@
 <body>
     	<div id="app"><div ref="sideContainer" class="side-container">
     
-    <a class="a-block nav-head false" href="http://tablerows.gitee.io/tablerow.github.io/">
+    <a class="a-block nav-head false" href="https://baiban114.github.io/tablerow.github.io/">
     
         <div class="nav-title">
             彦祖，你又来了
@@ -991,7 +991,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 menu
             </i>
         </button>
-        <a ref="navTitle" class="navbar-brand" href="http://tablerows.gitee.io/tablerow.github.io/">
+        <a ref="navTitle" class="navbar-brand" href="https://baiban114.github.io/tablerow.github.io/">
             彦祖，你又来了
         </a>
         
@@ -1008,7 +1008,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </nav>
 <div class="single-column-header-container" ref="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="http://tablerows.gitee.io/tablerow.github.io/">
+    <a href="https://baiban114.github.io/tablerow.github.io/">
         <div class="single-column-header-title">彦祖，你又来了</div>        
         
     </a>
@@ -1123,9 +1123,51 @@ git push -u origin master
 </code></pre></div><p>​		先执行一遍hugo -D是为了将草稿也编译一下；再不带-D，这样主页不会显示草稿；</p>
 <p>​		还有一个博客生成测试脚本，执行hugo server命令，用于在本地实时查看页面；</p>
 <p>​		也可以使用github Actions来完成持续集成（CI）,顺道学习Devops；难得有个项目有提供hugo的插件，我却还是觉得脚本成本低，，</p>
-<p>进阶版脚本：同时提交至github和gitee</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-</code></pre></div><h1 id="自己钻研的定制经验">自己钻研的定制经验</h1>
+<p>进阶版脚本：同时提交至github和gitee:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chcp <span style="color:#b452cd">65001</span>
+rem 定义变量延迟环境，关闭回显
+@echo off&amp;setlocal enabledelayedexpansion
+rem 读取config.toml所有内容
+<span style="color:#8b008b;font-weight:bold">for</span> /f <span style="color:#cd5555">&#34;eol=* tokens=*&#34;</span> %%i  in (config.toml) <span style="color:#8b008b;font-weight:bold">do</span> (
+rem 设置变量a为每行内容
+<span style="color:#658b00">set</span> <span style="color:#00688b">a</span>=%%i
+<span style="color:#658b00">set</span> <span style="color:#cd5555">&#34;a=!a:http://tablerows.gitee.io/tablerow.github.io/=https://baiban114.github.io/tablerow.github.io/!&#34;</span>
+rem 把修改后的全部行存入$
+<span style="color:#658b00">echo</span> !a!&gt;&gt;$)
+rem 用$的内容替换原来config.toml内容
+move $ config.toml
+
+hugo -D
+hugo
+<span style="color:#658b00">cd</span> ./public
+git add -A
+git commit -m <span style="color:#cd5555">&#34;脚本提交&#34;</span>
+git push -u origin master
+
+<span style="color:#658b00">cd</span> ..
+
+@echo off&amp;setlocal enabledelayedexpansion
+<span style="color:#8b008b;font-weight:bold">for</span> /f <span style="color:#cd5555">&#34;eol=* tokens=*&#34;</span> %%i  in (config.toml) <span style="color:#8b008b;font-weight:bold">do</span> (
+<span style="color:#658b00">set</span> <span style="color:#00688b">a</span>=%%i
+<span style="color:#658b00">set</span> <span style="color:#cd5555">&#34;a=!a:https://baiban114.github.io/tablerow.github.io/=http://tablerows.gitee.io/tablerow.github.io/!&#34;</span>
+<span style="color:#658b00">echo</span> !a!&gt;&gt;$)
+move $ config.toml
+
+hugo -D
+hugo
+<span style="color:#658b00">cd</span> ./public
+git add -A
+git commit -m <span style="color:#cd5555">&#34;脚本提交&#34;</span>
+git push -u gitee master
+pause
+</code></pre></div><blockquote>
+<p>chcp 65001是将本次bat脚本运行时采用的字符集设置为utf8，因为牵扯到修改hugo的配置文件（相关内容会编译至页面）</p>
+<p>如果脚本页面中的内容也有中文（如“脚本提交”），建议将也脚本文件保存为utf8,避免这一部分中文变成乱码</p>
+<ul>
+<li><input disabled="" type="checkbox"> 回头试试提交信息加上时间戳之类的（或者指定参数？）</li>
+</ul>
+</blockquote>
+<h1 id="自己钻研的定制经验">自己钻研的定制经验</h1>
 <p>utteranc.es客户端地址：https://utteranc.es/client.js</p>
 <p>​		因为没时间系统学习怎么制作hugo主题，我只能在Diary主题的基础上瞎摸索，这里是一些经验；如果其他主题作者命名方式一样（约定大于配置233）就会很好办。</p>
 <p>​		对Diary主题改动了一些，有点儿想提PR的冲动。。。不过萌新经验还差太多，不知道合不合适。。。羞(．． )…</p>
@@ -1250,7 +1292,11 @@ git push -u origin master
 <h1 id="静态页面托管平台">静态页面托管平台</h1>
 <ul>
 <li>github pages</li>
-<li>gitee pages</li>
+<li>gitee pages
+<ul>
+<li>提交到仓库后，还要在Pages服务那里点“更新”才会更新！！</li>
+</ul>
+</li>
 <li>vercel</li>
 </ul>
 <p>我看oschina和CSDN也有项目仓库了，不知道有没有托管功能。</p>
@@ -1262,6 +1308,8 @@ git push -u origin master
 <li><input disabled="" type="checkbox"> 能不能钻个空子利用pages当图床?</li>
 </ul>
 </li>
+<li>CSDN发篇文章只有图片当图床</li>
+<li>vercel + 百度云</li>
 </ul>
 <h1 id="我为什么用hugo">我为什么用hugo?</h1>
 <p>​	哦我的上帝啊，瞧瞧这hugo！ko no sei gai还有更难用的静态网站生成器吗？当然我也没用过其他的，只是吐槽一下hhh</p>
@@ -1283,13 +1331,13 @@ git push -u origin master
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="http://tablerows.gitee.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
+                <a class="newer-posts" href="https://baiban114.github.io/tablerow.github.io/posts/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
 			Next<br>文件系统
                 </a>
                 
                 
                 
-                <a class="older-posts" href="http://tablerows.gitee.io/tablerow.github.io/posts/tips/">
+                <a class="older-posts" href="https://baiban114.github.io/tablerow.github.io/posts/tips/">
 			Previous<br>tips
                 </a>
                 
